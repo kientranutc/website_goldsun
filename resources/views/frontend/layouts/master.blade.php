@@ -11,18 +11,18 @@
     <meta name="revisit-after" content="1 days">
     <meta name="rating" content="general">
     <link rel="shortcut icon" href="http://goldsuncnc.com.vn/favicon.ico" type="image/x-icon" /><title>Gold Sun CNC Technology</title>
-    <link rel="shortcut icon" href="assets/img/favicon.ico">
+    <link rel="shortcut icon" href="{{asset('frontend/assets/img/favicon.ico')}}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
 
-    <link rel="StyleSheet" href="assets/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" media="all" href="assets/css/demo.css">
-    <link rel="stylesheet" type="text/css" media="all" href="assets/css/jquery.mmenu.all.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/highslide.css" />
-    <link rel="stylesheet" type="text/css" href="assets/css/owl.carousel.min.css" />
-    <link rel="stylesheet" type="text/css" href="assets/css/owl.theme.default.min.css" />
-    <link rel="StyleSheet" href="style.css">
-    <link rel="StyleSheet" href="assets/css/style.responsive.css">
+    <link rel="StyleSheet" href="{{asset('frontend/assets/css/bootstrap.css')}}">
+    <link rel="stylesheet"   href="{{asset('frontend/assets/css/demo.css')}}">
+    <link rel="stylesheet"   href="{{asset('frontend/assets/css/jquery.mmenu.all.css')}}">
+    <link rel="stylesheet"  href="{{asset('frontend/assets/css/highslide.css')}}" />
+    <link rel="stylesheet"  href="{{asset('frontend/assets/css/owl.carousel.min.css')}}" />
+    <link rel="stylesheet" href="{{asset('frontend/assets/css/owl.theme.default.min.css')}}" />
+    <link rel="StyleSheet" href="{{asset('frontend/style.css')}}">
+    <link rel="StyleSheet" href="{{asset('frontend/assets/css/style.responsive.css')}}">
 
 
 </head>
@@ -36,7 +36,7 @@
             <li><a href="http://goldsuncnc.com.vn">Trang chủ</a></li><li><a href="http://goldsuncnc.com.vn/ve-chung-toi/cong-ty-tnhh-may-moc-va-vat-tu-goldsun.html">Giới thiệu</a></li>			       			<li>
                 <a href="#">Sản phẩm</a>
                 <ul>
-                    <li><a href="http://goldsuncnc.com.vn/may-cnc.html">Máy CNC</a>									<ul><li><a href="index.php?f=products&do=categories&id=182">Máy Điêu Khắc</a></li><li><a href="index.php?f=products&do=categories&id=183">Máy Cắt Dây</a></li><li><a href="index.php?f=products&do=categories&id=184">Máy Tiện</a></li><li><a href="index.php?f=products&do=categories&id=185">Máy Xung</a></li><li><a href="index.php?f=products&do=categories&id=186">Máy gia công trung tâm, máy phay CNC</a></li><li><a href="index.php?f=products&do=categories&id=189">Máy đục lỗ</a></li></ul>								</li> <li><a href="http://goldsuncnc.com.vn/may-cong-cu.html">Máy Công Cụ</a>									<ul><li><a href="index.php?f=products&do=categories&id=187">Máy cưa vòng</a></li><li><a href="index.php?f=products&do=categories&id=188">Máy tiện vạn năng</a></li><li><a href="index.php?f=products&do=categories&id=190">Máy mài mặt phẳng</a></li><li><a href="index.php?f=products&do=categories&id=191">Máy chấn tôn</a></li><li><a href="index.php?f=products&do=categories&id=192">Máy cắt tôn</a></li><li><a href="index.php?f=products&do=categories&id=193">Máy cán ren</a></li><li><a href="index.php?f=products&do=categories&id=194">Máy phay giường</a></li><li><a href="index.php?f=products&do=categories&id=195">Máy phay cạnh</a></li><li><a href="index.php?f=products&do=categories&id=196">Máy uốn ống</a></li><li><a href="index.php?f=products&do=categories&id=197">Máy phay chóp</a></li><li><a href="index.php?f=products&do=categories&id=198">Máy phay đầu ngang</a></li><li><a href="index.php?f=products&do=categories&id=199">Máy khoan</a></li><li><a href="index.php?f=products&do=categories&id=200">Máy Phay</a></li></ul>								</li> <li><a href="http://goldsuncnc.com.vn/may-moc-thiet-bi-khac.html">Máy móc Thiết bị khác</a>									<ul><li><a href="index.php?f=products&do=categories&id=205">Máy phun cát</a></li><li><a href="index.php?f=products&do=categories&id=204">Máy mài dao</a></li><li><a href="index.php?f=products&do=categories&id=203">Lò Nung Trung Tần</a></li><li><a href="index.php?f=products&do=categories&id=201">Lò Cao Tần</a></li><li><a href="index.php?f=products&do=categories&id=202">Robot Công Nghiệp</a></li></ul>								</li> <li><a href="http://goldsuncnc.com.vn/vat-tu-linh-kien.html">Vật Tư Linh Kiện</a>								</li></ul></li><li><a href="http://goldsuncnc.com.vn/tin-tuc-su-kien/">Tin tức & sự kiên</a></li><li><a href="#">Công nghệ & Kỹ thuật</a></li><li><a href="http://goldsuncnc.com.vn/hau-mai/che-do-hau-mai-tu-goldsun.html">Hậu mãi</a></li><li><a href="http://goldsuncnc.com.vn/lien-he.html">Liên hệ</a></li>
+                    <li><a href="">Máy CNC</a>									<ul><li><a href="index.php?f=products&do=categories&id=182">Máy Điêu Khắc</a></li><li><a href="index.php?f=products&do=categories&id=183">Máy Cắt Dây</a></li><li><a href="index.php?f=products&do=categories&id=184">Máy Tiện</a></li><li><a href="index.php?f=products&do=categories&id=185">Máy Xung</a></li><li><a href="index.php?f=products&do=categories&id=186">Máy gia công trung tâm, máy phay CNC</a></li><li><a href="index.php?f=products&do=categories&id=189">Máy đục lỗ</a></li></ul>								</li> <li><a href="http://goldsuncnc.com.vn/may-cong-cu.html">Máy Công Cụ</a>									<ul><li><a href="index.php?f=products&do=categories&id=187">Máy cưa vòng</a></li><li><a href="index.php?f=products&do=categories&id=188">Máy tiện vạn năng</a></li><li><a href="index.php?f=products&do=categories&id=190">Máy mài mặt phẳng</a></li><li><a href="index.php?f=products&do=categories&id=191">Máy chấn tôn</a></li><li><a href="index.php?f=products&do=categories&id=192">Máy cắt tôn</a></li><li><a href="index.php?f=products&do=categories&id=193">Máy cán ren</a></li><li><a href="index.php?f=products&do=categories&id=194">Máy phay giường</a></li><li><a href="index.php?f=products&do=categories&id=195">Máy phay cạnh</a></li><li><a href="index.php?f=products&do=categories&id=196">Máy uốn ống</a></li><li><a href="index.php?f=products&do=categories&id=197">Máy phay chóp</a></li><li><a href="index.php?f=products&do=categories&id=198">Máy phay đầu ngang</a></li><li><a href="index.php?f=products&do=categories&id=199">Máy khoan</a></li><li><a href="index.php?f=products&do=categories&id=200">Máy Phay</a></li></ul>								</li> <li><a href="http://goldsuncnc.com.vn/may-moc-thiet-bi-khac.html">Máy móc Thiết bị khác</a>									<ul><li><a href="index.php?f=products&do=categories&id=205">Máy phun cát</a></li><li><a href="index.php?f=products&do=categories&id=204">Máy mài dao</a></li><li><a href="index.php?f=products&do=categories&id=203">Lò Nung Trung Tần</a></li><li><a href="index.php?f=products&do=categories&id=201">Lò Cao Tần</a></li><li><a href="index.php?f=products&do=categories&id=202">Robot Công Nghiệp</a></li></ul>								</li> <li><a href="http://goldsuncnc.com.vn/vat-tu-linh-kien.html">Vật Tư Linh Kiện</a>								</li></ul></li><li><a href="http://goldsuncnc.com.vn/tin-tuc-su-kien/">Tin tức & sự kiên</a></li><li><a href="#">Công nghệ & Kỹ thuật</a></li><li><a href="http://goldsuncnc.com.vn/hau-mai/che-do-hau-mai-tu-goldsun.html">Hậu mãi</a></li><li><a href="http://goldsuncnc.com.vn/lien-he.html">Liên hệ</a></li>
 
         </ul>
     </nav>
@@ -44,7 +44,7 @@
 <header>
     <div class="header-top"><div class="container"><div class="row">
                 <div class="logo col-xs-9 col-sm-9 col-md-12 col-lg-3">
-                    <a href="http://goldsuncnc.com.vn" title="Logo"><img src="C:/Users/admin/Desktop/theme/assets/img/logo.png" alt="Logo" class="img-responsive"></a>		</div>
+                    <a href="http://goldsuncnc.com.vn" title="Logo"><img src="{{asset('frontend/assets/img/logo.PNG')}}" alt="Logo" class="img-responsive"></a>		</div>
                 <div class="menutop col-xs-12 col-sm-12 col-md-11 col-lg-8">
                     <div class="navbar navbar-default navbar-static-top" role="navigation">
                         <div class="collapse navbar-collapse" id="menu-site-default">
@@ -73,8 +73,8 @@
                 </div>
                 <div class="show_lang col-xs-3 col-sm-3 col-md-1 col-lg-1">
                     <ul>
-                        <li><a href="http://goldsuncnc.com.vn/index.php?lang=vietnamese"><img src="assets/img/vn.png"></a></li>
-                        <li><a href="http://goldsuncnc.com.vn/index.php?lang=english"><img src="assets/img/el.png"></a></li>
+                        <li><a href="{{URL::route('switchLang','vi')}}"><img src="{{asset('frontend/assets/img/vn.png')}}"></a></li>
+                        <li><a href="{{URL::route('switchLang','en')}}"><img src="{{asset('frontend/assets/img/el.png')}}"></a></li>
                     </ul>
                 </div>
             </div></div></div>
@@ -108,7 +108,7 @@
 
     <div class="prd-home"><div class="container"><div class="row">
                 <div class="prd-cat">
-                    <div class="title-cat">Sản phẩm mới</div>
+                    <div class="title-cat">@lang('category.category')</div>
                     <div class="line"></div>
                     <div class="slide-prd owl-theme"><div class="prd"><div class="prd-in">
                                 <div class="img-prd">
@@ -430,51 +430,51 @@
             <div class="line"></div>
             <ul><li class="">
                     <div class="you-wp">
-                        <a href="http://" title=""><img src="C:/Users/admin/Desktop/theme/assets/img/provider1.PNG" alt="1" class="img-responsive"></a>
+                        <a href="http://" title=""><img src="{{asset('frontend/assets/img/provider1.PNG')}}" alt="1" class="img-responsive"></a>
                     </div>
                 </li><li class="li-ou">
                     <div class="you-wp">
-                        <a href="http://" title=""><img src="C:/Users/admin/Desktop/theme/assets/img/provider7.jpg" alt="2" class="img-responsive"></a>
+                        <a href="http://" title=""><img src="{{asset('frontend/assets/img/provider7.jpg')}}" alt="2" class="img-responsive"></a>
                     </div>
                 </li><li class="">
                     <div class="you-wp">
-                        <a href="http://" title=""><img src="C:/Users/admin/Desktop/theme/assets/img/provider2.jpg" alt="3" class="img-responsive"></a>
+                        <a href="http://" title=""><img src="{{asset('frontend/assets/img/provider2.jpg')}}" alt="3" class="img-responsive"></a>
                     </div>
                 </li><li class="li-ou">
                     <div class="you-wp">
-                        <a href="http://" title=""><img src="C:/Users/admin/Desktop/theme/assets/img/provider8.jpg" alt="4" class="img-responsive"></a>
+                        <a href="http://" title=""><img src="{{asset('frontend/assets/img/provider8.jpg')}}" alt="4" class="img-responsive"></a>
                     </div>
                 </li><li class="">
                     <div class="you-wp">
-                        <a href="http://" title=""><img src="C:/Users/admin/Desktop/theme/assets/img/provider3.png" alt="5" class="img-responsive"></a>
+                        <a href="http://" title=""><img src="{{asset('frontend/assets/img/provider3.png')}}" alt="5" class="img-responsive"></a>
                     </div>
                 </li><li class="li-ou">
                     <div class="you-wp">
-                        <a href="http://" title=""><img src="C:/Users/admin/Desktop/theme/assets/img/provider9.png" alt="6" class="img-responsive"></a>
+                        <a href="http://" title=""><img src="{{asset('frontend//assets/img/provider9.png')}}" alt="6" class="img-responsive"></a>
                     </div>
                 </li><li class="">
                     <div class="you-wp">
-                        <a href="http://" title=""><img src="C:/Users/admin/Desktop/theme/assets/img/provider4.png" alt="7" class="img-responsive"></a>
+                        <a href="http://" title=""><img src="{{asset('frontend/assets/img/provider4.png')}}" alt="7" class="img-responsive"></a>
                     </div>
                 </li><li class="li-ou">
                     <div class="you-wp">
-                        <a href="http://" title=""><img src="C:/Users/admin/Desktop/theme/assets/img/provider10.png" alt="8" class="img-responsive"></a>
+                        <a href="http://" title=""><img src="{{asset('frontend/assets/img/provider10.png')}}" alt="8" class="img-responsive"></a>
                     </div>
                 </li><li class="">
                     <div class="you-wp">
-                        <a href="http://" title=""><img src="C:/Users/admin/Desktop/theme/assets/img/provider5.png" alt="9" class="img-responsive"></a>
+                        <a href="http://" title=""><img src="{{asset('frontend/assets/img/provider5.png')}}" alt="9" class="img-responsive"></a>
                     </div>
                 </li><li class="li-ou">
                     <div class="you-wp">
-                        <a href="http://" title=""><img src="C:/Users/admin/Desktop/theme/assets/img/provider11.png" alt="10" class="img-responsive"></a>
+                        <a href="http://" title=""><img src="{{asset('frontend/assets/img/provider11.png')}}" alt="10" class="img-responsive"></a>
                     </div>
                 </li><li class="">
                     <div class="you-wp">
-                        <a href="http://" title=""><img src="C:/Users/admin/Desktop/theme/assets/img/provider6.png" alt="11" class="img-responsive"></a>
+                        <a href="http://" title=""><img src="{{asset('frontend/assets/img/provider6.png')}}" alt="11" class="img-responsive"></a>
                     </div>
                 </li><li class="li-ou">
                     <div class="you-wp">
-                        <a href="http://" title=""><img src="C:/Users/admin/Desktop/theme/assets/img/provider12.png" alt="12" class="img-responsive"></a>
+                        <a href="http://" title=""><img src="{{asset('frontend/assets/img/provider12.png')}}" alt="12" class="img-responsive"></a>
                     </div>
                 </li>	</ul>
         </div>
@@ -482,12 +482,12 @@
 
 
 
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="assets/js/jquery.mmenu.js"></script>
-    <script type="text/javascript" src="assets/js/owl.carousel.js"></script>
-    <script type="text/javascript" src="assets/js/highslide-with-gallery.js"></script>
-    <script type="text/javascript" src="assets/js/colud_zoom_old.js"> </script>
+    <script src="{{asset('frontend/assets/js/jquery.min.js')}}"></script>
+    <script src="{{asset('frontend/assets/js/bootstrap.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('frontend/assets/js/jquery.mmenu.js')}}"></script>
+    <script type="text/javascript" src="{{asset('frontend/assets/js/owl.carousel.js')}}"></script>
+    <script type="text/javascript" src="{{asset('frontend/assets/js/highslide-with-gallery.js')}}"></script>
+    <script type="text/javascript" src="{{asset('frontend/assets/js/colud_zoom_old.js')}}"> </script>
 
     <script type="text/javascript">
 
@@ -557,7 +557,7 @@
                 <div class="title-cat">Thông tin liên hệ</div>
                 <div class="line line-2"></div>
                 <div class="col-contact col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                    <a href="http://goldsuncnc.com.vn/lien-he.html" title=""><img src="assets/img/c1.png" alt=""></a>
+                    <a href="http://goldsuncnc.com.vn/lien-he.html" title=""><img src="{{asset('frontend/assets/img/c1.png')}}" alt=""></a>
                     <p class="title-contact">Địa chỉ</p>
                     <p class="text-contact"><p>
                         <strong>VPGD:</strong> Số nh&agrave; 11, Tổ 13 Khu An Lạc, Phường Cầu Diễn, Quận Nam Từ Li&ecirc;m, H&agrave; Nội</p>
@@ -567,13 +567,13 @@
                 </div>
 
                 <div class="col-contact col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                    <a href="http://goldsuncnc.com.vn/lien-he.html" title=""><img src="assets/img/c2.png" alt=""></a>
+                    <a href="http://goldsuncnc.com.vn/lien-he.html" title=""><img src="{{asset('frontend/assets/img/c2.png')}}" alt=""></a>
                     <p class="title-contact">Điện thoại</p>
                     <p class="text-contact">Tel: 024.37.87.20.35 - HotLine: 0904.121.830</p>
                 </div>
 
                 <div class="col-contact col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                    <a href="http://goldsuncnc.com.vn/lien-he.html" title=""><img src="assets/img/c3.png" alt=""></a>
+                    <a href="http://goldsuncnc.com.vn/lien-he.html" title=""><img src="{{asset('frontend/assets/img/c3.png')}}" alt=""></a>
                     <p class="title-contact">Email</p>
                     <p class="text-contact">goldsunvn.cnc@gmail.com  </p>
                 </div>
@@ -587,12 +587,12 @@
                         <a href="tel:Tel: 024.37.87.20.35 - HotLine: 0904.121.830" title="">Tel: 024.37.87.20.35 - HotLine: 0904.121.830</a>
                     </div>
                     <div class="social">
-                        <a href="https://www.facebook.com/cncgiacongtrungtam/" title="" target="_blank"><img src="assets/img/f1.png" alt=""></a>
-                        <a href="#" title="" target="_blank"><img src="assets/img/f2.png" alt=""></a>
-                        <a href="https://twitter.com/goldsunvn001" title="" target="_blank"><img src="assets/img/f3.png" alt=""></a>
-                        <a href="#" title="" target="_blank"><img src="assets/img/f6.png" alt=""></a>
-                        <a href="#" title="" target="_blank"><img src="assets/img/f7.png" alt=""></a>
-                        <a href="#" title="" target="_blank"><img src="assets/img/f8.png" alt=""></a>
+                        <a href="https://www.facebook.com/cncgiacongtrungtam/" title="" target="_blank"><img src="{{asset('frontend/assets/img/f1.png')}}" alt=""></a>
+                        <a href="#" title="" target="_blank"><img src="{{asset('frontend/assets/img/f2.png')}}" alt=""></a>
+                        <a href="https://twitter.com/goldsunvn001" title="" target="_blank"><img src="{{asset('frontend/assets/img/f3.png')}}" alt=""></a>
+                        <a href="#" title="" target="_blank"><img src="{{asset('frontend/assets/img/f6.png')}}" alt=""></a>
+                        <a href="#" title="" target="_blank"><img src="{{asset('frontend/assets/img/f7.png')}}" alt=""></a>
+                        <a href="#" title="" target="_blank"><img src="{{asset('frontend/assets/img/f8.png')}}" alt=""></a>
                     </div>
                 </div>
                 <div class="col-menui col-xs-6 col-sm-3 col-md-2 col-lg-2">

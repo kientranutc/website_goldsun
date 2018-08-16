@@ -1,0 +1,102 @@
+
+@media (max-width:399px) {
+    .prd{
+        width: 100%;
+    }
+}
+@media (max-width:615px) {
+    .info, .col-menui{
+        width: 100%;
+    }
+}
+@media (max-width:1199px){
+    .logo img{
+        margin:auto;
+    }
+    .title-mail{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+@media (min-width:992px) and (max-width:1199px){
+    .sent-mail form input{
+        margin-bottom: 10px;
+    }
+
+}
+@media (min-width:1367px){
+
+}
+@media (max-width:767px) {
+    .sent-mail form input{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .col-menui, .info{
+        margin-bottom: 20px;
+    }
+    .partner{
+        display: none;
+    }
+    .img-prd{
+        height: auto;
+    }
+}
+@media (min-width: 600px) and (max-width:767px) {
+}
+@media (min-width: 550px) and (max-width:991px) {
+
+}
+@media (max-width:549px) {
+    .col-menu, .col-facebook{
+        width: 100%;
+    }
+    .title-prd{
+        height: auto;
+    }
+}
+
+@media (min-width:768px) and (max-width:991px){
+    .menu-prd p a{
+        font-size: 16px;
+    }
+    .sent-mail form input{
+        width: 30%;
+        margin-bottom: 10px;
+    }
+    .col-menui{
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width:991px) {
+    #page{
+        display: block;
+    }
+    .menutop{
+        display: none;
+    }
+}
+@media (min-width:1200px) and (max-width: 1309px){
+    ul.nav.navbar-nav li {
+        padding: 10px;
+    }
+}
+@media (min-width: 1310px){
+    .container {
+        width: 1310px;
+    }
+}
+@media (max-width: 1310px){
+    .partner li.li-ou{
+        margin-top: 0px;
+    }
+    .partner li {
+        float: none;
+        display: inline-block;
+        margin-left: 0;
+    }
+    .partner ul{
+        text-align: center;
+    }
+}

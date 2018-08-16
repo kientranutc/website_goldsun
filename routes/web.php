@@ -11,6 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::group(['middleware' => 'localization'], function() {
+    Route::get('language/{la}', [
+        'as' => 'switchLang',
+        'uses' => 'Frontend\LangController@index',
+    ]);
+    Route::get('/', [
+        'as' => 'frontend.home',
+        'uses' => 'Frontend\HomeController@index'
+    ]);
 });
