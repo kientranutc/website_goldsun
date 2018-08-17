@@ -1,620 +1,578 @@
-<!DOCTYPE html><html lang="vi" xmlns="http://www.w3.org/1999/xhtml" prefix="og: http://ogp.me/ns#"><head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"><meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta http-equiv="expires" content="0">
-    <meta name="resource-type" content="document">
-    <meta name="distribution" content="global">
-    <meta name="author" content="Gold Sun CNC Technology">
-    <meta name="google-site-verification" content=" " /><meta name="copyright" content="Copyright (c) 2018 by Gold Sun CNC Technology">
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-    <meta name="robots" content="index, follow">
-    <meta name="revisit-after" content="1 days">
-    <meta name="rating" content="general">
-    <link rel="shortcut icon" href="http://goldsuncnc.com.vn/favicon.ico" type="image/x-icon" /><title>Gold Sun CNC Technology</title>
-    <link rel="shortcut icon" href="assets/img/favicon.ico">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>GoldSunCNC | @yield('title')</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.7 -->
+    <link rel="stylesheet" href="{{asset('backend/bower_components/bootstrap/dist/css/bootstrap.min.css')}}">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="{{asset('backend/bower_components/font-awesome/css/font-awesome.min.css')}}">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="{{asset('backend/bower_components/Ionicons/css/ionicons.min.css')}}">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="{{asset('backend/dist/css/AdminLTE.min.css')}}">
+    <!-- AdminLTE Skins. Choose a skin from the css/skins
+         folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="{{asset('backend/dist/css/skins/_all-skins.min.css')}}">
+    <!-- Morris chart -->
+    <link rel="stylesheet" href="{{asset('backend/bower_components/morris.js/morris.css')}}">
+    <!-- jvectormap -->
+    <link rel="stylesheet" href="{{asset('backend/bower_components/jvectormap/jquery-jvectormap.css')}}">
+    <!-- Date Picker -->
+    <link rel="stylesheet" href="{{asset('backend/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css')}}">
+    <!-- Daterange picker -->
+    <link rel="stylesheet" href="{{asset('backend/bower_components/bootstrap-daterangepicker/daterangepicker.css')}}">
+    <!-- bootstrap wysihtml5 - text editor -->
+    <link rel="stylesheet" href="{{asset('backend/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css')}}">
 
-    <link rel="StyleSheet" href="assets/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" media="all" href="assets/css/demo.css">
-    <link rel="stylesheet" type="text/css" media="all" href="assets/css/jquery.mmenu.all.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/highslide.css" />
-    <link rel="stylesheet" type="text/css" href="assets/css/owl.carousel.min.css" />
-    <link rel="stylesheet" type="text/css" href="assets/css/owl.theme.default.min.css" />
-    <link rel="StyleSheet" href="style.css">
-    <link rel="StyleSheet" href="assets/css/style.responsive.css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
+    <!-- Google Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 
+    @yield('link')
 </head>
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
 
-<div id="page">
-    <div class="mmheader">
-        <a href="#menu"><span></span></a>
+    <header class="main-header">
+        <!-- Logo -->
+        <a href="index2.html" class="logo">
+            <!-- mini logo for sidebar mini 50x50 pixels -->
+            <span class="logo-mini"><b>A</b>LT</span>
+            <!-- logo for regular state and mobile devices -->
+            <span class="logo-lg"><b>Admin</b>LTE</span>
+        </a>
+        <!-- Header Navbar: style can be found in header.less -->
+        <nav class="navbar navbar-static-top">
+            <!-- Sidebar toggle button-->
+            <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                <span class="sr-only">Toggle navigation</span>
+            </a>
+
+            <div class="navbar-custom-menu">
+                <ul class="nav navbar-nav">
+                    <!-- Messages: style can be found in dropdown.less-->
+                    <li class="dropdown messages-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-envelope-o"></i>
+                            <span class="label label-success">4</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="header">You have 4 messages</li>
+                            <li>
+                                <!-- inner menu: contains the actual data -->
+                                <ul class="menu">
+                                    <li><!-- start message -->
+                                        <a href="#">
+                                            <div class="pull-left">
+                                                <img src="{{asset('backend/dist/img/user2-160x160.jpg"')}}" class="img-circle" alt="User Image">
+                                            </div>
+                                            <h4>
+                                                Support Team
+                                                <small><i class="fa fa-clock-o"></i> 5 mins</small>
+                                            </h4>
+                                            <p>Why not buy a new awesome theme?</p>
+                                        </a>
+                                    </li>
+                                    <!-- end message -->
+                                    <li>
+                                        <a href="#">
+                                            <div class="pull-left">
+                                                <img src="{{asset('backend/dist/img/user3-128x128.jpg')}}" class="img-circle" alt="User Image">
+                                            </div>
+                                            <h4>
+                                                AdminLTE Design Team
+                                                <small><i class="fa fa-clock-o"></i> 2 hours</small>
+                                            </h4>
+                                            <p>Why not buy a new awesome theme?</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="pull-left">
+                                                <img src="dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
+                                            </div>
+                                            <h4>
+                                                Developers
+                                                <small><i class="fa fa-clock-o"></i> Today</small>
+                                            </h4>
+                                            <p>Why not buy a new awesome theme?</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="pull-left">
+                                                <img src="dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
+                                            </div>
+                                            <h4>
+                                                Sales Department
+                                                <small><i class="fa fa-clock-o"></i> Yesterday</small>
+                                            </h4>
+                                            <p>Why not buy a new awesome theme?</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="pull-left">
+                                                <img src="dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
+                                            </div>
+                                            <h4>
+                                                Reviewers
+                                                <small><i class="fa fa-clock-o"></i> 2 days</small>
+                                            </h4>
+                                            <p>Why not buy a new awesome theme?</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="footer"><a href="#">See All Messages</a></li>
+                        </ul>
+                    </li>
+                    <!-- Notifications: style can be found in dropdown.less -->
+                    <li class="dropdown notifications-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-bell-o"></i>
+                            <span class="label label-warning">10</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="header">You have 10 notifications</li>
+                            <li>
+                                <!-- inner menu: contains the actual data -->
+                                <ul class="menu">
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-users text-aqua"></i> 5 new members joined today
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-warning text-yellow"></i> Very long description here that may not fit into the
+                                            page and may cause design problems
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-users text-red"></i> 5 new members joined
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-shopping-cart text-green"></i> 25 sales made
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-user text-red"></i> You changed your username
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="footer"><a href="#">View all</a></li>
+                        </ul>
+                    </li>
+                    <!-- Tasks: style can be found in dropdown.less -->
+                    <li class="dropdown tasks-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-flag-o"></i>
+                            <span class="label label-danger">9</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="header">You have 9 tasks</li>
+                            <li>
+                                <!-- inner menu: contains the actual data -->
+                                <ul class="menu">
+                                    <li><!-- Task item -->
+                                        <a href="#">
+                                            <h3>
+                                                Design some buttons
+                                                <small class="pull-right">20%</small>
+                                            </h3>
+                                            <div class="progress xs">
+                                                <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar"
+                                                     aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                                                    <span class="sr-only">20% Complete</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <!-- end task item -->
+                                    <li><!-- Task item -->
+                                        <a href="#">
+                                            <h3>
+                                                Create a nice theme
+                                                <small class="pull-right">40%</small>
+                                            </h3>
+                                            <div class="progress xs">
+                                                <div class="progress-bar progress-bar-green" style="width: 40%" role="progressbar"
+                                                     aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                                                    <span class="sr-only">40% Complete</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <!-- end task item -->
+                                    <li><!-- Task item -->
+                                        <a href="#">
+                                            <h3>
+                                                Some task I need to do
+                                                <small class="pull-right">60%</small>
+                                            </h3>
+                                            <div class="progress xs">
+                                                <div class="progress-bar progress-bar-red" style="width: 60%" role="progressbar"
+                                                     aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                                                    <span class="sr-only">60% Complete</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <!-- end task item -->
+                                    <li><!-- Task item -->
+                                        <a href="#">
+                                            <h3>
+                                                Make beautiful transitions
+                                                <small class="pull-right">80%</small>
+                                            </h3>
+                                            <div class="progress xs">
+                                                <div class="progress-bar progress-bar-yellow" style="width: 80%" role="progressbar"
+                                                     aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                                                    <span class="sr-only">80% Complete</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <!-- end task item -->
+                                </ul>
+                            </li>
+                            <li class="footer">
+                                <a href="#">View all tasks</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- User Account: style can be found in dropdown.less -->
+                    <li class="dropdown user user-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <img src="{{asset('backend/dist/img/user2-160x160.jpg')}}" class="user-image" alt="User Image">
+                            <span class="hidden-xs">Alexander Pierce</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <!-- User image -->
+                            <li class="user-header">
+                                <img src="{{asset('backend/dist/img/user2-160x160.jpg')}}" class="img-circle" alt="User Image">
+
+                                <p>
+                                    Alexander Pierce - Web Developer
+                                    <small>Member since Nov. 2012</small>
+                                </p>
+                            </li>
+                            <!-- Menu Body -->
+                            <li class="user-body">
+                                <div class="row">
+                                    <div class="col-xs-4 text-center">
+                                        <a href="#">Followers</a>
+                                    </div>
+                                    <div class="col-xs-4 text-center">
+                                        <a href="#">Sales</a>
+                                    </div>
+                                    <div class="col-xs-4 text-center">
+                                        <a href="#">Friends</a>
+                                    </div>
+                                </div>
+                                <!-- /.row -->
+                            </li>
+                            <!-- Menu Footer-->
+                            <li class="user-footer">
+                                <div class="pull-left">
+                                    <a href="#" class="btn btn-default btn-flat">Profile</a>
+                                </div>
+                                <div class="pull-right">
+                                    <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- Control Sidebar Toggle Button -->
+                    <li>
+                        <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- Left side column. contains the logo and sidebar -->
+    @include('backend.partials.menu_left')
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+            <h1>
+                Dashboard
+                <small>Control panel</small>
+            </h1>
+            <ol class="breadcrumb">
+                <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+                <li class="active">@yield('breadcrumb')</li>
+            </ol>
+        </section>
+
+        <!-- Main content -->
+        <section class="content">
+        @yield('content')
+            <!-- /.row (main row) -->
+        </section>
+        <!-- /.content -->
     </div>
-    <nav id="menu">
-        <ul>
-            <li><a href="http://goldsuncnc.com.vn">Trang chủ</a></li><li><a href="http://goldsuncnc.com.vn/ve-chung-toi/cong-ty-tnhh-may-moc-va-vat-tu-goldsun.html">Giới thiệu</a></li>			       			<li>
-                <a href="#">Sản phẩm</a>
-                <ul>
-                    <li><a href="http://goldsuncnc.com.vn/may-cnc.html">Máy CNC</a>									<ul><li><a href="index.php?f=products&do=categories&id=182">Máy Điêu Khắc</a></li><li><a href="index.php?f=products&do=categories&id=183">Máy Cắt Dây</a></li><li><a href="index.php?f=products&do=categories&id=184">Máy Tiện</a></li><li><a href="index.php?f=products&do=categories&id=185">Máy Xung</a></li><li><a href="index.php?f=products&do=categories&id=186">Máy gia công trung tâm, máy phay CNC</a></li><li><a href="index.php?f=products&do=categories&id=189">Máy đục lỗ</a></li></ul>								</li> <li><a href="http://goldsuncnc.com.vn/may-cong-cu.html">Máy Công Cụ</a>									<ul><li><a href="index.php?f=products&do=categories&id=187">Máy cưa vòng</a></li><li><a href="index.php?f=products&do=categories&id=188">Máy tiện vạn năng</a></li><li><a href="index.php?f=products&do=categories&id=190">Máy mài mặt phẳng</a></li><li><a href="index.php?f=products&do=categories&id=191">Máy chấn tôn</a></li><li><a href="index.php?f=products&do=categories&id=192">Máy cắt tôn</a></li><li><a href="index.php?f=products&do=categories&id=193">Máy cán ren</a></li><li><a href="index.php?f=products&do=categories&id=194">Máy phay giường</a></li><li><a href="index.php?f=products&do=categories&id=195">Máy phay cạnh</a></li><li><a href="index.php?f=products&do=categories&id=196">Máy uốn ống</a></li><li><a href="index.php?f=products&do=categories&id=197">Máy phay chóp</a></li><li><a href="index.php?f=products&do=categories&id=198">Máy phay đầu ngang</a></li><li><a href="index.php?f=products&do=categories&id=199">Máy khoan</a></li><li><a href="index.php?f=products&do=categories&id=200">Máy Phay</a></li></ul>								</li> <li><a href="http://goldsuncnc.com.vn/may-moc-thiet-bi-khac.html">Máy móc Thiết bị khác</a>									<ul><li><a href="index.php?f=products&do=categories&id=205">Máy phun cát</a></li><li><a href="index.php?f=products&do=categories&id=204">Máy mài dao</a></li><li><a href="index.php?f=products&do=categories&id=203">Lò Nung Trung Tần</a></li><li><a href="index.php?f=products&do=categories&id=201">Lò Cao Tần</a></li><li><a href="index.php?f=products&do=categories&id=202">Robot Công Nghiệp</a></li></ul>								</li> <li><a href="http://goldsuncnc.com.vn/vat-tu-linh-kien.html">Vật Tư Linh Kiện</a>								</li></ul></li><li><a href="http://goldsuncnc.com.vn/tin-tuc-su-kien/">Tin tức & sự kiên</a></li><li><a href="#">Công nghệ & Kỹ thuật</a></li><li><a href="http://goldsuncnc.com.vn/hau-mai/che-do-hau-mai-tu-goldsun.html">Hậu mãi</a></li><li><a href="http://goldsuncnc.com.vn/lien-he.html">Liên hệ</a></li>
-
-        </ul>
-    </nav>
-</div>
-<header>
-    <div class="header-top"><div class="container"><div class="row">
-                <div class="logo col-xs-9 col-sm-9 col-md-12 col-lg-3">
-                    <a href="http://goldsuncnc.com.vn" title="Logo"><img src="C:/Users/admin/Desktop/theme/assets/img/logo.png" alt="Logo" class="img-responsive"></a>		</div>
-                <div class="menutop col-xs-12 col-sm-12 col-md-11 col-lg-8">
-                    <div class="navbar navbar-default navbar-static-top" role="navigation">
-                        <div class="collapse navbar-collapse" id="menu-site-default">
-
-                            <script>
-
-                                function setActive() {
-                                    aObj = document.getElementById('nav').getElementsByTagName('a');
-                                    for(i=1;i<aObj.length;i++) {
-                                        if(document.location.href.indexOf(aObj[i].href)>=0) {
-                                            aObj[i].className='active';
-                                        }
-                                    }
-                                }
-                                window.onload = setActive;
-                            </script>
-                            <ul class="nav navbar-nav">
-                                <li class=""><a href="http://goldsuncnc.com.vn">Trang chủ</a></li><li class=""><a href="http://goldsuncnc.com.vn/ve-chung-toi/cong-ty-tnhh-may-moc-va-vat-tu-goldsun.html">Giới thiệu</a></li>			       			<li class="dropdown">
-                                    <a href="#">Sản phẩm</a>
-                                    <ul class="dropmenu">
-                                        <li class="dropdown2"><a href="http://goldsuncnc.com.vn/may-cnc.html">Máy CNC</a>									<ul class="dropdown-menu2" role="menu"><li class="li_con2"><a href="index.php?f=products&do=categories&id=182">Máy Điêu Khắc</a></li><li class="li_con2"><a href="index.php?f=products&do=categories&id=183">Máy Cắt Dây</a></li><li class="li_con2"><a href="index.php?f=products&do=categories&id=184">Máy Tiện</a></li><li class="li_con2"><a href="index.php?f=products&do=categories&id=185">Máy Xung</a></li><li class="li_con2"><a href="index.php?f=products&do=categories&id=186">Máy gia công trung tâm, máy phay CNC</a></li><li class="li_con2"><a href="index.php?f=products&do=categories&id=189">Máy đục lỗ</a></li></ul>								</li> <li class="dropdown2"><a href="http://goldsuncnc.com.vn/may-cong-cu.html">Máy Công Cụ</a>									<ul class="dropdown-menu2" role="menu"><li class="li_con2"><a href="index.php?f=products&do=categories&id=187">Máy cưa vòng</a></li><li class="li_con2"><a href="index.php?f=products&do=categories&id=188">Máy tiện vạn năng</a></li><li class="li_con2"><a href="index.php?f=products&do=categories&id=190">Máy mài mặt phẳng</a></li><li class="li_con2"><a href="index.php?f=products&do=categories&id=191">Máy chấn tôn</a></li><li class="li_con2"><a href="index.php?f=products&do=categories&id=192">Máy cắt tôn</a></li><li class="li_con2"><a href="index.php?f=products&do=categories&id=193">Máy cán ren</a></li><li class="li_con2"><a href="index.php?f=products&do=categories&id=194">Máy phay giường</a></li><li class="li_con2"><a href="index.php?f=products&do=categories&id=195">Máy phay cạnh</a></li><li class="li_con2"><a href="index.php?f=products&do=categories&id=196">Máy uốn ống</a></li><li class="li_con2"><a href="index.php?f=products&do=categories&id=197">Máy phay chóp</a></li><li class="li_con2"><a href="index.php?f=products&do=categories&id=198">Máy phay đầu ngang</a></li><li class="li_con2"><a href="index.php?f=products&do=categories&id=199">Máy khoan</a></li><li class="li_con2"><a href="index.php?f=products&do=categories&id=200">Máy Phay</a></li></ul>								</li> <li class="dropdown2"><a href="http://goldsuncnc.com.vn/may-moc-thiet-bi-khac.html">Máy móc Thiết bị khác</a>									<ul class="dropdown-menu2" role="menu"><li class="li_con2"><a href="index.php?f=products&do=categories&id=205">Máy phun cát</a></li><li class="li_con2"><a href="index.php?f=products&do=categories&id=204">Máy mài dao</a></li><li class="li_con2"><a href="index.php?f=products&do=categories&id=203">Lò Nung Trung Tần</a></li><li class="li_con2"><a href="index.php?f=products&do=categories&id=201">Lò Cao Tần</a></li><li class="li_con2"><a href="index.php?f=products&do=categories&id=202">Robot Công Nghiệp</a></li></ul>								</li> <li class="dropdown2"><a href="http://goldsuncnc.com.vn/vat-tu-linh-kien.html">Vật Tư Linh Kiện</a>								</li></ul></li><li class=""><a href="http://goldsuncnc.com.vn/tin-tuc-su-kien/">Tin tức & sự kiên</a></li><li class=""><a href="#">Công nghệ & Kỹ thuật</a></li><li class=""><a href="http://goldsuncnc.com.vn/hau-mai/che-do-hau-mai-tu-goldsun.html">Hậu mãi</a></li><li class=""><a href="http://goldsuncnc.com.vn/lien-he.html">Liên hệ</a></li>
-
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="show_lang col-xs-3 col-sm-3 col-md-1 col-lg-1">
-                    <ul>
-                        <li><a href="http://goldsuncnc.com.vn/index.php?lang=vietnamese"><img src="assets/img/vn.png"></a></li>
-                        <li><a href="http://goldsuncnc.com.vn/index.php?lang=english"><img src="assets/img/el.png"></a></li>
-                    </ul>
-                </div>
-            </div></div></div>
-
-</header>
-<section>
-    <!-- Slide home -->
-    <div class="slide">
-        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li><li data-target="#carousel-example-generic" data-slide-to="1" class=""></li>	  </ol>
-
-            <div class="carousel-inner" role="listbox">
-                <div class="item active">
-                    <img src="http://goldsuncnc.com.vn/files/adv/adv_slide-1-_12.jpg" alt="" class="img-responsive">
-                </div><div class="item ">
-                    <img src="http://goldsuncnc.com.vn/files/adv/adv_3_63.jpg" alt="" class="img-responsive">
-                </div>	  </div>
-
-            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                <span class="sr-only">Next</span>
-            </a>
-        </div>	</div>
-    <!-- End Slide home -->
-
-    <!-- <div class="gioithieu"><div class="container">
-            </div></div> -->
-
-    <div class="prd-home"><div class="container"><div class="row">
-                <div class="prd-cat">
-                    <div class="title-cat">Sản phẩm mới</div>
-                    <div class="line"></div>
-                    <div class="slide-prd owl-theme"><div class="prd"><div class="prd-in">
-                                <div class="img-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-500-high-speed-tapping-center-313.html" title="T-500 High Speed Tapping Center"><img class="img-responsive" src="http://goldsuncnc.com.vn/files/products/t500_41.jpg" alt="T-500 High Speed Tapping Center"></a>
-                                </div>
-                                <div class="title-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-500-high-speed-tapping-center-313.html" title="T-500 High Speed Tapping Center">T-500 High Speed Tapping Center</a>
-                                </div>
-                            </div></div><div class="prd"><div class="prd-in">
-                                <div class="img-prd">
-                                    <a href="http://goldsuncnc.com.vn/b-8004b-glass-engraving-machine-314.html" title="B-800/4B Glass Engraving Machine"><img class="img-responsive" src="http://goldsuncnc.com.vn/files/products/b-800-4b_90.jpg" alt="B-800/4B Glass Engraving Machine"></a>
-                                </div>
-                                <div class="title-prd">
-                                    <a href="http://goldsuncnc.com.vn/b-8004b-glass-engraving-machine-314.html" title="B-800/4B Glass Engraving Machine">B-800/4B Glass Engraving Machine</a>
-                                </div>
-                            </div></div><div class="prd"><div class="prd-in">
-                                <div class="img-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-8-box-way-vertical-machining-center-315.html" title="T-8 Box way Vertical Machining Center"><img class="img-responsive" src="http://goldsuncnc.com.vn/files/products/t8_42.jpg" alt="T-8 Box way Vertical Machining Center"></a>
-                                </div>
-                                <div class="title-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-8-box-way-vertical-machining-center-315.html" title="T-8 Box way Vertical Machining Center">T-8 Box way Vertical Machining Center</a>
-                                </div>
-                            </div></div><div class="prd"><div class="prd-in">
-                                <div class="img-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-v856-parts-machining-center-316.html" title="T-V856 Parts Machining Center"><img class="img-responsive" src="http://goldsuncnc.com.vn/files/products/t-v856_08.jpg" alt="T-V856 Parts Machining Center"></a>
-                                </div>
-                                <div class="title-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-v856-parts-machining-center-316.html" title="T-V856 Parts Machining Center">T-V856 Parts Machining Center</a>
-                                </div>
-                            </div></div><div class="prd"><div class="prd-in">
-                                <div class="img-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-500b-high-speed-tapping-center-317.html" title="T-500B High Speed Tapping Center"><img class="img-responsive" src="http://goldsuncnc.com.vn/files/products/t-500b_79.jpg" alt="T-500B High Speed Tapping Center"></a>
-                                </div>
-                                <div class="title-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-500b-high-speed-tapping-center-317.html" title="T-500B High Speed Tapping Center">T-500B High Speed Tapping Center</a>
-                                </div>
-                            </div></div><div class="prd"><div class="prd-in">
-                                <div class="img-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-11g-gear-head-vertical-machining-center-318.html" title="T-11G Gear Head Vertical Machining Center"><img class="img-responsive" src="http://goldsuncnc.com.vn/files/products/t-11g_05.jpg" alt="T-11G Gear Head Vertical Machining Center"></a>
-                                </div>
-                                <div class="title-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-11g-gear-head-vertical-machining-center-318.html" title="T-11G Gear Head Vertical Machining Center">T-11G Gear Head Vertical Machining Center</a>
-                                </div>
-                            </div></div><div class="prd"><div class="prd-in">
-                                <div class="img-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-18-box-way-vertical-machining-center-319.html" title="T-18 Box way Vertical Machining Center"><img class="img-responsive" src="http://goldsuncnc.com.vn/files/products/t-18_80.jpg" alt="T-18 Box way Vertical Machining Center"></a>
-                                </div>
-                                <div class="title-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-18-box-way-vertical-machining-center-319.html" title="T-18 Box way Vertical Machining Center">T-18 Box way Vertical Machining Center</a>
-                                </div>
-                            </div></div><div class="prd"><div class="prd-in">
-                                <div class="img-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-16-box-ways-vertical-machining-center-320.html" title="T-16 Box ways Vertical Machining Center"><img class="img-responsive" src="http://goldsuncnc.com.vn/files/products/t-16_32.jpg" alt="T-16 Box ways Vertical Machining Center"></a>
-                                </div>
-                                <div class="title-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-16-box-ways-vertical-machining-center-320.html" title="T-16 Box ways Vertical Machining Center">T-16 Box ways Vertical Machining Center</a>
-                                </div>
-                            </div></div><div class="prd"><div class="prd-in">
-                                <div class="img-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-15-box-ways-vertical-machining-center-321.html" title="T-15 Box ways Vertical Machining Center"><img class="img-responsive" src="http://goldsuncnc.com.vn/files/products/t-16_98.jpg" alt="T-15 Box ways Vertical Machining Center"></a>
-                                </div>
-                                <div class="title-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-15-box-ways-vertical-machining-center-321.html" title="T-15 Box ways Vertical Machining Center">T-15 Box ways Vertical Machining Center</a>
-                                </div>
-                            </div></div><div class="prd"><div class="prd-in">
-                                <div class="img-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-13-box-way-vertical-machining-center-322.html" title="T-13 Box way Vertical Machining Center"><img class="img-responsive" src="http://goldsuncnc.com.vn/files/products/t-12_43.jpg" alt="T-13 Box way Vertical Machining Center"></a>
-                                </div>
-                                <div class="title-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-13-box-way-vertical-machining-center-322.html" title="T-13 Box way Vertical Machining Center">T-13 Box way Vertical Machining Center</a>
-                                </div>
-                            </div></div><div class="prd"><div class="prd-in">
-                                <div class="img-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-12-box-way-vertical-machining-center-323.html" title="T-12 Box way Vertical Machining Center"><img class="img-responsive" src="http://goldsuncnc.com.vn/files/products/t-12_35.jpg" alt="T-12 Box way Vertical Machining Center"></a>
-                                </div>
-                                <div class="title-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-12-box-way-vertical-machining-center-323.html" title="T-12 Box way Vertical Machining Center">T-12 Box way Vertical Machining Center</a>
-                                </div>
-                            </div></div><div class="prd"><div class="prd-in">
-                                <div class="img-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-11-box-way-vertical-machining-center-324.html" title="T-11 Box way Vertical Machining Center"><img class="img-responsive" src="http://goldsuncnc.com.vn/files/products/t-12_74.jpg" alt="T-11 Box way Vertical Machining Center"></a>
-                                </div>
-                                <div class="title-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-11-box-way-vertical-machining-center-324.html" title="T-11 Box way Vertical Machining Center">T-11 Box way Vertical Machining Center</a>
-                                </div>
-                            </div></div><div class="prd"><div class="prd-in">
-                                <div class="img-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-v10-parts-machining-center-325.html" title="T-V10 Parts Machining Center"><img class="img-responsive" src="http://goldsuncnc.com.vn/files/products/t-v10_23.jpg" alt="T-V10 Parts Machining Center"></a>
-                                </div>
-                                <div class="title-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-v10-parts-machining-center-325.html" title="T-V10 Parts Machining Center">T-V10 Parts Machining Center</a>
-                                </div>
-                            </div></div><div class="prd"><div class="prd-in">
-                                <div class="img-prd">
-                                    <a href="http://goldsuncnc.com.vn/c-870-cnc-engravingmilling-machine-326.html" title="C-870 CNC Engraving&Milling Machine"><img class="img-responsive" src="http://goldsuncnc.com.vn/files/products/c-870_87.jpg" alt="C-870 CNC Engraving&Milling Machine"></a>
-                                </div>
-                                <div class="title-prd">
-                                    <a href="http://goldsuncnc.com.vn/c-870-cnc-engravingmilling-machine-326.html" title="C-870 CNC Engraving&Milling Machine">C-870 CNC Engraving&Milling Machine</a>
-                                </div>
-                            </div></div><div class="prd"><div class="prd-in">
-                                <div class="img-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-10l-line-rail-vertical-machining-center-327.html" title="T-10L Line Rail Vertical Machining Center"><img class="img-responsive" src="http://goldsuncnc.com.vn/files/products/t-10l_31.jpg" alt="T-10L Line Rail Vertical Machining Center"></a>
-                                </div>
-                                <div class="title-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-10l-line-rail-vertical-machining-center-327.html" title="T-10L Line Rail Vertical Machining Center">T-10L Line Rail Vertical Machining Center</a>
-                                </div>
-                            </div></div><div class="prd"><div class="prd-in">
-                                <div class="img-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-8l-line-rail-vertical-machining-center-328.html" title="T-8L Line Rail Vertical Machining Center"><img class="img-responsive" src="http://goldsuncnc.com.vn/files/products/t-8l_79.jpg" alt="T-8L Line Rail Vertical Machining Center"></a>
-                                </div>
-                                <div class="title-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-8l-line-rail-vertical-machining-center-328.html" title="T-8L Line Rail Vertical Machining Center">T-8L Line Rail Vertical Machining Center</a>
-                                </div>
-                            </div></div><div class="prd"><div class="prd-in">
-                                <div class="img-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-v6h-parts-machining-center-329.html" title="T-V6H Parts Machining Center"><img class="img-responsive" src="http://goldsuncnc.com.vn/files/products/t-v6he_33.jpg" alt="T-V6H Parts Machining Center"></a>
-                                </div>
-                                <div class="title-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-v6h-parts-machining-center-329.html" title="T-V6H Parts Machining Center">T-V6H Parts Machining Center</a>
-                                </div>
-                            </div></div><div class="prd"><div class="prd-in">
-                                <div class="img-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-v6-parts-machining-center-330.html" title="T-V6 Parts Machining Center"><img class="img-responsive" src="http://goldsuncnc.com.vn/files/products/t-v6he_80.jpg" alt="T-V6 Parts Machining Center"></a>
-                                </div>
-                                <div class="title-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-v6-parts-machining-center-330.html" title="T-V6 Parts Machining Center">T-V6 Parts Machining Center</a>
-                                </div>
-                            </div></div><div class="prd"><div class="prd-in">
-                                <div class="img-prd">
-                                    <a href="http://goldsuncnc.com.vn/c-760-cnc-engraving-and-milling-machine-331.html" title="C-760 CNC Engraving and Milling Machine"><img class="img-responsive" src="http://goldsuncnc.com.vn/files/products/c-760_34.jpg" alt="C-760 CNC Engraving and Milling Machine"></a>
-                                </div>
-                                <div class="title-prd">
-                                    <a href="http://goldsuncnc.com.vn/c-760-cnc-engraving-and-milling-machine-331.html" title="C-760 CNC Engraving and Milling Machine">C-760 CNC Engraving and Milling Machine</a>
-                                </div>
-                            </div></div><div class="prd"><div class="prd-in">
-                                <div class="img-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-10-box-way-vertical-machining-center-332.html" title="T-10 Box way Vertical Machining Center"><img class="img-responsive" src="http://goldsuncnc.com.vn/files/products/t-12_74.jpg" alt="T-10 Box way Vertical Machining Center"></a>
-                                </div>
-                                <div class="title-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-10-box-way-vertical-machining-center-332.html" title="T-10 Box way Vertical Machining Center">T-10 Box way Vertical Machining Center</a>
-                                </div>
-                            </div></div></div></div>	</div></div></div>
-
-    <div class="prd-home"><div class="container"><div class="row">
-                <div class="prd-cat">
-                    <div class="title-cat">Sản phẩm nổi bật</div>
-                    <div class="line"></div>
-                    <div class="slide-prd owl-theme"><div class="prd"><div class="prd-in">
-                                <div class="img-prd">
-                                    <a href="http://goldsuncnc.com.vn/c-650-cnc-engravingmilling-machine-339.html" title="C-650 CNC Engraving&Milling Machine"><img class="img-responsive" src="http://goldsuncnc.com.vn/files/products/c-650_97.jpg" alt="C-650 CNC Engraving&Milling Machine"></a>
-                                </div>
-                                <div class="title-prd">
-                                    <a href="http://goldsuncnc.com.vn/c-650-cnc-engravingmilling-machine-339.html" title="C-650 CNC Engraving&Milling Machine">C-650 CNC Engraving&Milling Machine</a>
-                                </div>
-                            </div></div><div class="prd"><div class="prd-in">
-                                <div class="img-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-500c-high-speed-tapping-center-338.html" title="T-500C High Speed Tapping Center"><img class="img-responsive" src="http://goldsuncnc.com.vn/files/products/t-500c_62.jpg" alt="T-500C High Speed Tapping Center"></a>
-                                </div>
-                                <div class="title-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-500c-high-speed-tapping-center-338.html" title="T-500C High Speed Tapping Center">T-500C High Speed Tapping Center</a>
-                                </div>
-                            </div></div><div class="prd"><div class="prd-in">
-                                <div class="img-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-500h-high-speed-tapping-center-337.html" title="T-500H High Speed Tapping Center"><img class="img-responsive" src="http://goldsuncnc.com.vn/files/products/t-500h_21.jpg" alt="T-500H High Speed Tapping Center"></a>
-                                </div>
-                                <div class="title-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-500h-high-speed-tapping-center-337.html" title="T-500H High Speed Tapping Center">T-500H High Speed Tapping Center</a>
-                                </div>
-                            </div></div><div class="prd"><div class="prd-in">
-                                <div class="img-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-600-high-speed-tapping-center-336.html" title="T-600 High Speed Tapping Center"><img class="img-responsive" src="http://goldsuncnc.com.vn/files/products/t-600_69.jpg" alt="T-600 High Speed Tapping Center"></a>
-                                </div>
-                                <div class="title-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-600-high-speed-tapping-center-336.html" title="T-600 High Speed Tapping Center">T-600 High Speed Tapping Center</a>
-                                </div>
-                            </div></div><div class="prd"><div class="prd-in">
-                                <div class="img-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-700-high-speed-tapping-center-335.html" title="T-700 High Speed Tapping Center"><img class="img-responsive" src="http://goldsuncnc.com.vn/files/products/t-700_24.jpg" alt="T-700 High Speed Tapping Center"></a>
-                                </div>
-                                <div class="title-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-700-high-speed-tapping-center-335.html" title="T-700 High Speed Tapping Center">T-700 High Speed Tapping Center</a>
-                                </div>
-                            </div></div><div class="prd"><div class="prd-in">
-                                <div class="img-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-11l-line-rail-vertical-machining-center-334.html" title="T-11L Line Rail Vertical Machining Center"><img class="img-responsive" src="http://goldsuncnc.com.vn/files/products/t-11l_73.jpg" alt="T-11L Line Rail Vertical Machining Center"></a>
-                                </div>
-                                <div class="title-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-11l-line-rail-vertical-machining-center-334.html" title="T-11L Line Rail Vertical Machining Center">T-11L Line Rail Vertical Machining Center</a>
-                                </div>
-                            </div></div><div class="prd"><div class="prd-in">
-                                <div class="img-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-12l-line-rail-vertical-machining-center-333.html" title="T-12L Line Rail Vertical Machining Center"><img class="img-responsive" src="http://goldsuncnc.com.vn/files/products/t-12l_29.jpg" alt="T-12L Line Rail Vertical Machining Center"></a>
-                                </div>
-                                <div class="title-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-12l-line-rail-vertical-machining-center-333.html" title="T-12L Line Rail Vertical Machining Center">T-12L Line Rail Vertical Machining Center</a>
-                                </div>
-                            </div></div><div class="prd"><div class="prd-in">
-                                <div class="img-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-13-box-way-vertical-machining-center-322.html" title="T-13 Box way Vertical Machining Center"><img class="img-responsive" src="http://goldsuncnc.com.vn/files/products/t-12_43.jpg" alt="T-13 Box way Vertical Machining Center"></a>
-                                </div>
-                                <div class="title-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-13-box-way-vertical-machining-center-322.html" title="T-13 Box way Vertical Machining Center">T-13 Box way Vertical Machining Center</a>
-                                </div>
-                            </div></div><div class="prd"><div class="prd-in">
-                                <div class="img-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-15-box-ways-vertical-machining-center-321.html" title="T-15 Box ways Vertical Machining Center"><img class="img-responsive" src="http://goldsuncnc.com.vn/files/products/t-16_98.jpg" alt="T-15 Box ways Vertical Machining Center"></a>
-                                </div>
-                                <div class="title-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-15-box-ways-vertical-machining-center-321.html" title="T-15 Box ways Vertical Machining Center">T-15 Box ways Vertical Machining Center</a>
-                                </div>
-                            </div></div><div class="prd"><div class="prd-in">
-                                <div class="img-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-16-box-ways-vertical-machining-center-320.html" title="T-16 Box ways Vertical Machining Center"><img class="img-responsive" src="http://goldsuncnc.com.vn/files/products/t-16_32.jpg" alt="T-16 Box ways Vertical Machining Center"></a>
-                                </div>
-                                <div class="title-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-16-box-ways-vertical-machining-center-320.html" title="T-16 Box ways Vertical Machining Center">T-16 Box ways Vertical Machining Center</a>
-                                </div>
-                            </div></div><div class="prd"><div class="prd-in">
-                                <div class="img-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-18-box-way-vertical-machining-center-319.html" title="T-18 Box way Vertical Machining Center"><img class="img-responsive" src="http://goldsuncnc.com.vn/files/products/t-18_80.jpg" alt="T-18 Box way Vertical Machining Center"></a>
-                                </div>
-                                <div class="title-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-18-box-way-vertical-machining-center-319.html" title="T-18 Box way Vertical Machining Center">T-18 Box way Vertical Machining Center</a>
-                                </div>
-                            </div></div><div class="prd"><div class="prd-in">
-                                <div class="img-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-11g-gear-head-vertical-machining-center-318.html" title="T-11G Gear Head Vertical Machining Center"><img class="img-responsive" src="http://goldsuncnc.com.vn/files/products/t-11g_05.jpg" alt="T-11G Gear Head Vertical Machining Center"></a>
-                                </div>
-                                <div class="title-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-11g-gear-head-vertical-machining-center-318.html" title="T-11G Gear Head Vertical Machining Center">T-11G Gear Head Vertical Machining Center</a>
-                                </div>
-                            </div></div><div class="prd"><div class="prd-in">
-                                <div class="img-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-500b-high-speed-tapping-center-317.html" title="T-500B High Speed Tapping Center"><img class="img-responsive" src="http://goldsuncnc.com.vn/files/products/t-500b_79.jpg" alt="T-500B High Speed Tapping Center"></a>
-                                </div>
-                                <div class="title-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-500b-high-speed-tapping-center-317.html" title="T-500B High Speed Tapping Center">T-500B High Speed Tapping Center</a>
-                                </div>
-                            </div></div><div class="prd"><div class="prd-in">
-                                <div class="img-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-v856-parts-machining-center-316.html" title="T-V856 Parts Machining Center"><img class="img-responsive" src="http://goldsuncnc.com.vn/files/products/t-v856_08.jpg" alt="T-V856 Parts Machining Center"></a>
-                                </div>
-                                <div class="title-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-v856-parts-machining-center-316.html" title="T-V856 Parts Machining Center">T-V856 Parts Machining Center</a>
-                                </div>
-                            </div></div><div class="prd"><div class="prd-in">
-                                <div class="img-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-8-box-way-vertical-machining-center-315.html" title="T-8 Box way Vertical Machining Center"><img class="img-responsive" src="http://goldsuncnc.com.vn/files/products/t8_42.jpg" alt="T-8 Box way Vertical Machining Center"></a>
-                                </div>
-                                <div class="title-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-8-box-way-vertical-machining-center-315.html" title="T-8 Box way Vertical Machining Center">T-8 Box way Vertical Machining Center</a>
-                                </div>
-                            </div></div><div class="prd"><div class="prd-in">
-                                <div class="img-prd">
-                                    <a href="http://goldsuncnc.com.vn/b-8004b-glass-engraving-machine-314.html" title="B-800/4B Glass Engraving Machine"><img class="img-responsive" src="http://goldsuncnc.com.vn/files/products/b-800-4b_90.jpg" alt="B-800/4B Glass Engraving Machine"></a>
-                                </div>
-                                <div class="title-prd">
-                                    <a href="http://goldsuncnc.com.vn/b-8004b-glass-engraving-machine-314.html" title="B-800/4B Glass Engraving Machine">B-800/4B Glass Engraving Machine</a>
-                                </div>
-                            </div></div><div class="prd"><div class="prd-in">
-                                <div class="img-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-500-high-speed-tapping-center-313.html" title="T-500 High Speed Tapping Center"><img class="img-responsive" src="http://goldsuncnc.com.vn/files/products/t500_41.jpg" alt="T-500 High Speed Tapping Center"></a>
-                                </div>
-                                <div class="title-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-500-high-speed-tapping-center-313.html" title="T-500 High Speed Tapping Center">T-500 High Speed Tapping Center</a>
-                                </div>
-                            </div></div></div></div>	</div></div></div>
-
-    <div class="news-home"><div class="container"><div class="row">
-                <div class="news-left col-xs-12 col-sm-12 col-md-5 col-lg-5">
-                    <div class="title-cat">Về chúng tôi</div>
-                    <div class="line"></div>		<div class="img-news-home">
-                        <a href="http://goldsuncnc.com.vn/ve-chung-toi/cong-ty-tnhh-may-moc-va-vat-tu-goldsun.html" title="Công ty TNHH Máy móc và Vật tư Goldsun"><img src="http://goldsuncnc.com.vn/files/news/2017_09/1499053023_07.jpg" alt="Công ty TNHH Máy móc và Vật tư Goldsun" class="img-responsive"></a>
-                    </div>
-                    <div class="title-news-home"><a href="http://goldsuncnc.com.vn/ve-chung-toi/cong-ty-tnhh-may-moc-va-vat-tu-goldsun.html" title="Công ty TNHH Máy móc và Vật tư Goldsun">Công ty TNHH Máy móc và Vật tư Goldsun</a></div>
-                    <div class="bottom-news-home">
-                        <p>
-                            Ch&uacute;ng t&ocirc;i l&agrave; Tập đo&agrave;n sản xuất Khu&ocirc;n mẫu v&agrave; Thiết bị CNC Goldsun - Quảng Ch&acirc;u - Trung Quốc, chuy&ecirc;n sản xuất c&aacute;c thiết bị ch&iacute;nh x&aacute;c, tự động ho&aacute;, thiết bị CNC phục vụ cho ngh&agrave;nh cơ kh&iacute; khu&ocirc;n mẫu n&oacute;i ri&ecirc;ng v&agrave; cơ kh&iacute; n&oacute;i chung với quy m&ocirc; lớn.&nbsp;</p>		</div>
-                    <div class="chitiet"><a href="http://goldsuncnc.com.vn/ve-chung-toi/cong-ty-tnhh-may-moc-va-vat-tu-goldsun.html" title="Công ty TNHH Máy móc và Vật tư Goldsun">[ Chi tiết ]</a></div>
-                </div>
-                <div class="news-center col-xs-12 col-sm-12 col-md-2 col-lg-2">
-
-                </div>
-                <div class="news-right col-xs-12 col-sm-12 col-md-5 col-lg-5">
-
-                    <div class="title-cat">Tin tức</div>
-                    <div class="line"></div>		<div class="newsest">
-                        <div class="date-news">
-                            <p class="p1"><span>25</span></p>
-                            <p class="p2"><span>09/2017</span></p>
-                        </div>
-                        <div class="title-newsest"><a href="http://goldsuncnc.com.vn/hau-mai/che-do-hau-mai-tu-goldsun.html" title="Chế độ hậu mãi từ GOLDSUN">Chế độ hậu mãi từ GOLDSUN</a></div>
-                        <div class="hometext"><p>
-                                <span style="text-align: justify;">C&oacute; mặt tại Việt Nam từ năm 1994, hiện nay, mạng lưới kh&aacute;ch h&agrave;ng của C&ocirc;ng ty ch&uacute;ng t&ocirc;i được trải rộng khắp từ miền Bắc tới miền Nam Việt Nam với hơn 1000 sản phẩm m&aacute;y c&aacute;c loại. Do đ&oacute;, để tiện phục vụ nhu cầu sản xuất v&agrave; giải quyết nhanh ch&oacute;ng c&aacute;c sự cố thiết bị, C&ocirc;ng ty ch&uacute;ng t&ocirc;i đ&atilde; lập Chi nh&aacute;nh C&ocirc;ng ty tại H&agrave; Nội, văn ph&ograve;ng đại diện tại T.P Hồ Ch&iacute; Minh, B&igrave;nh Dương. Tất cả c&aacute;c VPĐD C&ocirc;ng ty ch&uacute;ng t&ocirc;i lu&ocirc;n c&oacute; kỹ sư Trung Quốc thường trực 24/24 giờ để kịp thời khắc phục sự cố m&aacute;y của Qu&iacute; kh&aacute;ch h&agrave;ng cũng như hỗ trợ kh&aacute;ch h&agrave;ng về mặt kỹ thuật.</span></p></div>
-                    </div>
-                    <div class="newsest">
-                        <div class="date-news">
-                            <p class="p1"><span>17</span></p>
-                            <p class="p2"><span>09/2017</span></p>
-                        </div>
-                        <div class="title-newsest"><a href="http://goldsuncnc.com.vn/tin-tuc-su-kien/hoi-thao-ky-thuat-cong-nghe-cnc.html" title="Hội thảo kỹ thuật công nghệ CNC">Hội thảo kỹ thuật công nghệ CNC</a></div>
-                        <div class="hometext"><p>
-                                <span style="color: rgb(0, 0, 0); font-family: Arial, Helvetica, sans-serif; text-align: justify;">Ng&agrave;y 15/9/2010, tại trường Cao đẳng nghề kỹ thuật c&ocirc;ng nghiệp Việt Nam - H&agrave;n Quốc, TP.Vinh, đ&atilde; diễn ra hội thảo kỹ thuật c&ocirc;ng nghệ CNC trong sản xuất, đ&agrave;o tạo v&agrave; c&aacute;c phần mềm ứng dụng.</span></p></div>
-                    </div>
-                    <div class="newsest">
-                        <div class="date-news">
-                            <p class="p1"><span>17</span></p>
-                            <p class="p2"><span>09/2017</span></p>
-                        </div>
-                        <div class="title-newsest"><a href="http://goldsuncnc.com.vn/tin-tuc-su-kien/giao-trinh-cong-nghe-cnc.html" title="Giáo trình Công nghệ CNC">Giáo trình Công nghệ CNC</a></div>
-                        <div class="hometext"><p>
-                                <span style="color: rgb(0, 0, 0); font-family: Arial, Helvetica, sans-serif; text-align: justify;">CNC &ndash; viết tắt cho Computer(ized) Numerical(ly) Control(led) (điều khiển bằng m&aacute;y t&iacute;nh) &ndash; đề cập đến việc điều khiển bằng m&aacute;y t&iacute;nh c&aacute;c m&aacute;y m&oacute;c kh&aacute;c với mục đ&iacute;ch sản xuất (c&oacute; t&iacute;nh lập lại) c&aacute;c bộ phận kim kh&iacute; (hay c&aacute;c vật liệu kh&aacute;c) phức tạp, bằng c&aacute;ch sử dụng c&aacute;c chương tr&igrave;nh viết bằng k&iacute; hiệu chuy&ecirc;n biệt theo ti&ecirc;u chuẩn EIA-274-D, thường gọi l&agrave; m&atilde; G. CNC được ph&aacute;t triển cuối thập ni&ecirc;n 1940 đầu thập ni&ecirc;n 1950 ở ph&ograve;ng th&iacute; nghiệm Servomechanism của trường MIT.</span></p></div>
-                    </div>
-                </div>
-            </div></div></div>
-
-    <div class="partner"><div class="container">
-            <div class="title-cat">Đối tác</div>
-            <div class="line"></div>
-            <ul><li class="">
-                    <div class="you-wp">
-                        <a href="http://" title=""><img src="C:/Users/admin/Desktop/theme/assets/img/provider1.PNG" alt="1" class="img-responsive"></a>
-                    </div>
-                </li><li class="li-ou">
-                    <div class="you-wp">
-                        <a href="http://" title=""><img src="C:/Users/admin/Desktop/theme/assets/img/provider7.jpg" alt="2" class="img-responsive"></a>
-                    </div>
-                </li><li class="">
-                    <div class="you-wp">
-                        <a href="http://" title=""><img src="C:/Users/admin/Desktop/theme/assets/img/provider2.jpg" alt="3" class="img-responsive"></a>
-                    </div>
-                </li><li class="li-ou">
-                    <div class="you-wp">
-                        <a href="http://" title=""><img src="C:/Users/admin/Desktop/theme/assets/img/provider8.jpg" alt="4" class="img-responsive"></a>
-                    </div>
-                </li><li class="">
-                    <div class="you-wp">
-                        <a href="http://" title=""><img src="C:/Users/admin/Desktop/theme/assets/img/provider3.png" alt="5" class="img-responsive"></a>
-                    </div>
-                </li><li class="li-ou">
-                    <div class="you-wp">
-                        <a href="http://" title=""><img src="C:/Users/admin/Desktop/theme/assets/img/provider9.png" alt="6" class="img-responsive"></a>
-                    </div>
-                </li><li class="">
-                    <div class="you-wp">
-                        <a href="http://" title=""><img src="C:/Users/admin/Desktop/theme/assets/img/provider4.png" alt="7" class="img-responsive"></a>
-                    </div>
-                </li><li class="li-ou">
-                    <div class="you-wp">
-                        <a href="http://" title=""><img src="C:/Users/admin/Desktop/theme/assets/img/provider10.png" alt="8" class="img-responsive"></a>
-                    </div>
-                </li><li class="">
-                    <div class="you-wp">
-                        <a href="http://" title=""><img src="C:/Users/admin/Desktop/theme/assets/img/provider5.png" alt="9" class="img-responsive"></a>
-                    </div>
-                </li><li class="li-ou">
-                    <div class="you-wp">
-                        <a href="http://" title=""><img src="C:/Users/admin/Desktop/theme/assets/img/provider11.png" alt="10" class="img-responsive"></a>
-                    </div>
-                </li><li class="">
-                    <div class="you-wp">
-                        <a href="http://" title=""><img src="C:/Users/admin/Desktop/theme/assets/img/provider6.png" alt="11" class="img-responsive"></a>
-                    </div>
-                </li><li class="li-ou">
-                    <div class="you-wp">
-                        <a href="http://" title=""><img src="C:/Users/admin/Desktop/theme/assets/img/provider12.png" alt="12" class="img-responsive"></a>
-                    </div>
-                </li>	</ul>
+    <!-- /.content-wrapper -->
+    <footer class="main-footer">
+        <div class="pull-right hidden-xs">
+            <b>Version</b> 2.4.0
         </div>
-    </div></div>
+        <strong>Copyright &copy; 2014-2016 <a href="https://adminlte.io">Almsaeed Studio</a>.</strong> All rights
+        reserved.
+    </footer>
 
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+        <!-- Create the tabs -->
+        <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+            <li><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
+            <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
+        </ul>
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <!-- Home tab content -->
+            <div class="tab-pane" id="control-sidebar-home-tab">
+                <h3 class="control-sidebar-heading">Recent Activity</h3>
+                <ul class="control-sidebar-menu">
+                    <li>
+                        <a href="javascript:void(0)">
+                            <i class="menu-icon fa fa-birthday-cake bg-red"></i>
 
+                            <div class="menu-info">
+                                <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
 
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="assets/js/jquery.mmenu.js"></script>
-    <script type="text/javascript" src="assets/js/owl.carousel.js"></script>
-    <script type="text/javascript" src="assets/js/highslide-with-gallery.js"></script>
-    <script type="text/javascript" src="assets/js/colud_zoom_old.js"> </script>
+                                <p>Will be 23 on April 24th</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <i class="menu-icon fa fa-user bg-yellow"></i>
 
-    <script type="text/javascript">
+                            <div class="menu-info">
+                                <h4 class="control-sidebar-subheading">Frodo Updated His Profile</h4>
 
-        $(function() {
-            $('nav#menu').mmenu();
-        });
+                                <p>New phone +1(800)555-1234</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <i class="menu-icon fa fa-envelope-o bg-light-blue"></i>
 
+                            <div class="menu-info">
+                                <h4 class="control-sidebar-subheading">Nora Joined Mailing List</h4>
 
-        $('.slide-prd').owlCarousel({
-            loop: true,
-            margin: 0,
-            autoplay: true,
-            autoplayTimeout:3000,
-            autoplaySpeed: 600,
-            nav: false,
-            dots:false,
-            responsiveClass: true,
-            responsive: {
-                0: {
-                    items: 1,
-                },
-                399: {
-                    items: 2,
-                },
-                768: {
-                    items: 4,
-                },
-                991: {
-                    items: 5,
-                },
-                1200: {
-                    items: 6,
-                }
-            }
-        });
-    </script>
+                                <p>nora@example.com</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <i class="menu-icon fa fa-file-code-o bg-green"></i>
 
-    <script type="text/javascript">
-        hs.graphicsDir = 'http://goldsuncnc.com.vn/templates/Adoosite/images/graphics/';
-        hs.align = 'center';
-        hs.transitions = ['expand', 'crossfade'];
-        hs.fadeInOut = true;
-        hs.dimmingOpacity = 0.8;
-        hs.outlineType = 'rounded-white';
-        hs.captionEval = 'this.thumb.alt';
-        hs.marginBottom = 105;
-        hs.numberPosition = 'caption';
+                            <div class="menu-info">
+                                <h4 class="control-sidebar-subheading">Cron Job 254 Executed</h4>
 
+                                <p>Execution time 5 seconds</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <!-- /.control-sidebar-menu -->
 
-        hs.addSlideshow({
-            interval: 5000,
-            repeat: false,
-            useControls: true,
-            overlayOptions: {
-                className: 'text-controls',
-                position: 'bottom center',
-                relativeTo: 'viewport',
-                offsetY: -60
-            },
-            thumbstrip: {
-                position: 'bottom center',
-                mode: 'horizontal',
-                relativeTo: 'viewport'
-            }
-        });
-    </script>	<div class="contact-home"><div class="container"><div class="row">
-                <div class="title-cat">Thông tin liên hệ</div>
-                <div class="line line-2"></div>
-                <div class="col-contact col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                    <a href="http://goldsuncnc.com.vn/lien-he.html" title=""><img src="assets/img/c1.png" alt=""></a>
-                    <p class="title-contact">Địa chỉ</p>
-                    <p class="text-contact"><p>
-                        <strong>VPGD:</strong> Số nh&agrave; 11, Tổ 13 Khu An Lạc, Phường Cầu Diễn, Quận Nam Từ Li&ecirc;m, H&agrave; Nội</p>
-                    <p>
-                        <strong>Xưởng Sản Xuất:</strong> Km 12, Quốc lộ 32, Phường Ph&uacute;c Diễn, Q. Bắc Từ Li&ecirc;m, Tp. H&agrave; Nội</p>
-                    </p>
-                </div>
+                <h3 class="control-sidebar-heading">Tasks Progress</h3>
+                <ul class="control-sidebar-menu">
+                    <li>
+                        <a href="javascript:void(0)">
+                            <h4 class="control-sidebar-subheading">
+                                Custom Template Design
+                                <span class="label label-danger pull-right">70%</span>
+                            </h4>
 
-                <div class="col-contact col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                    <a href="http://goldsuncnc.com.vn/lien-he.html" title=""><img src="assets/img/c2.png" alt=""></a>
-                    <p class="title-contact">Điện thoại</p>
-                    <p class="text-contact">Tel: 024.37.87.20.35 - HotLine: 0904.121.830</p>
-                </div>
+                            <div class="progress progress-xxs">
+                                <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <h4 class="control-sidebar-subheading">
+                                Update Resume
+                                <span class="label label-success pull-right">95%</span>
+                            </h4>
 
-                <div class="col-contact col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                    <a href="http://goldsuncnc.com.vn/lien-he.html" title=""><img src="assets/img/c3.png" alt=""></a>
-                    <p class="title-contact">Email</p>
-                    <p class="text-contact">goldsunvn.cnc@gmail.com  </p>
-                </div>
-            </div></div></div>
-</section>
-<footer>
-    <div class="footmsg"><div class="container"><div class="row">
-                <div class="info col-xs-6 col-sm-6 col-md-4 col-lg-4">
-                    <p class="title-ft">Liên hệ với chúng tôi</p>
-                    <div class="phone-ft">
-                        <a href="tel:Tel: 024.37.87.20.35 - HotLine: 0904.121.830" title="">Tel: 024.37.87.20.35 - HotLine: 0904.121.830</a>
+                            <div class="progress progress-xxs">
+                                <div class="progress-bar progress-bar-success" style="width: 95%"></div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <h4 class="control-sidebar-subheading">
+                                Laravel Integration
+                                <span class="label label-warning pull-right">50%</span>
+                            </h4>
+
+                            <div class="progress progress-xxs">
+                                <div class="progress-bar progress-bar-warning" style="width: 50%"></div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <h4 class="control-sidebar-subheading">
+                                Back End Framework
+                                <span class="label label-primary pull-right">68%</span>
+                            </h4>
+
+                            <div class="progress progress-xxs">
+                                <div class="progress-bar progress-bar-primary" style="width: 68%"></div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <!-- /.control-sidebar-menu -->
+
+            </div>
+            <!-- /.tab-pane -->
+            <!-- Stats tab content -->
+            <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
+            <!-- /.tab-pane -->
+            <!-- Settings tab content -->
+            <div class="tab-pane" id="control-sidebar-settings-tab">
+                <form method="post">
+                    <h3 class="control-sidebar-heading">General Settings</h3>
+
+                    <div class="form-group">
+                        <label class="control-sidebar-subheading">
+                            Report panel usage
+                            <input type="checkbox" class="pull-right" checked>
+                        </label>
+
+                        <p>
+                            Some information about this general settings option
+                        </p>
                     </div>
-                    <div class="social">
-                        <a href="https://www.facebook.com/cncgiacongtrungtam/" title="" target="_blank"><img src="assets/img/f1.png" alt=""></a>
-                        <a href="#" title="" target="_blank"><img src="assets/img/f2.png" alt=""></a>
-                        <a href="https://twitter.com/goldsunvn001" title="" target="_blank"><img src="assets/img/f3.png" alt=""></a>
-                        <a href="#" title="" target="_blank"><img src="assets/img/f6.png" alt=""></a>
-                        <a href="#" title="" target="_blank"><img src="assets/img/f7.png" alt=""></a>
-                        <a href="#" title="" target="_blank"><img src="assets/img/f8.png" alt=""></a>
+                    <!-- /.form-group -->
+
+                    <div class="form-group">
+                        <label class="control-sidebar-subheading">
+                            Allow mail redirect
+                            <input type="checkbox" class="pull-right" checked>
+                        </label>
+
+                        <p>
+                            Other sets of options are available
+                        </p>
                     </div>
-                </div>
-                <div class="col-menui col-xs-6 col-sm-3 col-md-2 col-lg-2">
-                    <p class="title-ft">Danh mục sản phẩm</p>
-                    <ul>
-                        <li><a href="index.php?f=products&do=categories&id=177" title="Máy CNC">Máy CNC</a></li><li><a href="index.php?f=products&do=categories&id=178" title="Máy Công Cụ">Máy Công Cụ</a></li><li><a href="#" title="Máy móc Thiết bị khác">Máy móc Thiết bị khác</a></li><li><a href="#" title="Vật Tư Linh Kiện">Vật Tư Linh Kiện</a></li>	 		</ul>
-                </div>	 	<div class="col-menui col-xs-6 col-sm-3 col-md-2 col-lg-2">
-                    <p class="title-ft">Dịch Vụ</p>
-                    <ul>
-                        <li><a href="#" title="Chế độ hậu mãi">Chế độ hậu mãi</a></li>	 		</ul>
-                </div>	 	<div class="col-menui col-xs-6 col-sm-3 col-md-2 col-lg-2">
-                    <p class="title-ft">Tin tức & Sự kiện</p>
-                    <ul>
-                        <li><a href="#" title="2017">2017</a></li><li><a href="#" title="2016">2016</a></li><li><a href="#" title="2015">2015</a></li><li><a href="#" title="2014">2014</a></li>	 		</ul>
-                </div>	 	<div class="col-menui col-xs-6 col-sm-3 col-md-2 col-lg-2">
-                    <p class="title-ft">Liên hệ</p>
-                    <ul>
-                        <li><a href="#" title="Thông tin liên hệ">Thông tin liên hệ</a></li><li><a href="#" title="Hỗ trợ trực tuyến">Hỗ trợ trực tuyến</a></li>	 		</ul>
-                </div>		</div></div></div>
+                    <!-- /.form-group -->
 
-    <div class="sent-mail"><div class="container">
-            <p>Goldsun CNC CO., LTD © Copyright 2017 All Rights Reserved</p>
-        </div></div>
+                    <div class="form-group">
+                        <label class="control-sidebar-subheading">
+                            Expose author name in posts
+                            <input type="checkbox" class="pull-right" checked>
+                        </label>
 
-</footer>
+                        <p>
+                            Allow the user to show his name in blog posts
+                        </p>
+                    </div>
+                    <!-- /.form-group -->
+
+                    <h3 class="control-sidebar-heading">Chat Settings</h3>
+
+                    <div class="form-group">
+                        <label class="control-sidebar-subheading">
+                            Show me as online
+                            <input type="checkbox" class="pull-right" checked>
+                        </label>
+                    </div>
+                    <!-- /.form-group -->
+
+                    <div class="form-group">
+                        <label class="control-sidebar-subheading">
+                            Turn off notifications
+                            <input type="checkbox" class="pull-right">
+                        </label>
+                    </div>
+                    <!-- /.form-group -->
+
+                    <div class="form-group">
+                        <label class="control-sidebar-subheading">
+                            Delete chat history
+                            <a href="javascript:void(0)" class="text-red pull-right"><i class="fa fa-trash-o"></i></a>
+                        </label>
+                    </div>
+                    <!-- /.form-group -->
+                </form>
+            </div>
+            <!-- /.tab-pane -->
+        </div>
+    </aside>
+    <!-- /.control-sidebar -->
+    <!-- Add the sidebar's background. This div must be placed
+         immediately after the control sidebar -->
+    <div class="control-sidebar-bg"></div>
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery 3 -->
+<script src="{{asset('backend/bower_components/jquery/dist/jquery.min.js')}}"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="{{asset('backend/bower_components/jquery-ui/jquery-ui.min.js')}}"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+    $.widget.bridge('uibutton', $.ui.button);
+</script>
+<!-- Bootstrap 3.3.7 -->
+<script src="{{asset('backend/bower_components/bootstrap/dist/js/bootstrap.min.js')}}"></script>
+<!-- Morris.js charts -->
+<script src="{{asset('backend/bower_components/raphael/raphael.min.js')}}"></script>
+<script src="{{asset('backend/bower_components/morris.js/morris.min.js')}}"></script>
+<!-- Sparkline -->
+<script src="{{asset('backend/bower_components/jquery-sparkline/dist/jquery.sparkline.min.js')}}"></script>
+<!-- jvectormap -->
+<script src="{{asset('backend/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js')}}"></script>
+<script src="{{asset('backend/plugins/jvectormap/jquery-jvectormap-world-mill-en.js')}}"></script>
+<!-- jQuery Knob Chart -->
+<script src="{{asset('backend/bower_components/jquery-knob/dist/jquery.knob.min.js')}}"></script>
+<!-- daterangepicker -->
+<script src="{{asset('backend/bower_components/moment/min/moment.min.js')}}"></script>
+<script src="{{asset('backend/bower_components/bootstrap-daterangepicker/daterangepicker.js')}}"></script>
+<!-- datepicker -->
+<script src="{{asset('backend/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js')}}"></script>
+<!-- Bootstrap WYSIHTML5 -->
+<script src="{{asset('backend/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js')}}"></script>
+<!-- Slimscroll -->
+<script src="{{asset('backend/bower_components/jquery-slimscroll/jquery.slimscroll.min.js')}}"></script>
+<!-- FastClick -->
+<script src="{{asset('backend/bower_components/fastclick/lib/fastclick.js')}}"></script>
+<!-- AdminLTE App -->
+<script src="{{asset('backend/dist/js/adminlte.min.js')}}"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+{{--<script src="{{asset('backend/dist/js/pages/dashboard.js')}}"></script>--}}
+<!-- AdminLTE for demo purposes -->
+<script src="{{asset('backend/dist/js/demo.js')}}"></script>
+@yield('script')
+</body>
+</html>

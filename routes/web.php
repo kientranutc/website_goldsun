@@ -21,3 +21,18 @@ Route::group(['middleware' => 'localization'], function() {
         'uses' => 'Frontend\HomeController@index'
     ]);
 });
+Route::get('/dang-nhap',[
+   'as' => 'auth.login',
+   'uses' => 'Backend\AuthController@login'
+]);
+/**
+ * ------------------------------------Backend-------------------------------
+ */
+
+Route::prefix('admin')->group(function () {
+    Route::get('/dashboard',[
+        'as'=>'dashboard.index',
+        'uses' => 'Backend\DashboardController@index'
+    ]);
+});
+
