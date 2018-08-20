@@ -25,6 +25,10 @@ Route::get('/dang-nhap',[
    'as' => 'auth.login',
    'uses' => 'Backend\AuthController@login'
 ]);
+Route::post('/dang-nhap',[
+    'as' => 'auth.post-login',
+    'uses' => 'Backend\AuthController@processLogin'
+]);
 /**
  * ------------------------------------Backend-------------------------------
  */
@@ -34,5 +38,11 @@ Route::prefix('admin')->group(function () {
         'as'=>'dashboard.index',
         'uses' => 'Backend\DashboardController@index'
     ]);
+    Route::get('/logout',[
+        'as'=>'auth.logout',
+        'uses' => 'Backend\AuthController@logout'
+    ]);
+
+
 });
 

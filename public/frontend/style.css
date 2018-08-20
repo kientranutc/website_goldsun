@@ -318,11 +318,12 @@ a.right.carousel-control {
     right:0px;
     background: url(assets/img/about-pic-bottom.png) no-repeat top left;
 }
-.img-prd{
+.img-prd {
     overflow: hidden;
     position: relative;
-    height: 188px;
+    height: auto;
     background: #ffffff;
+    margin-right: 3px;
 }
 .prd{
     margin-bottom: 25px;

@@ -34,16 +34,23 @@
     </div>
     <!-- /.login-logo -->
     <div class="login-box-body">
-        <p class="login-box-msg">Quản trị website goldsuncnc</p>
-
-        <form action="../../index2.html" method="post">
-            <div class="form-group has-feedback">
-                <input type="email" class="form-control" placeholder="Email">
+        @if($errors->any())
+            <p class="text-center text-danger"><strong>
+                    {{$errors->first()}}</strong></p>
+        @else
+            <p class="login-box-msg">Đăng nhập vào hệ thống nạp thẻ</p>
+        @endif
+        <form action="{{URL::route('auth.post-login')}}" method="post">
+            {{csrf_field()}}
+            <div class="form-group has-feedback {{($errors->has('email'))?"has-error":""}}">
+                <input type="text" class="form-control" name="email" value="{{old('email')}}" placeholder="Email">
                 <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                <p class="text-danger">{{$errors->first('email')}}</p>
             </div>
-            <div class="form-group has-feedback">
-                <input type="password" class="form-control" placeholder="Password">
+            <div class="form-group has-feedback {{($errors->has('password'))?"has-error":""}}">
+                <input type="password" class="form-control" name="password" placeholder="Password">
                 <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                <p class="text-danger">{{$errors->first('password')}}</p>
             </div>
             <div class="row">
                 <div class="col-xs-8">
@@ -60,10 +67,9 @@
                 <!-- /.col -->
             </div>
         </form>
-
         <!-- /.social-auth-links -->
 
-        <a href="#">Quên mật khẩu</a><br>
+        <a href="" data-toggle="modal" data-target="#forgetModal">Quên mật khẩu</a><br>
 
     </div>
     <!-- /.login-box-body -->
