@@ -33,16 +33,20 @@ Route::post('/dang-nhap',[
  * ------------------------------------Backend-------------------------------
  */
 
-Route::prefix('admin')->group(function () {
-    Route::get('/dashboard',[
-        'as'=>'dashboard.index',
-        'uses' => 'Backend\DashboardController@index'
-    ]);
-    Route::get('/logout',[
-        'as'=>'auth.logout',
-        'uses' => 'Backend\AuthController@logout'
-    ]);
+Route::group(['middleware' => 'checkLogin'], function() {
+    Route::prefix('admin')->group(function () {
+        Route::get('/dashboard', [
+            'as' => 'dashboard.index',
+            'uses' => 'Backend\DashboardController@index'
+        ]);
+        Route::get('/logout', [
+            'as' => 'auth.logout',
+            'uses' => 'Backend\AuthController@logout'
+        ]);
+        Route::prefix('/san-pham')->group(function () {
 
+        });
 
+    });
 });
 
