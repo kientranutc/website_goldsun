@@ -43,8 +43,28 @@ Route::group(['middleware' => 'checkLogin'], function() {
             'as' => 'auth.logout',
             'uses' => 'Backend\AuthController@logout'
         ]);
+        //san pham
         Route::prefix('/san-pham')->group(function () {
 
+        });
+        //danh muc
+        Route::prefix('/danh-muc')->group(function () {
+
+        });
+        //banner
+        Route::prefix('/banner')->group(function () {
+            Route::get('/index', [
+                'as' => 'banner.index',
+                'uses' => 'Backend\BannerController@index'
+            ]);
+            Route::get('/add', [
+                'as' => 'banner.add',
+                'uses' => 'Backend\BannerController@add'
+            ]);
+            Route::post('/add', [
+                'as' => 'banner.post-add',
+                'uses' => 'Backend\BannerController@processAdd'
+            ]);
         });
 
     });

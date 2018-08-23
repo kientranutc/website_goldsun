@@ -18,7 +18,7 @@ class CheckLogin
         if (\Auth::check()){
             return $next($request);
         } else {
-            return redirect()->route('dashboard.index');
+            return redirect('/dang-nhap');
         }
     }
 }
