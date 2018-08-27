@@ -66,7 +66,9 @@
         $(document).ready(function () {
             //get image default
             var images=$('#image-input').val();
-            $('#image').attr('src', images);
+            if (images!='') {
+                $('#image').attr('src', images);
+            }
             // choose image
             $(document).on('click', '#image', function () {
                $('#imageModal').modal('show');

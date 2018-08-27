@@ -49,7 +49,26 @@ Route::group(['middleware' => 'checkLogin'], function() {
         });
         //danh muc
         Route::prefix('/danh-muc')->group(function () {
-
+            Route::get('/', [
+                'as' => 'category.index',
+                'uses' => 'Backend\CategoryController@index'
+            ]);
+            Route::get('/add', [
+                'as' => 'category.add',
+                'uses' => 'Backend\CategoryController@add'
+            ]);
+            Route::get('/delete/{id}', [
+                'as' => 'category.delete',
+                'uses' => 'Backend\CategoryController@delete'
+            ]);
+            Route::get('/edit/{id}', [
+                'as' => 'category.edit',
+                'uses' => 'Backend\CategoryController@edit'
+            ]);
+            Route::post('/add', [
+                'as' => 'category.post-add',
+                'uses' => 'Backend\CategoryController@processAdd'
+            ]);
         });
         //banner
         Route::prefix('/banner')->group(function () {
