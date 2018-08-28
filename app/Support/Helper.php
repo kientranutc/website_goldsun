@@ -7,7 +7,7 @@ class Helper{
             $id = $val["id"];
             $name = $val["name_vi"];
             if ($val["parent_id"] == $parent){
-                if ($id == $select) {
+                if ($id == $parent) {
                     echo "<option value='$id' selected='selected'>$str $name </option>";
                 }else{
                     echo "<option value='$id'> $str $name</option>";
@@ -20,8 +20,9 @@ class Helper{
     public function parentMulti($data,$select,$parent = 0, $str="--"){
         foreach ($data as $val ){
             $id = $val["id"];
-            $name = $val["categories"];
+            $name = $val["name_vi"];
             if ($val["parent_id"] == $parent){
+
                 if ($id == $select) {
                     echo "<option value='$id' selected='selected'>$str $name </option>";
                 }else{

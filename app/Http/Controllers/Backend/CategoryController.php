@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Requests\CreateCategoryRequest;
+use App\Http\Requests\UpdateCategoryRequest;
 use App\Models\Category;
 use App\Support\Helper;
 use Illuminate\Http\Request;
@@ -16,7 +17,7 @@ class CategoryController extends Controller
 
     public function  index()
     {
-        $dataCategory = Category::all();
+        $dataCategory = Category::orderBy('parent_id','ASC')->get();
         $data = [];
         foreach ($dataCategory as $item) {
             $aaRow = $item->toArray();
@@ -76,5 +77,31 @@ class CategoryController extends Controller
         $dataEdit = Category::find($id);
         $dataCategory = Category::all()->toArray();
         return view("backend.page.category.edit", compact('helper', 'dataCategory','dataEdit'));
+    }
+
+    public function processEdit(UpdateCategoryRequest $request, $id)
+    {
+        $dataRequest = $request->except('_token');
+        $category =  Category::find($id);
+        if (isset($dataRequest['image'])) {
+            $category->image = $dataRequest['image'];
+        }
+        if (isset($dataRequest['name_en'])) {
+            $category->name_en = $dataRequest['name_en'];
+        }
+        if (isset($dataRequest['name_vi'])) {
+            $category->name_vi = $dataRequest['name_vi'];
+        }
+        if (isset($dataRequest['parent_id'])) {
+            $category->parent_id = $dataRequest['parent_id'];
+        }
+        if (isset($dataRequest['active'])) {
+            $category->active = $dataRequest['active'];
+        }
+        if ($category->save()) {
+            return redirect()->route('category.index')->with('success', 'Cập nhật danh mục thành công !');
+        } else {
+            return redirect()->back()->withErrors('Lỗi cập nhật danh mục');
+        }
     }
 }

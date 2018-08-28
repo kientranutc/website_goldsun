@@ -45,7 +45,18 @@ Route::group(['middleware' => 'checkLogin'], function() {
         ]);
         //san pham
         Route::prefix('/san-pham')->group(function () {
-
+            Route::get('/', [
+                'as' => 'product.index',
+                'uses' => 'Backend\ProductController@index'
+            ]);
+            Route::get('/them-moi', [
+                'as' => 'product.add',
+                'uses' => 'Backend\ProductController@add'
+            ]);
+            Route::post('/them-moi', [
+                'as' => 'product.post-add',
+                'uses' => 'Backend\ProductController@processAdd'
+            ]);
         });
         //danh muc
         Route::prefix('/danh-muc')->group(function () {
@@ -64,6 +75,10 @@ Route::group(['middleware' => 'checkLogin'], function() {
             Route::get('/edit/{id}', [
                 'as' => 'category.edit',
                 'uses' => 'Backend\CategoryController@edit'
+            ]);
+            Route::post('/edit/{id}', [
+                'as' => 'category.post-edit',
+                'uses' => 'Backend\CategoryController@processEdit'
             ]);
             Route::post('/add', [
                 'as' => 'category.post-add',

@@ -14,7 +14,7 @@
                     </div>
                     <!-- /.box-header -->
                     <!-- form start -->
-                    <form role="form" action="{{URL::route('category.post-add')}}" method="post">
+                    <form role="form" action="{{URL::route('category.post-edit',['id'=>$dataEdit->id])}}" method="post">
                         {{csrf_field()}}
                         <div class="box-body">
                             <label for="exampleInputPassword1">Ảnh danh mục</label>
@@ -43,7 +43,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group {{($errors->has('parent_id'))?"has-error":""}}">
                                         <label for="exampleInputPassword1">Danh mục (Cha/con)</label>
-                                        <select name="parent_id" id="parent_id" class="form-control">
+                                        <select disabled name="parent_id" id="parent_id" class="form-control">
                                             <option value="">Chọn danh muc(cha/con)</option>
                                             {{$helper->parent($dataCategory, $dataEdit->id)}}
                                         </select>
@@ -77,7 +77,7 @@
                         <!-- /.box-body -->
 
                         <div class="box-footer">
-                            <button type="submit" class="btn btn-primary">Thêm mới</button>
+                            <button type="submit" class="btn btn-primary">Cập nhật</button>
                         </div>
                     </form>
                 </div>
