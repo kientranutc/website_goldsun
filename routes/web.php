@@ -35,7 +35,7 @@ Route::post('/dang-nhap',[
 
 Route::group(['middleware' => 'checkLogin'], function() {
     Route::prefix('admin')->group(function () {
-        Route::get('/dashboard', [
+        Route::get('/thong-ke-chung', [
             'as' => 'dashboard.index',
             'uses' => 'Backend\DashboardController@index'
         ]);
@@ -56,6 +56,22 @@ Route::group(['middleware' => 'checkLogin'], function() {
             Route::post('/them-moi', [
                 'as' => 'product.post-add',
                 'uses' => 'Backend\ProductController@processAdd'
+            ]);
+            Route::get('/sua/{id}', [
+                'as' => 'product.edit',
+                'uses' => 'Backend\ProductController@edit'
+            ]);
+            Route::post('/sua/{id}', [
+                'as' => 'product.post-edit',
+                'uses' => 'Backend\ProductController@processEdit'
+            ]);
+            Route::get('/xoa/{id}', [
+                'as' => 'product.delete',
+                'uses' => 'Backend\ProductController@delete'
+            ]);
+            Route::get('/chi-tiet/{id}', [
+                'as' => 'product.detail',
+                'uses' => 'Backend\ProductController@showDetail'
             ]);
         });
         //danh muc
@@ -98,6 +114,38 @@ Route::group(['middleware' => 'checkLogin'], function() {
             Route::post('/add', [
                 'as' => 'banner.post-add',
                 'uses' => 'Backend\BannerController@processAdd'
+            ]);
+        });
+        // news
+
+        Route::prefix('/tin-tuc')->group(function () {
+            Route::get('/', [
+                'as' => 'news.index',
+                'uses' => 'Backend\NewsController@index'
+            ]);
+            Route::get('/them-moi', [
+                'as' => 'news.add',
+                'uses' => 'Backend\NewsController@add'
+            ]);
+            Route::get('/sua/{id}', [
+                'as' => 'news.edit',
+                'uses' => 'Backend\NewsController@edit'
+            ]);
+            Route::post('/sua/{id}', [
+                'as' => 'news.post-edit',
+                'uses' => 'Backend\NewsController@processEdit'
+            ]);
+            Route::post('/them-moi', [
+                'as' => 'news.post-add',
+                'uses' => 'Backend\NewsController@processAdd'
+            ]);
+            Route::get('/xoa/{id}', [
+                'as' => 'news.delete',
+                'uses' => 'Backend\NewsController@delete'
+            ]);
+            Route::get('/chi-tiet/{id}', [
+                'as' => 'news.detail',
+                'uses' => 'Backend\NewsController@showDetail'
             ]);
         });
 

@@ -2,6 +2,9 @@
 @section('title')
   Dashboard
 @stop
+@section('header')
+    Tổng hợp chung
+@stop
 @section('content')
 <!-- Small boxes (Stat box) -->
 <div class="row">

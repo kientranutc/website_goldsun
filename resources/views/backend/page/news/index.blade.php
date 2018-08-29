@@ -8,10 +8,10 @@
             <div class="col-xs-12">
                 <div class="box">
                     <div class="box-header">
-                        <a href="{{URL::route('product.add')}}" class="btn btn-success">Thêm mới</a>
+                        <a href="{{URL::route('news.add')}}" class="btn btn-success">Thêm mới</a>
                         <br>
                         <br>
-                        <h3 class="box-title">Danh sách sản phẩm</h3>
+                        <h3 class="box-title">Danh sách tin tức</h3>
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
@@ -19,25 +19,23 @@
                             <thead>
                             <tr>
                                 <th>STT</th>
-                                <th>Tên sản phẩm(Tiếng việt)</th>
-                                <th>Tên sản phẩm(Tiếng anh)</th>
-                                <th>Tên danh mục</th>
+                                <th>Tiêu đề (Tiếng việt)</th>
+                                <th>Tiêu đề(Tiếng anh)</th>
                                 <th>Ảnh</th>
                                 <th>Trạng thái</th>
-                                <th>Nội dung</th>
+                                <td>Nội dung</td>
                                 <th>Ngày tạo</th>
                                 <th></th>
                             </tr>
                             </thead>
                             <tbody>
-                            @forelse($product as $item)
+                            @forelse($news as $item)
                                 <tr>
                                     <td>
                                         {{$item->id}}
                                     </td>
                                     <td>{{$item->name_vi}}</td>
                                     <td>{{$item->name_en}}</td>
-                                    <td>{{$category->getCategory($item->category_id)}}</td>
                                     <td><img src="{{$item->image}}" alt="" width="70px" height="70px"></td>
                                     <td class="text-center">
                                         @if($item['active']==1)
@@ -51,8 +49,9 @@
                                     </td>
                                     <td><b> {{$item['created_at']}}</b></td>
                                     <td class="text-center">
-                                        <a href="{{URL::route('product.edit',['id'=>$item['id']])}}" title="sửa" class="btn btn-primary"><i class="fa fa-refresh"></i> Sửa</a>
-                                        <a href="{{URL::route('product.delete',['id'=>$item['id']])}}" onclick="return confirm('Bạn có muốn xóa sản phẩm này không ?');" title="Xóa" class="btn btn-danger"><i class="fa fa-trash"></i> Xóa</a>
+                                        <a href="{{URL::route('news.edit',['id'=>$item['id']])}}" title="sửa" class="btn btn-primary"><i class="fa fa-refresh"></i> Sửa</a>
+                                        <a href="{{URL::route('news.delete',['id'=>$item['id']])}}" onclick="return confirm('Bạn có muốn xóa tin tức này không ?');" title="Xóa" class="btn btn-danger"><i class="fa fa-trash"></i> Xóa</a>
+
                                     </td>
                                 </tr>
                             @empty
@@ -73,8 +72,8 @@
         $(function () {
 
             $(document).on('click', '.show-description', function () {
-               var id = $(this).data('id');
-               $('#modalDescription').modal('show').find('.content-change').load("/admin/san-pham/chi-tiet/"+id);
+                var id = $(this).data('id');
+                $('#modalDescription').modal('show').find('.content-change').load("/admin/tin-tuc/chi-tiet/"+id);
             });
             $('#example2').DataTable({
                 pagingType: "full_numbers",

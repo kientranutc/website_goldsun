@@ -47,6 +47,16 @@ class Helper{
             }
         }
     }
+    public function showCategory($data, $parent = 0, $str="--|"){
+        foreach ($data as $val ){
+            $id = $val["id"];
+            $name = $val["name_vi"];
+            if ($val["parent_id"] == $parent){
+                echo "<option value='$id'> $str $name</option>";
+                $this->showCategory($data,$id,$str."--|");
+            }
+        }
+    }
     public function parentAddMulti($data, $parent = 0, $str="--"){
         foreach ($data as $val ){
             $id = $val["id"];

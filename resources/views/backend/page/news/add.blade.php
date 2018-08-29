@@ -6,13 +6,13 @@
     <section class="content">
         <div class="row">
             <!-- form start -->
-            <form role="form" action="{{URL::route('product.post-add')}}" method="post">
+            <form role="form" action="{{URL::route('news.post-add')}}" method="post">
             <!-- left column -->
-            <div class="col-md-9">
+            <div class="col-md-12">
                 <!-- general form elements -->
                 <div class="box box-primary">
                     <div class="box-header with-border">
-                        <h3 class="box-title">Thêm mới sản phẩm</h3>
+                        <h3 class="box-title">Thêm mới tin tức</h3>
                     </div>
                     <!-- /.box-header -->
                         {{csrf_field()}}
@@ -20,22 +20,22 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group {{($errors->has('name_en'))?"has-error":""}}">
-                                        <label for="exampleInputPassword1">Tên sản phẩm (Tiếng việt)</label>
-                                        <input type="text" name="name_en" value="{{old('name_en')}}" class="form-control" id="exampleInputPassword1" placeholder="Tên sản phẩm (Tiếng việt)">
+                                        <label for="exampleInputPassword1">Tiêu đề (Tiếng việt)</label>
+                                        <input type="text" name="name_en" value="{{old('name_en')}}" class="form-control" id="exampleInputPassword1" placeholder="Tiêu đề (Tiếng việt)">
                                         <p class="text-danger">{{$errors->first('name_en')}}</p>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group {{($errors->has('name_vi'))?"has-error":""}}">
-                                        <label for="exampleInputPassword1">Tên sản phẩm(Tiếng anh)</label>
-                                        <input type="text" name="name_vi" value="{{old('name_vi')}}" class="form-control" id="exampleInputPassword1" placeholder="Tên sản phẩm (Tiếng anh)">
+                                        <label for="exampleInputPassword1">Tiêu đề (Tiếng anh)</label>
+                                        <input type="text" name="name_vi" value="{{old('name_vi')}}" class="form-control" id="exampleInputPassword1" placeholder="Tiêu đề (Tiếng anh)">
                                         <p class="text-danger">{{$errors->first('name_vi')}}</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
-                                    <label for="exampleInputPassword1">Ảnh sản phẩm</label>
+                                    <label for="exampleInputPassword1">Ảnh tin tức</label>
                                     <div class="image-content">
                                         <p> <img src="{{asset('backend/img/image_empty.png')}}" style="cursor: pointer" width="100px" height="100px" title="click để thêm ảnh" id="image" alt=""></p>
                                         <input type="hidden" name="image" id="image-input" value="{{old('image')}}">
@@ -88,48 +88,6 @@
                         <div class="box-footer">
                             <button type="submit" class="btn btn-primary">Thêm mới</button>
                         </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <!-- general form elements -->
-                <div class="box box-primary">
-                    <div class="box-header with-border">
-                        <h3 class="box-title">Danh mục</h3>
-                    </div>
-                    <div class="box-body" style="overflow-y: scroll; height: 600px">
-                        <ul class="nav">
-                            @forelse($dataCategoryParentNull as $item)
-                            <li>
-                                <div class="form-group">
-                                    <label for="{{$item->id}}">
-                                        <input type="checkbox" name="category[]" {{(is_array(old('category'))&& in_array($item->id, old('category')))?"checked":""}} value="{{$item->id}}" id="{{$item->id}}" class="flat-red">
-                                        {{$item->name_vi}}
-                                    </label>
-                                </div>
-                            </li>
-                            <li>
-                                <ul class="nav" style="margin-left: 30px">
-                                    <?php
-                                    $dataChild = $category->getCategoryParent($item->id);
-
-                                    ?>
-                                    @forelse($dataChild as $val)
-                                    <li>
-                                        <div class="form-group">
-                                            <label for="{{$val->id}}">
-                                                <input type="checkbox" name="category[]"  {{( is_array(old('category'))&& in_array($val->id, old('category')))?"checked":""}}  id="{{$val->id}}" value="{{$val->id}}" class="flat-red" >
-                                                {{$val->name_vi}}
-                                            </label>
-                                        </div>
-                                    </li>
-                                        @empty
-                                        @endforelse
-                                </ul>
-                            </li>
-                            @empty
-                            @endforelse
-                        </ul>
-                    </div>
                 </div>
             </div>
             </form>

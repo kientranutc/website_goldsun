@@ -6,30 +6,30 @@
     <section class="content">
         <div class="row">
             <!-- form start -->
-            <form role="form" action="{{URL::route('product.post-add')}}" method="post">
-            <!-- left column -->
-            <div class="col-md-9">
-                <!-- general form elements -->
-                <div class="box box-primary">
-                    <div class="box-header with-border">
-                        <h3 class="box-title">Thêm mới sản phẩm</h3>
-                    </div>
-                    <!-- /.box-header -->
+            <form role="form" action="{{URL::route('news.post-edit', ["id"=>$dataEdit->id])}}" method="post">
+                <!-- left column -->
+                <div class="col-md-12">
+                    <!-- general form elements -->
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <h3 class="box-title">Sửa tin tức</h3>
+                        </div>
+                        <!-- /.box-header -->
                         {{csrf_field()}}
                         <div class="box-body">
                             <div class="row">
                                 <div class="col-md-6">
-                                    <div class="form-group {{($errors->has('name_en'))?"has-error":""}}">
+                                    <div class="form-group {{($errors->has('name_vi'))?"has-error":""}}">
                                         <label for="exampleInputPassword1">Tên sản phẩm (Tiếng việt)</label>
-                                        <input type="text" name="name_en" value="{{old('name_en')}}" class="form-control" id="exampleInputPassword1" placeholder="Tên sản phẩm (Tiếng việt)">
-                                        <p class="text-danger">{{$errors->first('name_en')}}</p>
+                                        <input type="text" name="name_vi" value="{{old('name_vi')?old('name_vi'):$dataEdit->name_vi}}" class="form-control" id="exampleInputPassword1" placeholder="Tên sản phẩm (Tiếng việt)">
+                                        <p class="text-danger">{{$errors->first('name_vi')}}</p>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <div class="form-group {{($errors->has('name_vi'))?"has-error":""}}">
+                                    <div class="form-group {{($errors->has('name_en'))?"has-error":""}}">
                                         <label for="exampleInputPassword1">Tên sản phẩm(Tiếng anh)</label>
-                                        <input type="text" name="name_vi" value="{{old('name_vi')}}" class="form-control" id="exampleInputPassword1" placeholder="Tên sản phẩm (Tiếng anh)">
-                                        <p class="text-danger">{{$errors->first('name_vi')}}</p>
+                                        <input type="text" name="name_en" value="{{old('name_en')?old('name_en'):$dataEdit->name_en}}" class="form-control" id="exampleInputPassword1" placeholder="Tên sản phẩm (Tiếng anh)">
+                                        <p class="text-danger">{{$errors->first('name_en')}}</p>
                                     </div>
                                 </div>
                             </div>
@@ -38,7 +38,7 @@
                                     <label for="exampleInputPassword1">Ảnh sản phẩm</label>
                                     <div class="image-content">
                                         <p> <img src="{{asset('backend/img/image_empty.png')}}" style="cursor: pointer" width="100px" height="100px" title="click để thêm ảnh" id="image" alt=""></p>
-                                        <input type="hidden" name="image" id="image-input" value="{{old('image')}}">
+                                        <input type="hidden" name="image" id="image-input" value="{{old('image')?old('image'):$dataEdit->image}}">
                                         <p class="text-danger">{{$errors->first('image')}}</p>
                                     </div>
                                 </div>
@@ -49,14 +49,14 @@
                                             <div class="col-md-2">
                                                 <div class="radio">
                                                     <label>
-                                                        <input type="radio" name="active" id="optionsRadios1" value="1" checked="">
+                                                        <input type="radio" name="active" {{($dataEdit->active==1)?"checked":""}} id="optionsRadios1" value="1" checked="">
                                                         Hiển thị
                                                     </label>
                                                 </div>
                                             </div>
                                             <div class="col-md-1">
                                                 <div class="radio">
-                                                    <label><input type="radio" name="actives" id="optionsRadios2" value="0">
+                                                    <label><input type="radio" {{($dataEdit->active==0)?"checked":""}} name="active" id="optionsRadios2" value="0">
                                                         Ẩn
                                                     </label>
                                                 </div>
@@ -70,7 +70,9 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label for="exampleInputPassword1">Nội dung (Tiếng việt)</label>
-                                    <textarea name="description_vi" class="form-control" id="description_vi" cols="30" rows="10">{{old('description_vi')}}</textarea>
+                                        <textarea name="description_vi" class="form-control" id="description_vi" cols="30" rows="10">
+                                            {{old('description_vi')?ld('description_vi'):$dataEdit->description_vi}}
+                                        </textarea>
                                     </div>
                                 </div>
                             </div>
@@ -78,7 +80,9 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label for="exampleInputPassword1">Nội dung(Tiếng anh)</label>
-                                    <textarea name="description_en" class="form-control" id="description_en" cols="30" rows="10">{{old('description_en')}}</textarea>
+                                        <textarea name="description_en" class="form-control" id="description_en" cols="30" rows="10">
+                                          {{old('description_en')?ld('description_en'):$dataEdit->description_en}}
+                                        </textarea>
                                     </div>
                                 </div>
                             </div>
@@ -86,52 +90,10 @@
                         <!-- /.box-body -->
 
                         <div class="box-footer">
-                            <button type="submit" class="btn btn-primary">Thêm mới</button>
+                            <button type="submit" class="btn btn-primary">Cập nhật</button>
                         </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <!-- general form elements -->
-                <div class="box box-primary">
-                    <div class="box-header with-border">
-                        <h3 class="box-title">Danh mục</h3>
-                    </div>
-                    <div class="box-body" style="overflow-y: scroll; height: 600px">
-                        <ul class="nav">
-                            @forelse($dataCategoryParentNull as $item)
-                            <li>
-                                <div class="form-group">
-                                    <label for="{{$item->id}}">
-                                        <input type="checkbox" name="category[]" {{(is_array(old('category'))&& in_array($item->id, old('category')))?"checked":""}} value="{{$item->id}}" id="{{$item->id}}" class="flat-red">
-                                        {{$item->name_vi}}
-                                    </label>
-                                </div>
-                            </li>
-                            <li>
-                                <ul class="nav" style="margin-left: 30px">
-                                    <?php
-                                    $dataChild = $category->getCategoryParent($item->id);
-
-                                    ?>
-                                    @forelse($dataChild as $val)
-                                    <li>
-                                        <div class="form-group">
-                                            <label for="{{$val->id}}">
-                                                <input type="checkbox" name="category[]"  {{( is_array(old('category'))&& in_array($val->id, old('category')))?"checked":""}}  id="{{$val->id}}" value="{{$val->id}}" class="flat-red" >
-                                                {{$val->name_vi}}
-                                            </label>
-                                        </div>
-                                    </li>
-                                        @empty
-                                        @endforelse
-                                </ul>
-                            </li>
-                            @empty
-                            @endforelse
-                        </ul>
                     </div>
                 </div>
-            </div>
             </form>
         </div>
 

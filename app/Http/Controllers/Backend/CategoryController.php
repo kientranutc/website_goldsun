@@ -54,9 +54,11 @@ class CategoryController extends Controller
         }
         if (isset($dataRequest['name_en'])) {
             $category->name_en = $dataRequest['name_en'];
+            $category->slug_en = str_slug($dataRequest['name_en'], '-');
         }
         if (isset($dataRequest['name_vi'])) {
             $category->name_vi = $dataRequest['name_vi'];
+            $category->slug_vi = str_slug($dataRequest['name_vi'], '-');
         }
         if (isset($dataRequest['parent_id'])) {
             $category->parent_id = $dataRequest['parent_id'];
@@ -88,9 +90,11 @@ class CategoryController extends Controller
         }
         if (isset($dataRequest['name_en'])) {
             $category->name_en = $dataRequest['name_en'];
+            $category->slug_en = str_slug($dataRequest['name_en'], '-');
         }
         if (isset($dataRequest['name_vi'])) {
             $category->name_vi = $dataRequest['name_vi'];
+            $category->slug_vi = str_slug($dataRequest['name_vi'], '-');
         }
         if (isset($dataRequest['parent_id'])) {
             $category->parent_id = $dataRequest['parent_id'];

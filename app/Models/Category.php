@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Support\Helper;
 use Illuminate\Database\Eloquent\Model;
 
 class Category extends Model
@@ -13,5 +14,15 @@ class Category extends Model
         return Category::where('active', 1)
                         ->where('parent_id', $id)
                         ->get();
+    }
+
+
+    public function getCategory($str)
+    {
+        $helper = new Helper();
+        $arr = explode(',', $str);
+        $category =  Category::whereIn('id', $arr)->get()->toArray();
+
+        return $helper->showCategory($category);
     }
 }
