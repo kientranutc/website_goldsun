@@ -33,7 +33,7 @@
     </div>
     <nav id="menu">
         <ul>
-            <li><a href="#">@lang('menu.home')</a></li>
+            <li><a href="/">@lang('menu.home')</a></li>
             <li><a href="{{URL::route('about-us.index')}}">@lang('menu.intro')</a></li>
             <li>
                 <a href="#">@lang('menu.product')</a>
@@ -108,7 +108,7 @@
                                 window.onload = setActive;
                             </script>
                             <ul class="nav navbar-nav">
-                                <li><a href="#">@lang('menu.home')</a></li>
+                                <li><a href="/">@lang('menu.home')</a></li>
                                 <li><a href="{{URL::route('about-us.index')}}">@lang('menu.intro')</a></li>
                                 <li class="dropdown">
                                     <a href="#">@lang('menu.product')</a>
@@ -156,7 +156,7 @@
                                     </ul>
                                 </li>
                                 <li class=""><a href="#">@lang('menu.news')</a></li>
-                                <li class=""><a href="#">@lang('menu.tech')</a></li>
+                                <li class="#"><a href="#">@lang('menu.tech')</a></li>
                                 <li class=""><a href="{{URL::route('after-sale.index')}}">@lang('menu.after_sale')</a></li>
                                 <li class=""><a href="{{URL::route('contact.index')}}">@lang('menu.contact')</a></li>
                             </ul>
@@ -192,7 +192,11 @@
                 <div class="col-menui col-xs-6 col-sm-3 col-md-2 col-lg-2">
                     <p class="title-ft">Danh mục sản phẩm</p>
                     <ul>
-                        <li><a href="index.php?f=products&do=categories&id=177" title="Máy CNC">Máy CNC</a></li><li><a href="index.php?f=products&do=categories&id=178" title="Máy Công Cụ">Máy Công Cụ</a></li><li><a href="#" title="Máy móc Thiết bị khác">Máy móc Thiết bị khác</a></li><li><a href="#" title="Vật Tư Linh Kiện">Vật Tư Linh Kiện</a></li>	 		</ul>
+                        @forelse($categoryParentNull as $ctfooter)
+                        <li><a href="" title="Máy CNC">{{$ctfooter['name_'.$local]}}</a></li>
+                            @empty
+                        @endforelse
+                    </ul>
                 </div>	 	<div class="col-menui col-xs-6 col-sm-3 col-md-2 col-lg-2">
                     <p class="title-ft">@lang('menu.service')</p>
                     <ul>

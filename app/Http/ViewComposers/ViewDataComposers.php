@@ -3,6 +3,7 @@
 namespace App\Http\ViewComposers;
 
 use App\Models\Banner;
+use App\Models\Category;
 use App\Models\Logo;
 use Illuminate\View\View;
 
@@ -37,10 +38,11 @@ class ViewDataComposers
     {
 
         $local= (session('locale')!= null)?session('locale'):"vi";
-
+        $categoryParentNull = Category::whereNull('parent_id')->get()->toArray();
         $view->with(
             [
                 'local' =>$local,
+                'categoryParentNull'=>$categoryParentNull
 
             ]);
 

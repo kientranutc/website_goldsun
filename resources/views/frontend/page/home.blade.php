@@ -224,33 +224,24 @@
                 <div class="news-right col-xs-12 col-sm-12 col-md-5 col-lg-5">
 
                     <div class="title-cat">@lang('category.news')</div>
-                    <div class="line"></div>		<div class="newsest">
-                        <div class="date-news">
-                            <p class="p1"><span>25</span></p>
-                            <p class="p2"><span>09/2017</span></p>
-                        </div>
-                        <div class="title-newsest"><a href="http://goldsuncnc.com.vn/hau-mai/che-do-hau-mai-tu-goldsun.html" title="Chế độ hậu mãi từ GOLDSUN">Chế độ hậu mãi từ GOLDSUN</a></div>
-                        <div class="hometext"><p>
-                                <span style="text-align: justify;">C&oacute; mặt tại Việt Nam từ năm 1994, hiện nay, mạng lưới kh&aacute;ch h&agrave;ng của C&ocirc;ng ty ch&uacute;ng t&ocirc;i được trải rộng khắp từ miền Bắc tới miền Nam Việt Nam với hơn 1000 sản phẩm m&aacute;y c&aacute;c loại. Do đ&oacute;, để tiện phục vụ nhu cầu sản xuất v&agrave; giải quyết nhanh ch&oacute;ng c&aacute;c sự cố thiết bị, C&ocirc;ng ty ch&uacute;ng t&ocirc;i đ&atilde; lập Chi nh&aacute;nh C&ocirc;ng ty tại H&agrave; Nội, văn ph&ograve;ng đại diện tại T.P Hồ Ch&iacute; Minh, B&igrave;nh Dương. Tất cả c&aacute;c VPĐD C&ocirc;ng ty ch&uacute;ng t&ocirc;i lu&ocirc;n c&oacute; kỹ sư Trung Quốc thường trực 24/24 giờ để kịp thời khắc phục sự cố m&aacute;y của Qu&iacute; kh&aacute;ch h&agrave;ng cũng như hỗ trợ kh&aacute;ch h&agrave;ng về mặt kỹ thuật.</span></p></div>
+                    <div class="line">
+
                     </div>
+                    @forelse($newsLimitThree as $news)
                     <div class="newsest">
                         <div class="date-news">
-                            <p class="p1"><span>17</span></p>
-                            <p class="p2"><span>09/2017</span></p>
+                            <p class="p1"><span>{{$news['news_day']}}</span></p>
+                            <p class="p2"><span>{{$news['news_month_year']}}</span></p>
                         </div>
-                        <div class="title-newsest"><a href="http://goldsuncnc.com.vn/tin-tuc-su-kien/hoi-thao-ky-thuat-cong-nghe-cnc.html" title="Hội thảo kỹ thuật công nghệ CNC">Hội thảo kỹ thuật công nghệ CNC</a></div>
-                        <div class="hometext"><p>
-                                <span style="color: rgb(0, 0, 0); font-family: Arial, Helvetica, sans-serif; text-align: justify;">Ng&agrave;y 15/9/2010, tại trường Cao đẳng nghề kỹ thuật c&ocirc;ng nghiệp Việt Nam - H&agrave;n Quốc, TP.Vinh, đ&atilde; diễn ra hội thảo kỹ thuật c&ocirc;ng nghệ CNC trong sản xuất, đ&agrave;o tạo v&agrave; c&aacute;c phần mềm ứng dụng.</span></p></div>
+                        <div class="title-newsest"><a href="" title="{{$news['name_'.$local]}}">{{$news['name_'.$local]}}</a></div>
+                        <div class="hometext">
+                            <p>
+                                <span style="color: rgb(0, 0, 0); font-family: Arial, Helvetica, sans-serif; text-align: justify;">
+                                    {!!$news['description_'.$local]!!}
+                                </span></p></div>
                     </div>
-                    <div class="newsest">
-                        <div class="date-news">
-                            <p class="p1"><span>17</span></p>
-                            <p class="p2"><span>09/2017</span></p>
-                        </div>
-                        <div class="title-newsest"><a href="http://goldsuncnc.com.vn/tin-tuc-su-kien/giao-trinh-cong-nghe-cnc.html" title="Giáo trình Công nghệ CNC">Giáo trình Công nghệ CNC</a></div>
-                        <div class="hometext"><p>
-                                <span style="color: rgb(0, 0, 0); font-family: Arial, Helvetica, sans-serif; text-align: justify;">CNC &ndash; viết tắt cho Computer(ized) Numerical(ly) Control(led) (điều khiển bằng m&aacute;y t&iacute;nh) &ndash; đề cập đến việc điều khiển bằng m&aacute;y t&iacute;nh c&aacute;c m&aacute;y m&oacute;c kh&aacute;c với mục đ&iacute;ch sản xuất (c&oacute; t&iacute;nh lập lại) c&aacute;c bộ phận kim kh&iacute; (hay c&aacute;c vật liệu kh&aacute;c) phức tạp, bằng c&aacute;ch sử dụng c&aacute;c chương tr&igrave;nh viết bằng k&iacute; hiệu chuy&ecirc;n biệt theo ti&ecirc;u chuẩn EIA-274-D, thường gọi l&agrave; m&atilde; G. CNC được ph&aacute;t triển cuối thập ni&ecirc;n 1940 đầu thập ni&ecirc;n 1950 ở ph&ograve;ng th&iacute; nghiệm Servomechanism của trường MIT.</span></p></div>
-                    </div>
+                    @empty
+                    @endforelse
                 </div>
             </div></div></div>
 

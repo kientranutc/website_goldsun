@@ -19,17 +19,17 @@
                         <div class="box-body">
                             <div class="row">
                                 <div class="col-md-6">
-                                    <div class="form-group {{($errors->has('name_en'))?"has-error":""}}">
-                                        <label for="exampleInputPassword1">Tiêu đề (Tiếng việt)</label>
-                                        <input type="text" name="name_en" value="{{old('name_en')}}" class="form-control" id="exampleInputPassword1" placeholder="Tiêu đề (Tiếng việt)">
-                                        <p class="text-danger">{{$errors->first('name_en')}}</p>
+                                    <div class="form-group {{($errors->has('name_vi'))?"has-error":""}}">
+                                        <label for="exampleInputPassword1">Tiêu đề (Tiếng viêt)</label>
+                                        <input type="text" name="name_vi" value="{{old('name_vi')}}" class="form-control" id="exampleInputPassword1" placeholder="Tiêu đề (Tiếng viêt)">
+                                        <p class="text-danger">{{$errors->first('name_vi')}}</p>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <div class="form-group {{($errors->has('name_vi'))?"has-error":""}}">
+                                    <div class="form-group {{($errors->has('name_en'))?"has-error":""}}">
                                         <label for="exampleInputPassword1">Tiêu đề (Tiếng anh)</label>
-                                        <input type="text" name="name_vi" value="{{old('name_vi')}}" class="form-control" id="exampleInputPassword1" placeholder="Tiêu đề (Tiếng anh)">
-                                        <p class="text-danger">{{$errors->first('name_vi')}}</p>
+                                        <input type="text" name="name_en" value="{{old('name_en')}}" class="form-control" id="exampleInputPassword1" placeholder="Tiêu đề (Tiếng anh)">
+                                        <p class="text-danger">{{$errors->first('name_en')}}</p>
                                     </div>
                                 </div>
                             </div>
