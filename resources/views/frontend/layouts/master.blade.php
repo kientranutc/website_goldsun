@@ -33,10 +33,10 @@
     </div>
     <nav id="menu">
         <ul>
-            <li><a href="#">Trang chủ</a></li>
-            <li><a href="#">Giới thiệu</a></li>
+            <li><a href="#">@lang('menu.home')</a></li>
+            <li><a href="{{URL::route('about-us.index')}}">@lang('menu.intro')</a></li>
             <li>
-                <a href="#">Sản phẩm</a>
+                <a href="#">@lang('menu.product')</a>
                 <ul>
                     <li>
                         <a href="">Máy CNC</a>
@@ -80,17 +80,17 @@
                     <li><a href="#">Vật Tư Linh Kiện</a>								</li>
                 </ul>
             </li>
-            <li><a href="#">Tin tức & sự kiên</a></li>
-            <li><a href="#">Công nghệ & Kỹ thuật</a></li>
-            <li><a href="#">Hậu mãi</a></li>
-            <li><a href="#">Liên hệ</a></li>
+            <li><a href="#">@lang('menu.news')</a></li>
+            <li><a href="#">@lang('menu.tech')</a></li>
+            <li><a href="{{URL::route('after-sale.index')}}">@lang('menu.after_sale')</a></li>
+            <li><a href="{{URL::route('contact.index')}}">@lang('menu.contact')</a></li>
         </ul>
     </nav>
 </div>
 <header>
     <div class="header-top"><div class="container"><div class="row">
                 <div class="logo col-xs-9 col-sm-9 col-md-12 col-lg-3">
-                    <a href="http://goldsuncnc.com.vn" title="Logo"><img src="{{asset('frontend/assets/img/logo.PNG')}}" alt="Logo" class="img-responsive"></a>		</div>
+                    <a href="/" title="Logo"><img src="{{asset('frontend/assets/img/logo.PNG')}}" alt="Logo" class="img-responsive"></a>		</div>
                 <div class="menutop col-xs-12 col-sm-12 col-md-11 col-lg-8">
                     <div class="navbar navbar-default navbar-static-top" role="navigation">
                         <div class="collapse navbar-collapse" id="menu-site-default">
@@ -108,11 +108,57 @@
                                 window.onload = setActive;
                             </script>
                             <ul class="nav navbar-nav">
-                                <li class=""><a href="http://goldsuncnc.com.vn">Trang chủ</a></li><li class=""><a href="http://goldsuncnc.com.vn/ve-chung-toi/cong-ty-tnhh-may-moc-va-vat-tu-goldsun.html">Giới thiệu</a></li>			       			<li class="dropdown">
-                                    <a href="#">Sản phẩm</a>
+                                <li><a href="#">@lang('menu.home')</a></li>
+                                <li><a href="{{URL::route('about-us.index')}}">@lang('menu.intro')</a></li>
+                                <li class="dropdown">
+                                    <a href="#">@lang('menu.product')</a>
                                     <ul class="dropmenu">
-                                        <li class="dropdown2"><a href="http://goldsuncnc.com.vn/may-cnc.html">Máy CNC</a>									<ul class="dropdown-menu2" role="menu"><li class="li_con2"><a href="index.php?f=products&do=categories&id=182">Máy Điêu Khắc</a></li><li class="li_con2"><a href="index.php?f=products&do=categories&id=183">Máy Cắt Dây</a></li><li class="li_con2"><a href="index.php?f=products&do=categories&id=184">Máy Tiện</a></li><li class="li_con2"><a href="index.php?f=products&do=categories&id=185">Máy Xung</a></li><li class="li_con2"><a href="index.php?f=products&do=categories&id=186">Máy gia công trung tâm, máy phay CNC</a></li><li class="li_con2"><a href="index.php?f=products&do=categories&id=189">Máy đục lỗ</a></li></ul>								</li> <li class="dropdown2"><a href="http://goldsuncnc.com.vn/may-cong-cu.html">Máy Công Cụ</a>									<ul class="dropdown-menu2" role="menu"><li class="li_con2"><a href="index.php?f=products&do=categories&id=187">Máy cưa vòng</a></li><li class="li_con2"><a href="index.php?f=products&do=categories&id=188">Máy tiện vạn năng</a></li><li class="li_con2"><a href="index.php?f=products&do=categories&id=190">Máy mài mặt phẳng</a></li><li class="li_con2"><a href="index.php?f=products&do=categories&id=191">Máy chấn tôn</a></li><li class="li_con2"><a href="index.php?f=products&do=categories&id=192">Máy cắt tôn</a></li><li class="li_con2"><a href="index.php?f=products&do=categories&id=193">Máy cán ren</a></li><li class="li_con2"><a href="index.php?f=products&do=categories&id=194">Máy phay giường</a></li><li class="li_con2"><a href="index.php?f=products&do=categories&id=195">Máy phay cạnh</a></li><li class="li_con2"><a href="index.php?f=products&do=categories&id=196">Máy uốn ống</a></li><li class="li_con2"><a href="index.php?f=products&do=categories&id=197">Máy phay chóp</a></li><li class="li_con2"><a href="index.php?f=products&do=categories&id=198">Máy phay đầu ngang</a></li><li class="li_con2"><a href="index.php?f=products&do=categories&id=199">Máy khoan</a></li><li class="li_con2"><a href="index.php?f=products&do=categories&id=200">Máy Phay</a></li></ul>								</li> <li class="dropdown2"><a href="http://goldsuncnc.com.vn/may-moc-thiet-bi-khac.html">Máy móc Thiết bị khác</a>									<ul class="dropdown-menu2" role="menu"><li class="li_con2"><a href="index.php?f=products&do=categories&id=205">Máy phun cát</a></li><li class="li_con2"><a href="index.php?f=products&do=categories&id=204">Máy mài dao</a></li><li class="li_con2"><a href="index.php?f=products&do=categories&id=203">Lò Nung Trung Tần</a></li><li class="li_con2"><a href="index.php?f=products&do=categories&id=201">Lò Cao Tần</a></li><li class="li_con2"><a href="index.php?f=products&do=categories&id=202">Robot Công Nghiệp</a></li></ul>								</li> <li class="dropdown2"><a href="http://goldsuncnc.com.vn/vat-tu-linh-kien.html">Vật Tư Linh Kiện</a>								</li></ul></li><li class=""><a href="http://goldsuncnc.com.vn/tin-tuc-su-kien/">Tin tức & sự kiên</a></li><li class=""><a href="#">Công nghệ & Kỹ thuật</a></li><li class=""><a href="http://goldsuncnc.com.vn/hau-mai/che-do-hau-mai-tu-goldsun.html">Hậu mãi</a></li><li class=""><a href="http://goldsuncnc.com.vn/lien-he.html">Liên hệ</a></li>
-
+                                        <li class="dropdown2">
+                                            <a href="http://goldsuncnc.com.vn/may-cnc.html">Máy CNC</a>
+                                            <ul class="dropdown-menu2" role="menu">
+                                                <li class="li_con2"><a href="index.php?f=products&do=categories&id=182">Máy Điêu Khắc</a></li>
+                                                <li class="li_con2"><a href="index.php?f=products&do=categories&id=183">Máy Cắt Dây</a></li>
+                                                <li class="li_con2"><a href="index.php?f=products&do=categories&id=184">Máy Tiện</a></li>
+                                                <li class="li_con2"><a href="index.php?f=products&do=categories&id=185">Máy Xung</a></li>
+                                                <li class="li_con2"><a href="index.php?f=products&do=categories&id=186">Máy gia công trung tâm, máy phay CNC</a></li>
+                                                <li class="li_con2"><a href="index.php?f=products&do=categories&id=189">Máy đục lỗ</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown2">
+                                            <a href="http://goldsuncnc.com.vn/may-cong-cu.html">Máy Công Cụ</a>
+                                            <ul class="dropdown-menu2" role="menu">
+                                                <li class="li_con2"><a href="index.php?f=products&do=categories&id=187">Máy cưa vòng</a></li>
+                                                <li class="li_con2"><a href="index.php?f=products&do=categories&id=188">Máy tiện vạn năng</a></li>
+                                                <li class="li_con2"><a href="index.php?f=products&do=categories&id=190">Máy mài mặt phẳng</a></li>
+                                                <li class="li_con2"><a href="index.php?f=products&do=categories&id=191">Máy chấn tôn</a></li>
+                                                <li class="li_con2"><a href="index.php?f=products&do=categories&id=192">Máy cắt tôn</a></li>
+                                                <li class="li_con2"><a href="index.php?f=products&do=categories&id=193">Máy cán ren</a></li>
+                                                <li class="li_con2"><a href="index.php?f=products&do=categories&id=194">Máy phay giường</a></li>
+                                                <li class="li_con2"><a href="index.php?f=products&do=categories&id=195">Máy phay cạnh</a></li>
+                                                <li class="li_con2"><a href="index.php?f=products&do=categories&id=196">Máy uốn ống</a></li>
+                                                <li class="li_con2"><a href="index.php?f=products&do=categories&id=197">Máy phay chóp</a></li>
+                                                <li class="li_con2"><a href="index.php?f=products&do=categories&id=198">Máy phay đầu ngang</a></li>
+                                                <li class="li_con2"><a href="index.php?f=products&do=categories&id=199">Máy khoan</a></li>
+                                                <li class="li_con2"><a href="index.php?f=products&do=categories&id=200">Máy Phay</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown2">
+                                            <a href="http://goldsuncnc.com.vn/may-moc-thiet-bi-khac.html">Máy móc Thiết bị khác</a>
+                                            <ul class="dropdown-menu2" role="menu">
+                                                <li class="li_con2"><a href="index.php?f=products&do=categories&id=205">Máy phun cát</a></li>
+                                                <li class="li_con2"><a href="index.php?f=products&do=categories&id=204">Máy mài dao</a></li>
+                                                <li class="li_con2"><a href="index.php?f=products&do=categories&id=203">Lò Nung Trung Tần</a></li>
+                                                <li class="li_con2"><a href="index.php?f=products&do=categories&id=201">Lò Cao Tần</a></li>
+                                                <li class="li_con2"><a href="index.php?f=products&do=categories&id=202">Robot Công Nghiệp</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown2"><a href="http://goldsuncnc.com.vn/vat-tu-linh-kien.html">Vật Tư Linh Kiện</a>								</li>
+                                    </ul>
+                                </li>
+                                <li class=""><a href="#">@lang('menu.news')</a></li>
+                                <li class=""><a href="#">@lang('menu.tech')</a></li>
+                                <li class=""><a href="{{URL::route('after-sale.index')}}">@lang('menu.after_sale')</a></li>
+                                <li class=""><a href="{{URL::route('contact.index')}}">@lang('menu.contact')</a></li>
                             </ul>
                         </div>
                     </div>
@@ -130,14 +176,14 @@
 <footer>
     <div class="footmsg"><div class="container"><div class="row">
                 <div class="info col-xs-6 col-sm-6 col-md-4 col-lg-4">
-                    <p class="title-ft">Liên hệ với chúng tôi</p>
+                    <p class="title-ft">@lang('category.contact_us')</p>
                     <div class="phone-ft">
                         <a href="tel:Tel: 024.37.87.20.35 - HotLine: 0904.121.830" title="">Tel: 024.37.87.20.35 - HotLine: 0904.121.830</a>
                     </div>
                     <div class="social">
                         <a href="https://www.facebook.com/cncgiacongtrungtam/" title="" target="_blank"><img src="{{asset('frontend/assets/img/f1.png')}}" alt=""></a>
                         <a href="#" title="" target="_blank"><img src="{{asset('frontend/assets/img/f2.png')}}" alt=""></a>
-                        <a href="https://twitter.com/goldsunvn001" title="" target="_blank"><img src="{{asset('frontend/assets/img/f3.png')}}" alt=""></a>
+                        <a href="" title="" target="_blank"><img src="{{asset('frontend/assets/img/f3.png')}}" alt=""></a>
                         <a href="#" title="" target="_blank"><img src="{{asset('frontend/assets/img/f6.png')}}" alt=""></a>
                         <a href="#" title="" target="_blank"><img src="{{asset('frontend/assets/img/f7.png')}}" alt=""></a>
                         <a href="#" title="" target="_blank"><img src="{{asset('frontend/assets/img/f8.png')}}" alt=""></a>
@@ -148,17 +194,17 @@
                     <ul>
                         <li><a href="index.php?f=products&do=categories&id=177" title="Máy CNC">Máy CNC</a></li><li><a href="index.php?f=products&do=categories&id=178" title="Máy Công Cụ">Máy Công Cụ</a></li><li><a href="#" title="Máy móc Thiết bị khác">Máy móc Thiết bị khác</a></li><li><a href="#" title="Vật Tư Linh Kiện">Vật Tư Linh Kiện</a></li>	 		</ul>
                 </div>	 	<div class="col-menui col-xs-6 col-sm-3 col-md-2 col-lg-2">
-                    <p class="title-ft">Dịch Vụ</p>
+                    <p class="title-ft">@lang('menu.service')</p>
                     <ul>
-                        <li><a href="#" title="Chế độ hậu mãi">Chế độ hậu mãi</a></li>	 		</ul>
+                        <li><a href="#" title="Chế độ hậu mãi">@lang('menu.after_sale')</a></li>	 		</ul>
                 </div>	 	<div class="col-menui col-xs-6 col-sm-3 col-md-2 col-lg-2">
-                    <p class="title-ft">Tin tức & Sự kiện</p>
+                    <p class="title-ft">@lang('menu.news')</p>
                     <ul>
                         <li><a href="#" title="2017">2017</a></li><li><a href="#" title="2016">2016</a></li><li><a href="#" title="2015">2015</a></li><li><a href="#" title="2014">2014</a></li>	 		</ul>
                 </div>	 	<div class="col-menui col-xs-6 col-sm-3 col-md-2 col-lg-2">
-                    <p class="title-ft">Liên hệ</p>
+                    <p class="title-ft">@lang('menu.contact')</p>
                     <ul>
-                        <li><a href="#" title="Thông tin liên hệ">Thông tin liên hệ</a></li><li><a href="#" title="Hỗ trợ trực tuyến">Hỗ trợ trực tuyến</a></li>	 		</ul>
+                        <li><a href="#" title="Thông tin liên hệ">@lang('category.contact')</a></li><li><a href="#" title="Hỗ trợ trực tuyến">@lang('category.support')</a></li>	 		</ul>
                 </div>		</div></div></div>
 
     <div class="sent-mail"><div class="container">

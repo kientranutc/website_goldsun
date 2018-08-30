@@ -81,7 +81,7 @@
 
     <div class="prd-home"><div class="container"><div class="row">
                 <div class="prd-cat">
-                    <div class="title-cat">Sản phẩm nổi bật</div>
+                    <div class="title-cat">@lang('category.top_products')</div>
                     <div class="line"></div>
                     <div class="slide-prd owl-theme"><div class="prd"><div class="prd-in">
                                 <div class="img-prd">
@@ -204,24 +204,26 @@
                                 </div>
                             </div></div></div></div>	</div></div></div>
 
-    <div class="news-home"><div class="container"><div class="row">
+    <div class="news-home">
+        <div class="container">
+            <div class="row">
                 <div class="news-left col-xs-12 col-sm-12 col-md-5 col-lg-5">
-                    <div class="title-cat">Về chúng tôi</div>
+                    <div class="title-cat">@lang('category.us_contact')</div>
                     <div class="line"></div>		<div class="img-news-home">
-                        <a href="http://goldsuncnc.com.vn/ve-chung-toi/cong-ty-tnhh-may-moc-va-vat-tu-goldsun.html" title="Công ty TNHH Máy móc và Vật tư Goldsun"><img src="http://goldsuncnc.com.vn/files/news/2017_09/1499053023_07.jpg" alt="Công ty TNHH Máy móc và Vật tư Goldsun" class="img-responsive"></a>
+                        <a href="#" title="Công ty TNHH Máy móc và Vật tư Goldsun"><img src="http://goldsuncnc.com.vn/files/news/2017_09/1499053023_07.jpg" alt="Công ty TNHH Máy móc và Vật tư Goldsun" class="img-responsive"></a>
                     </div>
-                    <div class="title-news-home"><a href="http://goldsuncnc.com.vn/ve-chung-toi/cong-ty-tnhh-may-moc-va-vat-tu-goldsun.html" title="Công ty TNHH Máy móc và Vật tư Goldsun">Công ty TNHH Máy móc và Vật tư Goldsun</a></div>
+                    <div class="title-news-home"><a href="#" title="@lang('category.intro.title')">@lang('category.intro.title')</a></div>
                     <div class="bottom-news-home">
                         <p>
-                            Ch&uacute;ng t&ocirc;i l&agrave; Tập đo&agrave;n sản xuất Khu&ocirc;n mẫu v&agrave; Thiết bị CNC Goldsun - Quảng Ch&acirc;u - Trung Quốc, chuy&ecirc;n sản xuất c&aacute;c thiết bị ch&iacute;nh x&aacute;c, tự động ho&aacute;, thiết bị CNC phục vụ cho ngh&agrave;nh cơ kh&iacute; khu&ocirc;n mẫu n&oacute;i ri&ecirc;ng v&agrave; cơ kh&iacute; n&oacute;i chung với quy m&ocirc; lớn.&nbsp;</p>		</div>
-                    <div class="chitiet"><a href="http://goldsuncnc.com.vn/ve-chung-toi/cong-ty-tnhh-may-moc-va-vat-tu-goldsun.html" title="Công ty TNHH Máy móc và Vật tư Goldsun">[ Chi tiết ]</a></div>
+                            @lang('category.intro.content')&nbsp;</p>		</div>
+                    <div class="chitiet"><a href="" title="@lang('category.intro.title')">[ @lang('category.more') ]</a></div>
                 </div>
                 <div class="news-center col-xs-12 col-sm-12 col-md-2 col-lg-2">
 
                 </div>
                 <div class="news-right col-xs-12 col-sm-12 col-md-5 col-lg-5">
 
-                    <div class="title-cat">Tin tức</div>
+                    <div class="title-cat">@lang('category.news')</div>
                     <div class="line"></div>		<div class="newsest">
                         <div class="date-news">
                             <p class="p1"><span>25</span></p>
@@ -253,7 +255,7 @@
             </div></div></div>
 
     <div class="partner"><div class="container">
-            <div class="title-cat">Đối tác</div>
+            <div class="title-cat">@lang('category.partners')</div>
             <div class="line"></div>
             <ul><li class="">
                     <div class="you-wp">
@@ -307,22 +309,19 @@
         </div>
     </div></div>
     <div class="contact-home"><div class="container"><div class="row">
-                <div class="title-cat">Thông tin liên hệ</div>
+                <div class="title-cat">@lang('category.contact')</div>
                 <div class="line line-2"></div>
                 <div class="col-contact col-xs-12 col-sm-4 col-md-4 col-lg-4">
                     <a href="http://goldsuncnc.com.vn/lien-he.html" title=""><img src="{{asset('frontend/assets/img/c1.png')}}" alt=""></a>
-                    <p class="title-contact">Địa chỉ</p>
+                    <p class="title-contact">{{config('language_footer.info_contact_'.$local.'.address.title')}}</p>
                     <p class="text-contact"><p>
-                        <strong>VPGD:</strong> Số nh&agrave; 11, Tổ 13 Khu An Lạc, Phường Cầu Diễn, Quận Nam Từ Li&ecirc;m, H&agrave; Nội</p>
-                    <p>
-                        <strong>Xưởng Sản Xuất:</strong> Km 12, Quốc lộ 32, Phường Ph&uacute;c Diễn, Q. Bắc Từ Li&ecirc;m, Tp. H&agrave; Nội</p>
-                    </p>
+                    {!! config('language_footer.info_contact_'.$local.'.address.content') !!}
                 </div>
 
                 <div class="col-contact col-xs-12 col-sm-4 col-md-4 col-lg-4">
                     <a href="http://goldsuncnc.com.vn/lien-he.html" title=""><img src="{{asset('frontend/assets/img/c2.png')}}" alt=""></a>
-                    <p class="title-contact">Điện thoại</p>
-                    <p class="text-contact">Tel: 024.37.87.20.35 - HotLine: 0904.121.830</p>
+                    <p class="title-contact">{{config('language_footer.info_contact_'.$local.'.phone.title')}}</p>
+                    {!! config('language_footer.info_contact_'.$local.'.phone.content') !!}
                 </div>
 
                 <div class="col-contact col-xs-12 col-sm-4 col-md-4 col-lg-4">

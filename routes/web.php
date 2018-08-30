@@ -12,6 +12,7 @@
 */
 
 Route::group(['middleware' => 'localization'], function() {
+
     Route::get('language/{la}', [
         'as' => 'switchLang',
         'uses' => 'Frontend\LangController@index',
@@ -20,6 +21,19 @@ Route::group(['middleware' => 'localization'], function() {
         'as' => 'frontend.home',
         'uses' => 'Frontend\HomeController@index'
     ]);
+    Route::get('ve-chung-toi/cong-ty-tnhh-may-moc-va-vat-tu-goldsun.html',[
+        'as' => 'about-us.index',
+        'uses' => 'Frontend\AboutUsController@index'
+    ]);
+    Route::get('hau-mai/che-do-hau-mai-tu-goldsun.html',[
+        'as' => 'after-sale.index',
+        'uses' => 'Frontend\AfterSaleController@index'
+    ]);
+    Route::get('lien-he.html',[
+        'as' => 'contact.index',
+        'uses' => 'Frontend\ContactController@index'
+    ]);
+
 });
 Route::get('/dang-nhap',[
    'as' => 'auth.login',
@@ -29,6 +43,12 @@ Route::post('/dang-nhap',[
     'as' => 'auth.post-login',
     'uses' => 'Backend\AuthController@processLogin'
 ]);
+// about use
+Route::get('/dang-nhap',[
+    'as' => 'auth.login',
+    'uses' => 'Backend\AuthController@login'
+]);
+
 /**
  * ------------------------------------Backend-------------------------------
  */
