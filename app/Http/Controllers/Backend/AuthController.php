@@ -3,6 +3,9 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Requests\LoginRequest;
+
+use App\Models\User;
+use App\Support\Helper;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -30,6 +33,29 @@ class AuthController extends Controller
     {
         \Auth::logout();
         return redirect()->route('auth.login');
+    }
+
+    public function forgetPassword(Request $request)
+    {
+        $email = $request->get('email');
+        $user = User::where('email', $email)->first();
+        if ($user) {
+            $data = [
+                'fullname'=>$user->fullname,
+                'email'=>$email,
+                'password' => 'abc123'
+            ];
+            $userUpdate = User::find($user->id);
+            $userUpdate->password =  bcrypt('abc123');
+            if ($userUpdate->save()) {
+                Helper::sendEmail($email, $data, 'email.forget_password', 'Quên mật khẩu');
+                return redirect()->route('auth.login')->with("success", "Vui lòng check mail để đăng nhập!");
+            }
+
+        } else {
+            return redirect()->route('auth.login')->withErrors('Email chưa tồn tại trên hệ thống');
+        }
+
     }
 
 

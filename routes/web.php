@@ -48,6 +48,11 @@ Route::get('/dang-nhap',[
     'as' => 'auth.login',
     'uses' => 'Backend\AuthController@login'
 ]);
+Route::post('/quen-mat-khau',[
+    'as' => 'auth.forget-pasword',
+    'uses' => 'Backend\AuthController@forgetPassword'
+]);
+
 
 /**
  * ------------------------------------Backend-------------------------------

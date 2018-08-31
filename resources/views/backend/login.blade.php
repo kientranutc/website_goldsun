@@ -69,8 +69,35 @@
         </form>
         <!-- /.social-auth-links -->
 
-        <a href="" data-toggle="modal" data-target="#forgetModal">Quên mật khẩu</a><br>
+            <a href="" data-toggle="modal" data-target="#forgetModal">Quên mật khẩu</a><br/>
 
+    </div>
+    <div id="forgetModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <form action="{{URL::route('auth.forget-pasword')}}" method="post" id="form-forget">
+                {{csrf_field()}}
+                <div class="modal-content" style="width: 70%;margin: 0 auto;">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">QUÊN MẬT KHẨU</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group has-feedback " id="error-class">
+                            <input type="email" id="forget-mail" name="email" class="form-control" placeholder="Email">
+                            <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                        </div>
+                        <p class="text-danger" id="show-error"></p>
+                        <p id="forget-info">Để đặt lại mật khẩu của mình, hãy nhập địa chỉ email mà bạn sử dụng để đăng nhập vào hệ thống.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-success" id="send-email"><i class="fa fa-send-o"></i> GỬI</button>
+                    </div>
+                </div>
+            </form>>
+
+        </div>
     </div>
     <!-- /.login-box-body -->
 </div>
@@ -79,7 +106,7 @@
 <!-- jQuery 3 -->
 <script src="{{asset('backend/bower_components/jquery/dist/jquery.min.js')}}"></script>
 <!-- Bootstrap 3.3.7 -->
-<script src="{{asset('bower_components/bootstrap/dist/js/bootstrap.min.js')}}"></script>
+<script src="{{asset('backend/bower_components/bootstrap/dist/js/bootstrap.min.js')}}"></script>
 <!-- iCheck -->
 <script src="{{asset('backend/plugins/iCheck/icheck.min.js')}}"></script>
 <script>
