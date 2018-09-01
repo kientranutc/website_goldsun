@@ -34,6 +34,12 @@
     </div>
     <!-- /.login-logo -->
     <div class="login-box-body">
+        @if(session()->has('success'))
+            <div class="alert alert-success alert-dismissable">
+                <a href="#" style="text-decoration: none " class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                <strong>Success!</strong> {{session()->get('success')}}
+            </div>
+        @endif
         @if($errors->any())
             <p class="text-center text-danger"><strong>
                     {{$errors->first()}}</strong></p>
