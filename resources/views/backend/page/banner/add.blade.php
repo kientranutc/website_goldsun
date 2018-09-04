@@ -34,14 +34,14 @@
                                     <div class="col-md-2">
                                         <div class="radio">
                                             <label>
-                                                <input type="radio" name="active" id="optionsRadios1" value="option1" checked="">
+                                                <input type="radio" name="active" id="optionsRadios1" value="1" checked="">
                                                 Hiển thị
                                             </label>
                                         </div>
                                     </div>
                                     <div class="col-md-3">
                                         <div class="radio">
-                                            <label><input type="radio" name="actives" id="optionsRadios2" value="option2">
+                                            <label><input type="radio" name="active" id="optionsRadios2" value="0">
                                                 Ẩn
                                             </label>
                                         </div>
@@ -53,7 +53,7 @@
                         <!-- /.box-body -->
 
                         <div class="box-footer">
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="submit" class="btn btn-primary">Thêm mới</button>
                         </div>
                     </form>
                 </div>

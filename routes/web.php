@@ -140,6 +140,19 @@ Route::group(['middleware' => 'checkLogin'], function() {
                 'as' => 'banner.post-add',
                 'uses' => 'Backend\BannerController@processAdd'
             ]);
+            Route::get('/sua/{id}', [
+                'as' => 'banner.edit',
+                'uses' => 'Backend\BannerController@edit'
+            ]);
+            Route::post('/sua/{id}', [
+                'as' => 'banner.post-edit',
+                'uses' => 'Backend\BannerController@processEdit'
+            ]);
+            Route::get('/xoa/{id}', [
+                'as' => 'banner.delete',
+                'uses' => 'Backend\BannerController@delete'
+            ]);
+
         });
         // news
 

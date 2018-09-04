@@ -20,7 +20,8 @@
             <li class="{{(Route::currentRouteName()=="product.index")?"active":""}}"><a href="{{URL::route('product.index')}}"><i class="fa fa-product-hunt text-yellow"></i> <span>Sản phẩm</span></a></li>
             <li class="{{(Route::currentRouteName()=="news.index")?"active":""}}"><a href="{{URL::route('news.index')}}"><i class="fa fa-newspaper-o text-aqua"></i> <span>Tin tức</span></a></li>
             <li class="{{(Route::currentRouteName()=="user.index")?"active":""}}"><a href="{{URL::route('user.index')}}"><i class="fa fa-circle-o text-aqua"></i> <span>Người dùng</span></a></li>
-        </ul>
+            <li class="{{(Route::currentRouteName()=="banner.index")?"active":""}}"><a href="{{URL::route('banner.index')}}"><i class="fa fa-circle-o text-aqua"></i> <span>Banner</span></a></li>
+         </ul>
     </section>
     <!-- /.sidebar -->
 </aside>
