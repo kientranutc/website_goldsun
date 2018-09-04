@@ -1039,7 +1039,7 @@ p.title-contact {
     padding:0px 15px;
 }
 ul.other-news li{
-    background: url(../images/list.png) no-repeat center left;
+    background: url(/frontend/assets/img/list.png) no-repeat center left;
     padding-left: 10px;
     line-height: 30px;
 }

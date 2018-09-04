@@ -13,5 +13,7 @@ return [
     ],
     'more'=>'Chi tiết',
     'support'=>'Hỗ trợ trực tuyến',
-    'partners' => 'ĐỐI TÁC'
+    'partners' => 'ĐỐI TÁC',
+    'news_relate'=>'Tin liên quan',
+    'list_categoy'=>'Danh mục sản phẩm'
 ];

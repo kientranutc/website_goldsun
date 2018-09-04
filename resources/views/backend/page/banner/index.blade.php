@@ -32,8 +32,8 @@
                                     <td>
                                         {{$item->id}}
                                     </td>
-                                    <td>
-                                        <img src="{{$item->image}}" class="thumbnail" width="100px" height="100px" alt="">
+                                    <td class="text-center">
+                                        <img src="{{$item->image}}"  width="300px" height="100px" alt="">
                                     </td>
                                     <td>
                                         <b class="text-danger">{{$item->link}}</b>

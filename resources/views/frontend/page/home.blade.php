@@ -8,11 +8,32 @@
                 <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li><li data-target="#carousel-example-generic" data-slide-to="1" class=""></li>	  </ol>
 
             <div class="carousel-inner" role="listbox">
+                <?php
+                $i=1;
+                ?>
+                @if(!empty($banner))
+                    @forelse($banner as $banners)
+                        @if($i==1)
+                            <div class="item active">
+                                <img src="{{$banners->image}}" alt="{{$banners->image}}" class="img-responsive">
+                            </div>
+                            @else
+                            <div class="item ">
+                                <img src="{{$banners->image}}" alt="{{$banners->image}}" class="img-responsive">
+                            </div>
+                            @endif
+                        <?php ++$i; ?>
+                        @empty
+                        @endforelse
+                    @else
                 <div class="item active">
                     <img src="http://goldsuncnc.com.vn/files/adv/adv_slide-1-_12.jpg" alt="" class="img-responsive">
-                </div><div class="item ">
+                </div>
+                <div class="item ">
                     <img src="http://goldsuncnc.com.vn/files/adv/adv_3_63.jpg" alt="" class="img-responsive">
-                </div>	  </div>
+                </div>
+            @endif
+        </div>
 
             <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
                 <span class="sr-only">Previous</span>
@@ -212,11 +233,11 @@
                     <div class="line"></div>		<div class="img-news-home">
                         <a href="#" title="Công ty TNHH Máy móc và Vật tư Goldsun"><img src="http://goldsuncnc.com.vn/files/news/2017_09/1499053023_07.jpg" alt="Công ty TNHH Máy móc và Vật tư Goldsun" class="img-responsive"></a>
                     </div>
-                    <div class="title-news-home"><a href="#" title="@lang('category.intro.title')">@lang('category.intro.title')</a></div>
+                    <div class="title-news-home"><a href="{{URL::route('about-us.index')}}" title="@lang('category.intro.title')">@lang('category.intro.title')</a></div>
                     <div class="bottom-news-home">
                         <p>
                             @lang('category.intro.content')&nbsp;</p>		</div>
-                    <div class="chitiet"><a href="" title="@lang('category.intro.title')">[ @lang('category.more') ]</a></div>
+                    <div class="chitiet"><a href="{{URL::route('about-us.index')}}" title="@lang('category.intro.title')">[ @lang('category.more') ]</a></div>
                 </div>
                 <div class="news-center col-xs-12 col-sm-12 col-md-2 col-lg-2">
 

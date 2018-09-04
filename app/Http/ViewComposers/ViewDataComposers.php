@@ -39,9 +39,11 @@ class ViewDataComposers
 
         $local= (session('locale')!= null)?session('locale'):"vi";
         $categoryParentNull = Category::whereNull('parent_id')->get()->toArray();
+        $category = new Category();
         $view->with(
             [
                 'local' =>$local,
+                'category' => $category,
                 'categoryParentNull'=>$categoryParentNull
 
             ]);

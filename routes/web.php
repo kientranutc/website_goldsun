@@ -33,6 +33,14 @@ Route::group(['middleware' => 'localization'], function() {
         'as' => 'contact.index',
         'uses' => 'Frontend\ContactController@index'
     ]);
+    Route::get('tin-tuc-su-kien/',[
+        'as' => 'news.frontend-index',
+        'uses' => 'Frontend\NewsController@index'
+    ]);
+    Route::get('tin-tuc-su-kien/{slug}.html',[
+        'as' => 'news.frontend-detail',
+        'uses' => 'Frontend\NewsController@detail'
+    ]);
 
 });
 Route::get('/dang-nhap',[

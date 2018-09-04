@@ -13,5 +13,7 @@ return [
     ],
     'more'=>'more',
     'support'=>'Support online',
-    'partners' => 'PARTNERS'
+    'partners' => 'PARTNERS',
+    'news_relate'=>'News relate',
+    'list_categoy'=>'List category'
 ];

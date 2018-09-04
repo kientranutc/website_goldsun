@@ -5,7 +5,7 @@
     <meta name="distribution" content="global">
     <meta name="author" content="Gold Sun CNC Technology">
     <meta name="google-site-verification" content=" " /><meta name="copyright" content="Copyright (c) 2018 by Gold Sun CNC Technology">
-    <meta name="keywords" content="">
+    <meta name="keywords" content="@yield('keyword')">
     <meta name="description" content="">
     <meta name="robots" content="index, follow">
     <meta name="revisit-after" content="1 days">
@@ -14,7 +14,6 @@
     <link rel="shortcut icon" href="{{asset('frontend/assets/img/favicon.ico')}}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
-
     <link rel="StyleSheet" href="{{asset('frontend/assets/css/bootstrap.css')}}">
     <link rel="stylesheet"   href="{{asset('frontend/assets/css/demo.css')}}">
     <link rel="stylesheet"   href="{{asset('frontend/assets/css/jquery.mmenu.all.css')}}">
@@ -23,8 +22,6 @@
     <link rel="stylesheet" href="{{asset('frontend/assets/css/owl.theme.default.min.css')}}" />
     <link rel="StyleSheet" href="{{asset('frontend/style.css')}}">
     <link rel="StyleSheet" href="{{asset('frontend/assets/css/style.responsive.css')}}">
-
-
 </head>
 
 <div id="page">
@@ -38,49 +35,26 @@
             <li>
                 <a href="#">@lang('menu.product')</a>
                 <ul>
+                    @forelse($categoryParentNull as $menu)
                     <li>
-                        <a href="">Máy CNC</a>
+                        <a href="">{{$menu['name_'.$local]}}</a>
                         <ul>
-                            <li><a href="#">Máy Điêu Khắc</a></li>
-                            <li><a href="#">Máy Cắt Dây</a></li>
-                            <li><a href="#">Máy Tiện</a></li>
-                            <li><a href="#">Máy Xung</a></li>
-                            <li><a href="#">Máy gia công trung tâm, máy phay CNC</a></li>
-                            <li><a href="#">Máy đục lỗ</a></li>
+                            <?php
+                            $categoryParent = $category->getCategoryParent($menu['id'])->toArray();
+                            ?>
+                            @if(!empty($categoryParent))
+                                @forelse($categoryParent as $menusub)
+                                    <li><a href="">{{$menusub['name_'.$local]}}</a></li>
+                                @empty
+                                @endforelse
+                            @endif
                         </ul>
                     </li>
-                    <li>
-                        <a href="#">Máy Công Cụ</a>
-                        <ul>
-                            <li><a href=#">Máy cưa vòng</a></li>
-                            <li><a href="#">Máy tiện vạn năng</a></li>
-                            <li><a href="#">Máy mài mặt phẳng</a></li>
-                            <li><a href="#">Máy chấn tôn</a></li>
-                            <li><a href="#">Máy cắt tôn</a></li>
-                            <li><a href="#">Máy cán ren</a></li>
-                            <li><a href="#">Máy phay giường</a></li>
-                            <li><a href="#">Máy phay cạnh</a></li>
-                            <li><a href="#">Máy uốn ống</a></li>
-                            <li><a href="#">Máy phay chóp</a></li>
-                            <li><a href="#">Máy phay đầu ngang</a></li>
-                            <li><a href="#">Máy khoan</a></li>
-                            <li><a href="#">Máy Phay</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#">Máy móc Thiết bị khác</a>
-                        <ul>
-                            <li><a href="#">Máy phun cát</a></li>
-                            <li><a href="#">Máy mài dao</a></li>
-                            <li><a href="#">Lò Nung Trung Tần</a></li>
-                            <li><a href="#">Lò Cao Tần</a></li>
-                            <li><a href="#">Robot Công Nghiệp</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Vật Tư Linh Kiện</a>								</li>
+                        @empty
+                    @endforelse
                 </ul>
             </li>
-            <li><a href="#">@lang('menu.news')</a></li>
+            <li><a href="{{URL::route('news.frontend-index')}}">@lang('menu.news')</a></li>
             <li><a href="#">@lang('menu.tech')</a></li>
             <li><a href="{{URL::route('after-sale.index')}}">@lang('menu.after_sale')</a></li>
             <li><a href="{{URL::route('contact.index')}}">@lang('menu.contact')</a></li>
@@ -113,49 +87,26 @@
                                 <li class="dropdown">
                                     <a href="#">@lang('menu.product')</a>
                                     <ul class="dropmenu">
+                                        @forelse($categoryParentNull as $menu)
                                         <li class="dropdown2">
-                                            <a href="http://goldsuncnc.com.vn/may-cnc.html">Máy CNC</a>
+                                            <a href="#">{{$menu['name_'.$local]}}</a>
                                             <ul class="dropdown-menu2" role="menu">
-                                                <li class="li_con2"><a href="index.php?f=products&do=categories&id=182">Máy Điêu Khắc</a></li>
-                                                <li class="li_con2"><a href="index.php?f=products&do=categories&id=183">Máy Cắt Dây</a></li>
-                                                <li class="li_con2"><a href="index.php?f=products&do=categories&id=184">Máy Tiện</a></li>
-                                                <li class="li_con2"><a href="index.php?f=products&do=categories&id=185">Máy Xung</a></li>
-                                                <li class="li_con2"><a href="index.php?f=products&do=categories&id=186">Máy gia công trung tâm, máy phay CNC</a></li>
-                                                <li class="li_con2"><a href="index.php?f=products&do=categories&id=189">Máy đục lỗ</a></li>
+                                                <?php
+                                                $categoryParent = $category->getCategoryParent($menu['id'])->toArray();
+                                                ?>
+                                                @if(!empty($categoryParent))
+                                                    @forelse($categoryParent as $menusub)
+                                                        <li class="li_con2"><a href="">{{$menusub['name_'.$local]}}</a></li>
+                                                        @empty
+                                                        @endforelse
+                                                @endif
                                             </ul>
                                         </li>
-                                        <li class="dropdown2">
-                                            <a href="http://goldsuncnc.com.vn/may-cong-cu.html">Máy Công Cụ</a>
-                                            <ul class="dropdown-menu2" role="menu">
-                                                <li class="li_con2"><a href="index.php?f=products&do=categories&id=187">Máy cưa vòng</a></li>
-                                                <li class="li_con2"><a href="index.php?f=products&do=categories&id=188">Máy tiện vạn năng</a></li>
-                                                <li class="li_con2"><a href="index.php?f=products&do=categories&id=190">Máy mài mặt phẳng</a></li>
-                                                <li class="li_con2"><a href="index.php?f=products&do=categories&id=191">Máy chấn tôn</a></li>
-                                                <li class="li_con2"><a href="index.php?f=products&do=categories&id=192">Máy cắt tôn</a></li>
-                                                <li class="li_con2"><a href="index.php?f=products&do=categories&id=193">Máy cán ren</a></li>
-                                                <li class="li_con2"><a href="index.php?f=products&do=categories&id=194">Máy phay giường</a></li>
-                                                <li class="li_con2"><a href="index.php?f=products&do=categories&id=195">Máy phay cạnh</a></li>
-                                                <li class="li_con2"><a href="index.php?f=products&do=categories&id=196">Máy uốn ống</a></li>
-                                                <li class="li_con2"><a href="index.php?f=products&do=categories&id=197">Máy phay chóp</a></li>
-                                                <li class="li_con2"><a href="index.php?f=products&do=categories&id=198">Máy phay đầu ngang</a></li>
-                                                <li class="li_con2"><a href="index.php?f=products&do=categories&id=199">Máy khoan</a></li>
-                                                <li class="li_con2"><a href="index.php?f=products&do=categories&id=200">Máy Phay</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="dropdown2">
-                                            <a href="http://goldsuncnc.com.vn/may-moc-thiet-bi-khac.html">Máy móc Thiết bị khác</a>
-                                            <ul class="dropdown-menu2" role="menu">
-                                                <li class="li_con2"><a href="index.php?f=products&do=categories&id=205">Máy phun cát</a></li>
-                                                <li class="li_con2"><a href="index.php?f=products&do=categories&id=204">Máy mài dao</a></li>
-                                                <li class="li_con2"><a href="index.php?f=products&do=categories&id=203">Lò Nung Trung Tần</a></li>
-                                                <li class="li_con2"><a href="index.php?f=products&do=categories&id=201">Lò Cao Tần</a></li>
-                                                <li class="li_con2"><a href="index.php?f=products&do=categories&id=202">Robot Công Nghiệp</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="dropdown2"><a href="http://goldsuncnc.com.vn/vat-tu-linh-kien.html">Vật Tư Linh Kiện</a>								</li>
+                                        @empty
+                                        @endforelse
                                     </ul>
                                 </li>
-                                <li class=""><a href="#">@lang('menu.news')</a></li>
+                                <li class=""><a href="{{URL::route('news.frontend-index')}}">@lang('menu.news')</a></li>
                                 <li class="#"><a href="#">@lang('menu.tech')</a></li>
                                 <li class=""><a href="{{URL::route('after-sale.index')}}">@lang('menu.after_sale')</a></li>
                                 <li class=""><a href="{{URL::route('contact.index')}}">@lang('menu.contact')</a></li>
@@ -190,7 +141,7 @@
                     </div>
                 </div>
                 <div class="col-menui col-xs-6 col-sm-3 col-md-2 col-lg-2">
-                    <p class="title-ft">Danh mục sản phẩm</p>
+                    <p class="title-ft">@lang('category.list_categoy')</p>
                     <ul>
                         @forelse($categoryParentNull as $ctfooter)
                         <li><a href="" title="Máy CNC">{{$ctfooter['name_'.$local]}}</a></li>
@@ -200,15 +151,16 @@
                 </div>	 	<div class="col-menui col-xs-6 col-sm-3 col-md-2 col-lg-2">
                     <p class="title-ft">@lang('menu.service')</p>
                     <ul>
-                        <li><a href="#" title="Chế độ hậu mãi">@lang('menu.after_sale')</a></li>	 		</ul>
+                        <li><a href="{{URL::route('after-sale.index')}}" title="Chế độ hậu mãi">@lang('menu.after_sale')</a></li>	 		</ul>
                 </div>	 	<div class="col-menui col-xs-6 col-sm-3 col-md-2 col-lg-2">
                     <p class="title-ft">@lang('menu.news')</p>
                     <ul>
-                        <li><a href="#" title="2017">2017</a></li><li><a href="#" title="2016">2016</a></li><li><a href="#" title="2015">2015</a></li><li><a href="#" title="2014">2014</a></li>	 		</ul>
+                        <li><a href="{{URL::route('news.frontend-index')}}" title="2017">2018</a></li>
+                    </ul>
                 </div>	 	<div class="col-menui col-xs-6 col-sm-3 col-md-2 col-lg-2">
                     <p class="title-ft">@lang('menu.contact')</p>
                     <ul>
-                        <li><a href="#" title="Thông tin liên hệ">@lang('category.contact')</a></li><li><a href="#" title="Hỗ trợ trực tuyến">@lang('category.support')</a></li>	 		</ul>
+                        <li><a href="{{URL::route('contact.index')}}" title="@lang('category.contact')">@lang('category.contact')</a></li><li><a href="#" title="Hỗ trợ trực tuyến">@lang('category.support')</a></li>	 		</ul>
                 </div>		</div></div></div>
 
     <div class="sent-mail"><div class="container">
@@ -228,7 +180,6 @@
     $(function() {
         $('nav#menu').mmenu();
     });
-
 
     $('.slide-prd').owlCarousel({
         loop: true,
