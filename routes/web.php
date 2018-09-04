@@ -173,6 +173,33 @@ Route::group(['middleware' => 'checkLogin'], function() {
                 'uses' => 'Backend\NewsController@showDetail'
             ]);
         });
+        Route::prefix('/nguoi-dung')->group(function () {
+            Route::get('/', [
+                'as' => 'user.index',
+                'uses' => 'Backend\UserController@index'
+            ]);
+            Route::get('/them-moi', [
+                'as' => 'user.add',
+                'uses' => 'Backend\UserController@add'
+            ]);
+            Route::get('/xoa/{id}', [
+                'as' => 'user.delete',
+                'uses' => 'Backend\UserController@delete'
+            ]);
+            Route::post('/them-moi', [
+                'as' => 'user.post-add',
+                'uses' => 'Backend\UserController@processAdd'
+            ]);
+            Route::get('/doi-mat-khau', [
+                'as' => 'user.edit',
+                'uses' => 'Backend\UserController@resetPassword'
+            ]);
+            Route::post('/doi-mat-khau', [
+                'as' => 'user.post-edit',
+                'uses' => 'Backend\UserController@changePassword'
+            ]);
+
+        });
 
     });
 });

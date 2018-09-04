@@ -9,6 +9,7 @@ class AfterSaleController extends Controller
 {
     public function index()
     {
-        return view('frontend.page.after_sale.after_sale_'.session('locale'));
+        $local = (session()->has('locale'))?session('locale'):'vi';
+        return view('frontend.page.after_sale.after_sale_'.$local);
     }
 }

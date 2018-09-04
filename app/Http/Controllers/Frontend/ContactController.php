@@ -9,6 +9,7 @@ class ContactController extends Controller
 {
     public function index()
     {
-        return view('frontend.page.contact.contact_'.session('locale'));
+        $local = (session()->has('locale'))?session('locale'):'vi';
+        return view('frontend.page.contact.contact_'.$local);
     }
 }
