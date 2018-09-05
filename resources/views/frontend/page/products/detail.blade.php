@@ -68,56 +68,24 @@
                             @endif</div>
                         <div class='line'></div>
                     </div>
-                    <div class="prd col-xs-6 col-sm-4 col-md-3 col-lg-2">
-                        <div class="prd-in">
-                            <div class="img-prd">
-                                <a href="http://goldsuncnc.com.vn/may-gia-cong-trung-tam-co-lon-356.html" title="MÁY GIA CÔNG TRUNG TÂM CỠ LỚN"><img class="img-responsive" src="http://goldsuncnc.com.vn/files/products/11_55.jpg" alt="MÁY GIA CÔNG TRUNG TÂM CỠ LỚN"></a>
-                            </div>
-                            <div class="title-prd">
-                                <a href="http://goldsuncnc.com.vn/may-gia-cong-trung-tam-co-lon-356.html" title="MÁY GIA CÔNG TRUNG TÂM CỠ LỚN">MÁY GIA CÔNG TRUNG TÂM CỠ LỚN</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="prd col-xs-6 col-sm-4 col-md-3 col-lg-2">
-                        <div class="prd-in">
-                            <div class="img-prd">
-                                <a href="http://goldsuncnc.com.vn/may-gia-cong-trung-tamkieu-dung-351.html" title="MÁY GIA CÔNG TRUNG TÂM(KIỂU ĐỨNG)"><img class="img-responsive" src="http://goldsuncnc.com.vn/files/products/6_19.jpg" alt="MÁY GIA CÔNG TRUNG TÂM(KIỂU ĐỨNG)"></a>
-                            </div>
-                            <div class="title-prd">
-                                <a href="http://goldsuncnc.com.vn/may-gia-cong-trung-tamkieu-dung-351.html" title="MÁY GIA CÔNG TRUNG TÂM(KIỂU ĐỨNG)">MÁY GIA CÔNG TRUNG TÂM(KIỂU ĐỨNG)</a>
+                    @if(!empty($productRelate))
+                        @forelse($productRelate as $item)
+                        <div class="prd col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                            <div class="prd-in">
+                                <div class="img-prd">
+                                    <a href="{{URL::route('product.detail',['slug'=>$item['slug_'.$local]])}}" title="{{$item['name_'.$local]}}">
+                                        <img class="img-responsive" src="{{$item['image']}}" alt="MÁY GIA CÔNG TRUNG TÂM CỠ LỚN">
+                                    </a>
+                                </div>
+                                <div class="title-prd">
+                                    <a href=""{{URL::route('product.detail',['slug'=>$item['slug_'.$local]])}}" title="{{$item['name_'.$local]}}">{{$item['name_'.$local]}}</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="prd col-xs-6 col-sm-4 col-md-3 col-lg-2">
-                        <div class="prd-in">
-                            <div class="img-prd">
-                                <a href="http://goldsuncnc.com.vn/may-gia-cong-trung-tam-cnc-347.html" title="MÁY GIA CÔNG TRUNG TÂM CNC"><img class="img-responsive" src="http://goldsuncnc.com.vn/files/products/2_77.jpg" alt="MÁY GIA CÔNG TRUNG TÂM CNC"></a>
-                            </div>
-                            <div class="title-prd">
-                                <a href="http://goldsuncnc.com.vn/may-gia-cong-trung-tam-cnc-347.html" title="MÁY GIA CÔNG TRUNG TÂM CNC">MÁY GIA CÔNG TRUNG TÂM CNC</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="prd col-xs-6 col-sm-4 col-md-3 col-lg-2">
-                        <div class="prd-in">
-                            <div class="img-prd">
-                                <a href="http://goldsuncnc.com.vn/may-gia-cong-trung-tam-cnc-gsvm8050el3-gsvm1050el3-346.html" title="MÁY GIA CÔNG TRUNG TÂM CNC GSVM8050EL3 - GSVM1050EL3"><img class="img-responsive" src="http://goldsuncnc.com.vn/files/products/1_64.jpg" alt="MÁY GIA CÔNG TRUNG TÂM CNC GSVM8050EL3 - GSVM1050EL3"></a>
-                            </div>
-                            <div class="title-prd">
-                                <a href="http://goldsuncnc.com.vn/may-gia-cong-trung-tam-cnc-gsvm8050el3-gsvm1050el3-346.html" title="MÁY GIA CÔNG TRUNG TÂM CNC GSVM8050EL3 - GSVM1050EL3">MÁY GIA CÔNG TRUNG TÂM CNC GSVM8050EL3 - GSVM1050EL3</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="prd col-xs-6 col-sm-4 col-md-3 col-lg-2">
-                        <div class="prd-in">
-                            <div class="img-prd">
-                                <a href="http://goldsuncnc.com.vn/t-18-box-way-vertical-machining-center-319.html" title="T-18 Box way Vertical Machining Center"><img class="img-responsive" src="http://goldsuncnc.com.vn/files/products/t-18_80.jpg" alt="T-18 Box way Vertical Machining Center"></a>
-                            </div>
-                            <div class="title-prd">
-                                <a href="http://goldsuncnc.com.vn/t-18-box-way-vertical-machining-center-319.html" title="T-18 Box way Vertical Machining Center">T-18 Box way Vertical Machining Center</a>
-                            </div>
-                        </div>
-                    </div>
+                        @empty
+                            @endforelse
+                        @endif
+
                 </div>
             </div>
         </div>

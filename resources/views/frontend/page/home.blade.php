@@ -100,130 +100,34 @@
         </div>
     </div>
 
-    <div class="prd-home"><div class="container"><div class="row">
+    <div class="prd-home">
+        <div class="container">
+            <div class="row">
                 <div class="prd-cat">
                     <div class="title-cat">@lang('category.top_products')</div>
                     <div class="line"></div>
-                    <div class="slide-prd owl-theme"><div class="prd"><div class="prd-in">
+                    <div class="slide-prd owl-theme">
+                        @forelse($product as $pro)
+                        <div class="prd">
+                            <div class="prd-in">
                                 <div class="img-prd">
-                                    <a href="http://goldsuncnc.com.vn/c-650-cnc-engravingmilling-machine-339.html" title="C-650 CNC Engraving&Milling Machine"><img class="img-responsive" src="http://goldsuncnc.com.vn/files/products/c-650_97.jpg" alt="C-650 CNC Engraving&Milling Machine"></a>
+                                    <a href="{{URL::route('product.detail',['slug'=>$pro['slug_'.$local]])}}" title="{{$pro['name_'.$local]}}">
+                                        <img class="img-responsive" src="{{$pro['image']}}" alt="{{$pro['name_'.$local]}}">
+                                    </a>
                                 </div>
                                 <div class="title-prd">
-                                    <a href="http://goldsuncnc.com.vn/c-650-cnc-engravingmilling-machine-339.html" title="C-650 CNC Engraving&Milling Machine">C-650 CNC Engraving&Milling Machine</a>
+                                    <a href="{{URL::route('product.detail',['slug'=>$pro['slug_'.$local]])}}" title="{{$pro['name_'.$local]}}">{{$pro['name_'.$local]}}</a>
                                 </div>
-                            </div></div><div class="prd"><div class="prd-in">
-                                <div class="img-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-500c-high-speed-tapping-center-338.html" title="T-500C High Speed Tapping Center"><img class="img-responsive" src="http://goldsuncnc.com.vn/files/products/t-500c_62.jpg" alt="T-500C High Speed Tapping Center"></a>
-                                </div>
-                                <div class="title-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-500c-high-speed-tapping-center-338.html" title="T-500C High Speed Tapping Center">T-500C High Speed Tapping Center</a>
-                                </div>
-                            </div></div><div class="prd"><div class="prd-in">
-                                <div class="img-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-500h-high-speed-tapping-center-337.html" title="T-500H High Speed Tapping Center"><img class="img-responsive" src="http://goldsuncnc.com.vn/files/products/t-500h_21.jpg" alt="T-500H High Speed Tapping Center"></a>
-                                </div>
-                                <div class="title-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-500h-high-speed-tapping-center-337.html" title="T-500H High Speed Tapping Center">T-500H High Speed Tapping Center</a>
-                                </div>
-                            </div></div><div class="prd"><div class="prd-in">
-                                <div class="img-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-600-high-speed-tapping-center-336.html" title="T-600 High Speed Tapping Center"><img class="img-responsive" src="http://goldsuncnc.com.vn/files/products/t-600_69.jpg" alt="T-600 High Speed Tapping Center"></a>
-                                </div>
-                                <div class="title-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-600-high-speed-tapping-center-336.html" title="T-600 High Speed Tapping Center">T-600 High Speed Tapping Center</a>
-                                </div>
-                            </div></div><div class="prd"><div class="prd-in">
-                                <div class="img-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-700-high-speed-tapping-center-335.html" title="T-700 High Speed Tapping Center"><img class="img-responsive" src="http://goldsuncnc.com.vn/files/products/t-700_24.jpg" alt="T-700 High Speed Tapping Center"></a>
-                                </div>
-                                <div class="title-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-700-high-speed-tapping-center-335.html" title="T-700 High Speed Tapping Center">T-700 High Speed Tapping Center</a>
-                                </div>
-                            </div></div><div class="prd"><div class="prd-in">
-                                <div class="img-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-11l-line-rail-vertical-machining-center-334.html" title="T-11L Line Rail Vertical Machining Center"><img class="img-responsive" src="http://goldsuncnc.com.vn/files/products/t-11l_73.jpg" alt="T-11L Line Rail Vertical Machining Center"></a>
-                                </div>
-                                <div class="title-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-11l-line-rail-vertical-machining-center-334.html" title="T-11L Line Rail Vertical Machining Center">T-11L Line Rail Vertical Machining Center</a>
-                                </div>
-                            </div></div><div class="prd"><div class="prd-in">
-                                <div class="img-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-12l-line-rail-vertical-machining-center-333.html" title="T-12L Line Rail Vertical Machining Center"><img class="img-responsive" src="http://goldsuncnc.com.vn/files/products/t-12l_29.jpg" alt="T-12L Line Rail Vertical Machining Center"></a>
-                                </div>
-                                <div class="title-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-12l-line-rail-vertical-machining-center-333.html" title="T-12L Line Rail Vertical Machining Center">T-12L Line Rail Vertical Machining Center</a>
-                                </div>
-                            </div></div><div class="prd"><div class="prd-in">
-                                <div class="img-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-13-box-way-vertical-machining-center-322.html" title="T-13 Box way Vertical Machining Center"><img class="img-responsive" src="http://goldsuncnc.com.vn/files/products/t-12_43.jpg" alt="T-13 Box way Vertical Machining Center"></a>
-                                </div>
-                                <div class="title-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-13-box-way-vertical-machining-center-322.html" title="T-13 Box way Vertical Machining Center">T-13 Box way Vertical Machining Center</a>
-                                </div>
-                            </div></div><div class="prd"><div class="prd-in">
-                                <div class="img-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-15-box-ways-vertical-machining-center-321.html" title="T-15 Box ways Vertical Machining Center"><img class="img-responsive" src="http://goldsuncnc.com.vn/files/products/t-16_98.jpg" alt="T-15 Box ways Vertical Machining Center"></a>
-                                </div>
-                                <div class="title-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-15-box-ways-vertical-machining-center-321.html" title="T-15 Box ways Vertical Machining Center">T-15 Box ways Vertical Machining Center</a>
-                                </div>
-                            </div></div><div class="prd"><div class="prd-in">
-                                <div class="img-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-16-box-ways-vertical-machining-center-320.html" title="T-16 Box ways Vertical Machining Center"><img class="img-responsive" src="http://goldsuncnc.com.vn/files/products/t-16_32.jpg" alt="T-16 Box ways Vertical Machining Center"></a>
-                                </div>
-                                <div class="title-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-16-box-ways-vertical-machining-center-320.html" title="T-16 Box ways Vertical Machining Center">T-16 Box ways Vertical Machining Center</a>
-                                </div>
-                            </div></div><div class="prd"><div class="prd-in">
-                                <div class="img-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-18-box-way-vertical-machining-center-319.html" title="T-18 Box way Vertical Machining Center"><img class="img-responsive" src="http://goldsuncnc.com.vn/files/products/t-18_80.jpg" alt="T-18 Box way Vertical Machining Center"></a>
-                                </div>
-                                <div class="title-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-18-box-way-vertical-machining-center-319.html" title="T-18 Box way Vertical Machining Center">T-18 Box way Vertical Machining Center</a>
-                                </div>
-                            </div></div><div class="prd"><div class="prd-in">
-                                <div class="img-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-11g-gear-head-vertical-machining-center-318.html" title="T-11G Gear Head Vertical Machining Center"><img class="img-responsive" src="http://goldsuncnc.com.vn/files/products/t-11g_05.jpg" alt="T-11G Gear Head Vertical Machining Center"></a>
-                                </div>
-                                <div class="title-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-11g-gear-head-vertical-machining-center-318.html" title="T-11G Gear Head Vertical Machining Center">T-11G Gear Head Vertical Machining Center</a>
-                                </div>
-                            </div></div><div class="prd"><div class="prd-in">
-                                <div class="img-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-500b-high-speed-tapping-center-317.html" title="T-500B High Speed Tapping Center"><img class="img-responsive" src="http://goldsuncnc.com.vn/files/products/t-500b_79.jpg" alt="T-500B High Speed Tapping Center"></a>
-                                </div>
-                                <div class="title-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-500b-high-speed-tapping-center-317.html" title="T-500B High Speed Tapping Center">T-500B High Speed Tapping Center</a>
-                                </div>
-                            </div></div><div class="prd"><div class="prd-in">
-                                <div class="img-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-v856-parts-machining-center-316.html" title="T-V856 Parts Machining Center"><img class="img-responsive" src="http://goldsuncnc.com.vn/files/products/t-v856_08.jpg" alt="T-V856 Parts Machining Center"></a>
-                                </div>
-                                <div class="title-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-v856-parts-machining-center-316.html" title="T-V856 Parts Machining Center">T-V856 Parts Machining Center</a>
-                                </div>
-                            </div></div><div class="prd"><div class="prd-in">
-                                <div class="img-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-8-box-way-vertical-machining-center-315.html" title="T-8 Box way Vertical Machining Center"><img class="img-responsive" src="http://goldsuncnc.com.vn/files/products/t8_42.jpg" alt="T-8 Box way Vertical Machining Center"></a>
-                                </div>
-                                <div class="title-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-8-box-way-vertical-machining-center-315.html" title="T-8 Box way Vertical Machining Center">T-8 Box way Vertical Machining Center</a>
-                                </div>
-                            </div></div><div class="prd"><div class="prd-in">
-                                <div class="img-prd">
-                                    <a href="http://goldsuncnc.com.vn/b-8004b-glass-engraving-machine-314.html" title="B-800/4B Glass Engraving Machine"><img class="img-responsive" src="http://goldsuncnc.com.vn/files/products/b-800-4b_90.jpg" alt="B-800/4B Glass Engraving Machine"></a>
-                                </div>
-                                <div class="title-prd">
-                                    <a href="http://goldsuncnc.com.vn/b-8004b-glass-engraving-machine-314.html" title="B-800/4B Glass Engraving Machine">B-800/4B Glass Engraving Machine</a>
-                                </div>
-                            </div></div><div class="prd"><div class="prd-in">
-                                <div class="img-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-500-high-speed-tapping-center-313.html" title="T-500 High Speed Tapping Center"><img class="img-responsive" src="http://goldsuncnc.com.vn/files/products/t500_41.jpg" alt="T-500 High Speed Tapping Center"></a>
-                                </div>
-                                <div class="title-prd">
-                                    <a href="http://goldsuncnc.com.vn/t-500-high-speed-tapping-center-313.html" title="T-500 High Speed Tapping Center">T-500 High Speed Tapping Center</a>
-                                </div>
-                            </div></div></div></div>	</div></div></div>
+                            </div>
+                        </div>
+                            @empty
+                        @endforelse
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="news-home">
         <div class="container">
@@ -254,7 +158,7 @@
                             <p class="p1"><span>{{$news['news_day']}}</span></p>
                             <p class="p2"><span>{{$news['news_month_year']}}</span></p>
                         </div>
-                        <div class="title-newsest"><a href="" title="{{$news['name_'.$local]}}">{{$news['name_'.$local]}}</a></div>
+                        <div class="title-newsest"><a href="{{URL::route('news.frontend-detail',['slug'=>$news['slug_'.$local]])}}" title="{{$news['name_'.$local]}}">{{$news['name_'.$local]}}</a></div>
                         <div class="hometext">
                             <p>
                                 <span style="color: rgb(0, 0, 0); font-family: Arial, Helvetica, sans-serif; text-align: justify;">

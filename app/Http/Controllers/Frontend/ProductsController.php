@@ -20,6 +20,12 @@ class ProductsController extends Controller
     {
         $local = (session()->has('locale'))?session('locale'):'vi';
         $productDetail = Products::where('slug_'.$local, $slug)->first()->toArray();
-        return view('frontend.page.products.detail', compact('productDetail'));
+        $productId = $productDetail['id'];
+        $categoryId = explode(',',$productDetail['category_id'])[0];
+        $productRelate = Products::where('category_id', 'like', '%'.$categoryId.'%')
+                        ->where('id', '<>', $productId)
+                        ->inRandomOrder()->take(5)
+                        ->get()->toArray();
+        return view('frontend.page.products.detail', compact('productDetail', 'productRelate'));
     }
 }
