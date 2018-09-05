@@ -224,4 +224,13 @@ Route::group(['middleware' => 'checkLogin'], function() {
 
     });
 });
+Route::get('/{id}-{slug}/',[
+    'as' => 'product.category',
+    'uses' => 'Frontend\ProductsController@category'
+]);
+Route::get('/products/{slug}.html',[
+    'as' => 'product.detail',
+    'uses' => 'Frontend\ProductsController@detail'
+]);
+
 

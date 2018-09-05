@@ -10,6 +10,6 @@ class LangController extends Controller
     public function  index($la)
     {
         session(['locale'=>$la]);
-        return redirect()->back();
+        return redirect('/');
     }
 }

@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="{{asset('frontend/assets/css/owl.theme.default.min.css')}}" />
     <link rel="StyleSheet" href="{{asset('frontend/style.css')}}">
     <link rel="StyleSheet" href="{{asset('frontend/assets/css/style.responsive.css')}}">
+    @yield('link')
 </head>
 
 <div id="page">
@@ -37,14 +38,14 @@
                 <ul>
                     @forelse($categoryParentNull as $menu)
                     <li>
-                        <a href="">{{$menu['name_'.$local]}}</a>
+                        <a href="{{URL::route('product.category',[ 'id'=>$menu['id'],'slug'=>$menu['slug_'.$local]])}}">{{$menu['name_'.$local]}}</a>
                         <ul>
                             <?php
                             $categoryParent = $category->getCategoryParent($menu['id'])->toArray();
                             ?>
                             @if(!empty($categoryParent))
                                 @forelse($categoryParent as $menusub)
-                                    <li><a href="">{{$menusub['name_'.$local]}}</a></li>
+                                    <li><a href="{{URL::route('product.category',[ 'id'=>$menusub['id'],'slug'=>$menusub['slug_'.$local]])}}">{{$menusub['name_'.$local]}}</a></li>
                                 @empty
                                 @endforelse
                             @endif
@@ -89,14 +90,14 @@
                                     <ul class="dropmenu">
                                         @forelse($categoryParentNull as $menu)
                                         <li class="dropdown2">
-                                            <a href="#">{{$menu['name_'.$local]}}</a>
+                                            <a href="{{URL::route('product.category',[ 'id'=>$menu['id'],'slug'=>$menu['slug_'.$local]])}}">{{$menu['name_'.$local]}}</a>
                                             <ul class="dropdown-menu2" role="menu">
                                                 <?php
                                                 $categoryParent = $category->getCategoryParent($menu['id'])->toArray();
                                                 ?>
                                                 @if(!empty($categoryParent))
                                                     @forelse($categoryParent as $menusub)
-                                                        <li class="li_con2"><a href="">{{$menusub['name_'.$local]}}</a></li>
+                                                        <li class="li_con2"><a href="{{URL::route('product.category',[ 'id'=>$menusub['id'],'slug'=>$menusub['slug_'.$local]])}}">{{$menusub['name_'.$local]}}</a></li>
                                                         @empty
                                                         @endforelse
                                                 @endif
