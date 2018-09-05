@@ -145,7 +145,7 @@
                     <p class="title-ft">@lang('category.list_categoy')</p>
                     <ul>
                         @forelse($categoryParentNull as $ctfooter)
-                        <li><a href="" title="Máy CNC">{{$ctfooter['name_'.$local]}}</a></li>
+                        <li><a href="{{URL::route('product.category',[ 'id'=>$ctfooter['id'],'slug'=>$ctfooter['slug_'.$local]])}}" title="Máy CNC">{{$ctfooter['name_'.$local]}}</a></li>
                             @empty
                         @endforelse
                     </ul>
