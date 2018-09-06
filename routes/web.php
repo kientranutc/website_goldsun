@@ -51,6 +51,10 @@ Route::post('/dang-nhap',[
     'as' => 'auth.post-login',
     'uses' => 'Backend\AuthController@processLogin'
 ]);
+Route::post('lien-lac/gui-lien-he', [
+    'as' => 'contact.send',
+    'uses' => 'Backend\ContactController@sendContact'
+]);
 // about use
 Route::get('/dang-nhap',[
     'as' => 'auth.login',
@@ -68,6 +72,7 @@ Route::post('/quen-mat-khau',[
 
 Route::group(['middleware' => 'checkLogin'], function() {
     Route::prefix('admin')->group(function () {
+
         Route::get('/thong-ke-chung', [
             'as' => 'dashboard.index',
             'uses' => 'Backend\DashboardController@index'
@@ -105,6 +110,12 @@ Route::group(['middleware' => 'checkLogin'], function() {
             Route::get('/chi-tiet/{id}', [
                 'as' => 'product.detail',
                 'uses' => 'Backend\ProductController@showDetail'
+            ]);
+        });
+        Route::prefix('/lien-he')->group(function () {
+            Route::get('/', [
+                'as' => 'contact.index',
+                'uses' => 'Backend\ContactController@index'
             ]);
         });
         //danh muc
@@ -224,6 +235,7 @@ Route::group(['middleware' => 'checkLogin'], function() {
 
     });
 });
+
 Route::get('/{id}-{slug}/',[
     'as' => 'product.category',
     'uses' => 'Frontend\ProductsController@category'

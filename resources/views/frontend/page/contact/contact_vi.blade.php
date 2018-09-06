@@ -55,7 +55,8 @@
                 <div class="form-contact">
                     <div class="form-lienhe col-xs-12 col-sm-6 col-md-6 col-lg-6">
                         <div class="title-lienhe">Gửi thông tin cho chúng tôi</div>
-                        <form method="post" active="" name="thongtindh" onsubmit="return check_frm()">
+                        <form action="{{URL::route('contact.send')}}" method="POST"  onsubmit="return check_frm()">
+                            {{csrf_field()}}
                             <input type="text" id="hoten" name="hoten" placeholder="Họ và tên" class="hoten"></input>
                             <input type="text" id="diachi" name="diachi" placeholder="Địa chỉ"  class="diachi"></input>
                             <input type="text" id="dienthoai" name="dienthoai" placeholder="Điện thoại"  class="dienthoai"></input>
