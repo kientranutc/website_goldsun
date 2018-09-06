@@ -57,40 +57,40 @@
                         <div class="prd">
                             <div class="prd-in">
                                 <div class="img-prd">
-                                    <a href="" title="T-500 High Speed Tapping Center"><img class="img-responsive" src="http://goldsuncnc.com.vn/files/products/t500_41.jpg" alt="T-500 High Speed Tapping Center"></a>
+                                    <a href="http://goldsunmachinery.vn/1-may-cnc" title="MÁY CNC"><img class="img-responsive" src="http://goldsuncnc.com.vn/files/products/t500_41.jpg" alt="MÁY CNC"></a>
                                 </div>
                                 <div class="title-prd">
-                                    <a href="" title="T-500 High Speed Tapping Center">MÁY CNC</a>
+                                    <a href="http://goldsunmachinery.vn/1-may-cnc" title="MÁY CNC">MÁY CNC</a>
                                 </div>
                             </div>
                         </div>
                         <div class="prd">
                             <div class="prd-in">
                                 <div class="img-prd">
-                                    <a href="" title="B-800/4B Glass Engraving Machine"><img class="img-responsive" src="http://goldsuncnc.com.vn/files/products/b-800-4b_90.jpg" alt="B-800/4B Glass Engraving Machine"></a>
+                                    <a href="http://goldsunmachinery.vn/13-may-cong-cu" title="MÁY CÔNG CỤ"><img class="img-responsive" src="http://goldsuncnc.com.vn/files/products/b-800-4b_90.jpg" alt="B-800/4B Glass Engraving Machine"></a>
                                 </div>
                                 <div class="title-prd">
-                                    <a href="" title="B-800/4B Glass Engraving Machine">MÁY CÔNG CỤ</a>
+                                    <a href="http://goldsunmachinery.vn/13-may-cong-cu" title="MÁY CÔNG CỤ">MÁY CÔNG CỤ</a>
                                 </div>
                             </div>
                         </div>
                         <div class="prd">
                             <div class="prd-in">
                                 <div class="img-prd">
-                                    <a href="" title="T-8 Box way Vertical Machining Center"><img class="img-responsive" src="http://goldsuncnc.com.vn/files/products/t8_42.jpg" alt="T-8 Box way Vertical Machining Center"></a>
+                                    <a href="http://goldsunmachinery.vn/27-may-moc-thiet-bi-khac" title="MÁY MỌC THIẾT BỊ KHÁC"><img class="img-responsive" src="http://goldsuncnc.com.vn/files/products/t8_42.jpg" alt="MÁY MỌC THIẾT BỊ KHÁC"></a>
                                 </div>
                                 <div class="title-prd">
-                                    <a href="" title="T-8 Box way Vertical Machining Center">MÁY MỌC THIẾT BỊ KHÁC</a>
+                                    <a href="http://goldsunmachinery.vn/27-may-moc-thiet-bi-khac" title="MÁY MỌC THIẾT BỊ KHÁC">MÁY MỌC THIẾT BỊ KHÁC</a>
                                 </div>
                             </div>
                         </div>
                         <div class="prd">
                             <div class="prd-in">
                                 <div class="img-prd">
-                                    <a href="" title="T-V856 Parts Machining Center"><img class="img-responsive" src="http://goldsuncnc.com.vn/files/products/t-v856_08.jpg" alt="T-V856 Parts Machining Center"></a>
+                                    <a href="http://goldsunmachinery.vn/33-vat-tu-linh-kien" title="VẬT TƯ LINH KIỆN"><img class="img-responsive" src="http://goldsuncnc.com.vn/files/products/t-v856_08.jpg" alt="VẬT TƯ LINH KIỆN"></a>
                                 </div>
                                 <div class="title-prd">
-                                    <a href="" title="T-V856 Parts Machining Center">VẬT TƯ LINH KIỆN</a>
+                                    <a href="http://goldsunmachinery.vn/33-vat-tu-linh-kien" title="VẬT TƯ LINH KIỆN">VẬT TƯ LINH KIỆN</a>
                                 </div>
                             </div>
                         </div>
