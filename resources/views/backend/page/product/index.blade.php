@@ -24,6 +24,7 @@
                                 <th>Tên danh mục</th>
                                 <th>Ảnh</th>
                                 <th>Trạng thái</th>
+                                <th>Sản phẩm nổi bật</th>
                                 <th>Nội dung</th>
                                 <th>Ngày tạo</th>
                                 <th></th>
@@ -44,6 +45,11 @@
                                             <span class="btn btn-success"> Hiển thị</span>
                                         @else
                                             <span class="btn btn-danger">Ẩn</span>
+                                        @endif
+                                    </td>
+                                    <td class="text-center">
+                                        @if($item['is_host']==1)
+                                            <span class="btn btn-danger">Sản phẩm nổi bật</span>
                                         @endif
                                     </td>
                                     <td>

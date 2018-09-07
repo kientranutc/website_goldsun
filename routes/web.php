@@ -114,7 +114,7 @@ Route::group(['middleware' => 'checkLogin'], function() {
         });
         Route::prefix('/lien-he')->group(function () {
             Route::get('/', [
-                'as' => 'contact.index',
+                'as' => 'contacts.index',
                 'uses' => 'Backend\ContactController@index'
             ]);
         });
