@@ -44,6 +44,9 @@ class ProductController extends Controller
         if(isset($dataRequest['active'])) {
             $product->active = $dataRequest['active'];
         }
+        if(isset($dataRequest['is_hot'])) {
+            $product->is_host = $dataRequest['is_hot'];
+        }
         if(isset($dataRequest['description_vi'])) {
             $product->description_vi = $dataRequest['description_vi'];
         }
@@ -87,6 +90,9 @@ class ProductController extends Controller
             }
             if(isset($dataRequest['active'])) {
                 $product->active = $dataRequest['active'];
+            }
+            if(isset($dataRequest['is_hot'])) {
+                $product->is_host = (int)$dataRequest['is_hot'];
             }
             if(isset($dataRequest['description_vi'])) {
                 $product->description_vi = $dataRequest['description_vi'];

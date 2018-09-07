@@ -47,58 +47,7 @@
     <!-- <div class="gioithieu"><div class="container">
             </div></div> -->
 
-    <div class="prd-home">
-        <div class="container">
-            <div class="row">
-                <div class="prd-cat">
-                    <div class="title-cat">@lang('category.category')</div>
-                    <div class="line"></div>
-                    <div class="slide-prd-category owl-theme">
-                        <div class="prd">
-                            <div class="prd-in">
-                                <div class="img-prd">
-                                    <a href="http://goldsunmachinery.vn/1-may-cnc" title="MÁY CNC"><img class="img-responsive" src="http://goldsuncnc.com.vn/files/products/t500_41.jpg" alt="MÁY CNC"></a>
-                                </div>
-                                <div class="title-prd">
-                                    <a href="http://goldsunmachinery.vn/1-may-cnc" title="MÁY CNC">MÁY CNC</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="prd">
-                            <div class="prd-in">
-                                <div class="img-prd">
-                                    <a href="http://goldsunmachinery.vn/13-may-cong-cu" title="MÁY CÔNG CỤ"><img class="img-responsive" src="http://goldsuncnc.com.vn/files/products/b-800-4b_90.jpg" alt="B-800/4B Glass Engraving Machine"></a>
-                                </div>
-                                <div class="title-prd">
-                                    <a href="http://goldsunmachinery.vn/13-may-cong-cu" title="MÁY CÔNG CỤ">MÁY CÔNG CỤ</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="prd">
-                            <div class="prd-in">
-                                <div class="img-prd">
-                                    <a href="http://goldsunmachinery.vn/27-may-moc-thiet-bi-khac" title="MÁY MỌC THIẾT BỊ KHÁC"><img class="img-responsive" src="http://goldsuncnc.com.vn/files/products/t8_42.jpg" alt="MÁY MỌC THIẾT BỊ KHÁC"></a>
-                                </div>
-                                <div class="title-prd">
-                                    <a href="http://goldsunmachinery.vn/27-may-moc-thiet-bi-khac" title="MÁY MỌC THIẾT BỊ KHÁC">MÁY MỌC THIẾT BỊ KHÁC</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="prd">
-                            <div class="prd-in">
-                                <div class="img-prd">
-                                    <a href="http://goldsunmachinery.vn/33-vat-tu-linh-kien" title="VẬT TƯ LINH KIỆN"><img class="img-responsive" src="http://goldsuncnc.com.vn/files/products/t-v856_08.jpg" alt="VẬT TƯ LINH KIỆN"></a>
-                                </div>
-                                <div class="title-prd">
-                                    <a href="http://goldsunmachinery.vn/33-vat-tu-linh-kien" title="VẬT TƯ LINH KIỆN">VẬT TƯ LINH KIỆN</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
 
     <div class="prd-home">
         <div class="container">
@@ -121,6 +70,32 @@
                             </div>
                         </div>
                             @empty
+                        @endforelse
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="prd-home">
+        <div class="container">
+            <div class="row">
+                <div class="prd-cat">
+                    <div class="title-cat">@lang('category.category')</div>
+                    <div class="line"></div>
+                    <div class="slide-prd-category owl-theme">
+                        @forelse($categoryParentNull as $item)
+                            <div class="prd">
+                                <div class="prd-in">
+                                    <div class="img-prd" width="350px" style="height: 350px !important;">
+                                        <a href="{{URL::route('product.category',[ 'id'=>$item['id'],'slug'=>$item['slug_'.$local]])}}" title="{{$item['name_'.$local]}}"><img class="img-responsive"  src="{{$item['image']}}" alt="{{$item['name_'.$local]}}"></a>
+                                    </div>
+                                    <div class="title-prd">
+                                        <a href="{{URL::route('product.category',[ 'id'=>$item['id'],'slug'=>$item['slug_'.$local]])}}" title="{{$item['name_'.$local]}}">{{$item['name_'.$local]}}</a>
+                                    </div>
+                                </div>
+                            </div>
+                        @empty
                         @endforelse
 
                     </div>

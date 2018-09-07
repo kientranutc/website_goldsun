@@ -42,11 +42,11 @@
                                         <p class="text-danger">{{$errors->first('image')}}</p>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-3">
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Trạng Thái</label>
                                         <div class="row">
-                                            <div class="col-md-2">
+                                            <div class="col-md-5">
                                                 <div class="radio">
                                                     <label>
                                                         <input type="radio" name="active" id="optionsRadios1" value="1" checked="">
@@ -54,9 +54,32 @@
                                                     </label>
                                                 </div>
                                             </div>
-                                            <div class="col-md-1">
+                                            <div class="col-md-6">
                                                 <div class="radio">
-                                                    <label><input type="radio" name="actives" id="optionsRadios2" value="0">
+                                                    <label><input type="radio" name="active" id="optionsRadios2" value="0">
+                                                        Ẩn
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Sản phẩm HOT</label>
+                                        <div class="row">
+                                            <div class="col-md-5">
+                                                <div class="radio">
+                                                    <label>
+                                                        <input type="radio" name="is_hot" id="optionsRadios1" value="1" checked="">
+                                                        Hiển thị
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="radio">
+                                                    <label><input type="radio" name="is_hot" id="optionsRadios2" value="0">
                                                         Ẩn
                                                     </label>
                                                 </div>
