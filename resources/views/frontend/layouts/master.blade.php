@@ -126,11 +126,12 @@
 </header>
 @yield('content')
 <footer>
-    <div class="footmsg"><div class="container"><div class="row">
+    <div class="footmsg" ><div class="container"><div class="row">
                 <div class="info col-xs-6 col-sm-6 col-md-4 col-lg-4">
                     <p class="title-ft">@lang('category.contact_us')</p>
-                    <div class="phone-ft">
-                        <a href="tel:Tel: 024.37.87.20.35 - HotLine: 0904.121.830" title="">Tel: 024.37.87.20.35 - HotLine: 0904.121.830</a>
+                    <div class="phone-ft" style="height: auto !important;line-height: 28px;">
+                        <a href="tel:Tel: 024.37.87.20.35 - HotLine: 0904.121.830" title="">Tel: 024.37.87.20.35 - HotLine: 0904.121.830</a><br>
+                        <a href="javascript:void(0)" class="zalo-footer">Zalo: 0898.089.955</a>
                     </div>
                     <div class="social">
                         <a href="https://www.facebook.com/cncgiacongtrungtam/" title="" target="_blank"><img src="{{asset('frontend/assets/img/f1.png')}}" alt=""></a>

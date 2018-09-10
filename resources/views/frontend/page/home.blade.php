@@ -203,22 +203,23 @@
                 <div class="title-cat">@lang('category.contact')</div>
                 <div class="line line-2"></div>
                 <div class="col-contact col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                    <a href="http://goldsuncnc.com.vn/lien-he.html" title=""><img src="{{asset('frontend/assets/img/c1.png')}}" alt=""></a>
+                    <a href="http://goldsunmachinery.vn/lien-he.html" title=""><img src="{{asset('frontend/assets/img/c1.png')}}" alt=""></a>
                     <p class="title-contact">{{config('language_footer.info_contact_'.$local.'.address.title')}}</p>
                     <p class="text-contact"><p>
                     {!! config('language_footer.info_contact_'.$local.'.address.content') !!}
                 </div>
 
                 <div class="col-contact col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                    <a href="http://goldsuncnc.com.vn/lien-he.html" title=""><img src="{{asset('frontend/assets/img/c2.png')}}" alt=""></a>
+                    <a href="http://goldsunmachinery.vn/lien-he.html" title=""><img src="{{asset('frontend/assets/img/c2.png')}}" alt=""></a>
                     <p class="title-contact">{{config('language_footer.info_contact_'.$local.'.phone.title')}}</p>
                     {!! config('language_footer.info_contact_'.$local.'.phone.content') !!}
+                    <p>Zalo: 0898.089.955</p>
                 </div>
 
                 <div class="col-contact col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                    <a href="http://goldsuncnc.com.vn/lien-he.html" title=""><img src="{{asset('frontend/assets/img/c3.png')}}" alt=""></a>
+                    <a href="http://goldsunmachinery.vn/lien-he.html" title=""><img src="{{asset('frontend/assets/img/c3.png')}}" alt=""></a>
                     <p class="title-contact">Email</p>
-                    <p class="text-contact">goldsunvn.cnc@gmail.com  </p>
+                    <p class="text-contact">goldsunmachineryvn@gmail.com  </p>
                 </div>
             </div></div></div>
 </section>
