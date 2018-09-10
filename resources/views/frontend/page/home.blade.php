@@ -213,7 +213,7 @@
                     <a href="http://goldsunmachinery.vn/lien-he.html" title=""><img src="{{asset('frontend/assets/img/c2.png')}}" alt=""></a>
                     <p class="title-contact">{{config('language_footer.info_contact_'.$local.'.phone.title')}}</p>
                     {!! config('language_footer.info_contact_'.$local.'.phone.content') !!}
-                    <p>Zalo: 0898.089.955</p>
+                    <p>Zalo: 089.808.9955</p>
                 </div>
 
                 <div class="col-contact col-xs-12 col-sm-4 col-md-4 col-lg-4">
