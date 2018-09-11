@@ -14,10 +14,10 @@ return [
     'info_contact_en'=>[
         'address' =>[
             'title' => 'ADDRESS',
-            'content'=>'EQUIPMENT CO., MOULD AND CONTROL OF THAI VIETNAM Climate<br>
-                Address: Sports Complex My Dinh Nhan My, My Dinh, Tu Liem, Hanoi<br>
-                Tel: (84-4) 37854282 Fax: (84-4) 37854283 © 2011<br>
-                Copyright by Co. Machinery and supplies Goldsun'
+            'content'=>'<p><strong>Transaction Office:</strong> No. 11, Group 13 An Lac, Cau Dien Ward, Nam Tu Liem District, Hanoi<p><strong>
+            Factory:</strong>
+            Km 12, National Road 32, Phuc Dien Ward, North Tu Liem Dist. Hanoi</p>'
+
         ],
         'phone'=>[
             'title'=>'PHONE',
