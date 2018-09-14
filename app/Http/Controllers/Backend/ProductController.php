@@ -6,6 +6,7 @@ use App\Http\Requests\AddProductRequest;
 use App\Http\Requests\UpdateProductRequest;
 use App\Models\Category;
 use App\Models\Products;
+use App\Support\Helper;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use SebastianBergmann\CodeCoverage\Report\Xml\Project;
@@ -14,9 +15,10 @@ class ProductController extends Controller
 {
     public function index()
     {
+        $helper = new Helper();
         $category =  new Category();
         $product = Products::orderBy('created_at', 'DESC')->get();
-        return view('backend.page.product.index', compact('category', 'product'));
+        return view('backend.page.product.index', compact('category', 'product', 'helper'));
     }
 
     public  function  add()
@@ -66,10 +68,11 @@ class ProductController extends Controller
 
     public function edit($id)
     {
+        $helper =  new Helper();
         $dataEdit = Products::find($id);
         $dataCategoryParentNull = Category::whereNull('parent_id')->where('active',1)->get();
         $category =  new Category();
-        return view('backend.page.product.edit', compact('dataEdit','dataCategoryParentNull', 'category'));
+        return view('backend.page.product.edit', compact('dataEdit','dataCategoryParentNull', 'category', 'helper'));
     }
 
     public  function processEdit(UpdateProductRequest $request, $id)

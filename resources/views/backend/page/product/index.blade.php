@@ -39,7 +39,7 @@
                                     <td>{{$item->name_vi}}</td>
                                     <td>{{$item->name_en}}</td>
                                     <td>{{$category->getCategory($item->category_id)}}</td>
-                                    <td><img src="{{$item->image}}" alt="" width="70px" height="70px"></td>
+                                    <td><img src="{{($helper->checkImage($item->image))?$item->image:"http://goldsunmachinery.vn/backend/img/image_empty.png"}}" alt="" width="70px" height="70px"></td>
                                     <td class="text-center">
                                         @if($item['active']==1)
                                             <span class="btn btn-success"> Hiển thị</span>

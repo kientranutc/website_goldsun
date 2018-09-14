@@ -38,7 +38,7 @@
                                     <label for="exampleInputPassword1">Ảnh sản phẩm</label>
                                     <div class="image-content">
                                         <p> <img src="{{asset('backend/img/image_empty.png')}}" style="cursor: pointer" width="100px" height="100px" title="click để thêm ảnh" id="image" alt=""></p>
-                                        <input type="hidden" name="image" id="image-input" value="{{old('image')?old('image'):$dataEdit->image}}">
+                                        <input type="hidden" name="image" id="image-input" value="{{($helper->checkImage($dataEdit->image))?$dataEdit->image:"http://goldsunmachinery.vn/backend/img/image_empty.png"}}">
                                         <p class="text-danger">{{$errors->first('image')}}</p>
                                     </div>
                                 </div>

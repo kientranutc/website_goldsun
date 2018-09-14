@@ -194,5 +194,15 @@ class Helper{
             });
     }
 
+    public function checkImage($path)
+    {
+
+        if (@getimagesize($path)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 }
 ?>
