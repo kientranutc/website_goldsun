@@ -24,7 +24,7 @@
             <div class="content">
                 <table>
                     <tr>
-                        <td><img src="{{$message->embed('frontend/assets/img/logo.png')}}" height="30" width="142" /></td>
+                        <td><img src="{{$message->embed('frontend/assets/img/logo.PNG')}}" height="30" width="142" /></td>
                         <td align="right"><h6 class="collapse">ĐĂNG KÝ</h6></td>
                     </tr>
                 </table>

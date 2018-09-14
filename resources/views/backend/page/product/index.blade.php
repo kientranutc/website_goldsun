@@ -39,7 +39,10 @@
                                     <td>{{$item->name_vi}}</td>
                                     <td>{{$item->name_en}}</td>
                                     <td>{{$category->getCategory($item->category_id)}}</td>
-                                    <td><img src="{{($helper->checkImage($item->image))?$item->image:"http://goldsunmachinery.vn/backend/img/image_empty.png"}}" alt="" width="70px" height="70px"></td>
+                                    <td>
+                                        <img src="{{($helper->checkImage($item->image))?$item->image:"http://goldsunmachinery.vn/backend/img/image_empty.png"}}" alt="" width="70px" height="70px">
+                                        <input type="hidden" name="" value="{{$item->image}}">
+                                    </td>
                                     <td class="text-center">
                                         @if($item['active']==1)
                                             <span class="btn btn-success"> Hiển thị</span>
