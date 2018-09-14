@@ -44,8 +44,8 @@ Route::group(['middleware' => 'localization'], function() {
 
 });
 Route::get('/dang-nhap',[
-   'as' => 'auth.login',
-   'uses' => 'Backend\AuthController@login'
+    'as' => 'auth.login',
+    'uses' => 'Backend\AuthController@login'
 ]);
 Route::post('/dang-nhap',[
     'as' => 'auth.post-login',
