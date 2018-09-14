@@ -1,16 +1,24 @@
-<!DOCTYPE html><html lang="vi" xmlns="http://www.w3.org/1999/xhtml" prefix="og: http://ogp.me/ns#"><head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"><meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta http-equiv="expires" content="0">
-    <meta name="resource-type" content="document">
-    <meta name="distribution" content="global">
-    <meta name="author" content="Gold Sun CNC Technology">
-    <meta name="google-site-verification" content=" " /><meta name="copyright" content="Copyright (c) 2018 by Gold Sun CNC Technology">
-    <meta name="keywords" content="@yield('keyword')">
-    <meta name="description" content="">
-    <meta name="robots" content="index, follow">
-    <meta name="revisit-after" content="1 days">
+<!DOCTYPE html>
+<html lang="vi" xmlns="http://www.w3.org/1999/xhtml" prefix="og: http://ogp.me/ns#">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Gold Sunmachinery - @yield('title')</title>
+    <meta itemprop="description" name="description" content="Trang chủ" />
+    <meta name="keywords" itemprop="keywords" content="Trang chủ" />
+    <meta name="author" itemprop="author" content="Trang chủ" />
+    <meta name="robots" content="index,follow" />
+    <meta property="fb:app_id" content="100876217015412" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="vi_VN" />
+    <meta property="og:title" content="gold sunmachinery" />
+    <meta property="og:description" content="gold sunmachinery" />
+    <meta property="og:url" content="http://goldsunmachinery.vn/" />
+    <meta property="og:image" content="http://goldsunmachinery.vn/frontend/assets/img/logo.PNG" />
+    <meta property="og:site_name" content=goldsunmachinery.vn" />
+    <meta property="article:section" content="gold sunmachinery" />
     <meta name="rating" content="general">
-    <link rel="shortcut icon" href="http://goldsuncnc.com.vn/favicon.ico" type="image/x-icon" /><title>Gold Sun CNC Technology</title>
+    <link rel="shortcut icon" href="http://goldsuncnc.com.vn/favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="{{asset('frontend/assets/img/favicon.ico')}}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">

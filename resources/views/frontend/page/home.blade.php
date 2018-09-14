@@ -1,4 +1,7 @@
 @extends('frontend.layouts.master')
+@section('title')
+    Trang Chủ
+@stop
 @section('content')
 <section>
     <!-- Slide home -->
