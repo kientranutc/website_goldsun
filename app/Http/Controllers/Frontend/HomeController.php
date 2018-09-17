@@ -13,7 +13,7 @@ class HomeController extends Controller
 {
     public  function  index()
     {
-        //die('Bảo trì : liên hệ với người phát triển !');
+        die('Bảo trì : liên hệ với người phát triển !');
         $product = Products::where('is_host',1)->take(7)->get()->toArray();
         $banner = Banner::where('active',1)->get();
         $newsLimitThree = News::selectRaw("*,DATE_FORMAT(created_at, '%d') as news_day,DATE_FORMAT(created_at, '%m/%Y') as news_month_year")
