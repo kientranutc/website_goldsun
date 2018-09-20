@@ -12,7 +12,13 @@ class ProductsController extends Controller
     public  function category($id,$slug)
     {
         $categoryName = Category::find($id)->toArray();
-        $productForCategory = Products::where('category_id', 'like', '%'.$id.'%')->paginate(30);
+
+        if (empty($categoryName['parent_id'])) {
+            $str = $id.",";
+        } else {
+            $str= $categoryName['parent_id'].",".$id;
+        }
+        $productForCategory = Products::where('category_id', 'like', '%'.$str.'%')->paginate(30);
         return view('frontend.page.products.category', compact('categoryName', 'productForCategory'));
     }
 

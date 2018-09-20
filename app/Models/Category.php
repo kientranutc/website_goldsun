@@ -13,6 +13,7 @@ class Category extends Model
     {
         return Category::where('active', 1)
                         ->where('parent_id', $id)
+                        ->orderBy('sort', 'DESC')
                         ->get();
     }
 
