@@ -14,7 +14,11 @@ class ProductsController extends Controller
         $categoryName = Category::find($id)->toArray();
 
         if (empty($categoryName['parent_id'])) {
-            $str = $id.",";
+            if((int)$id==33) {
+                $str = $id;
+            } else {
+                $str = $id . ",";
+            }
         } else {
             $str= $categoryName['parent_id'].",".$id;
         }
