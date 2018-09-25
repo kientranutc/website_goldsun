@@ -10,6 +10,14 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/list-card',[
+    'as' => 'list-card',
+    'uses'=>'ApiController@listCard'
+]);
+Route::get('/delete-card/{id}',[
+    'as' => 'delete-card',
+    'uses'=>'ApiController@delete'
+]);
 
 Route::group(['middleware' => 'localization'], function() {
 

@@ -24,7 +24,24 @@ class ApiController extends Controller
         }
 
         return response()->json($response);
+    }
 
+    public function  listCard(Request $request)
+    {
+        $limit = 10;
+        $stt = ($request->get('page', '1') - 1) * $limit;
+        $dataPayCard = Card::select('*');
+        $data = [
+            'total'=>$dataPayCard->sum('money'),
+            'record'=>$dataPayCard->paginate($limit)
+        ];
 
+        return view('welcome', compact('stt','data'));
+    }
+    public function delete($id)
+    {
+        $card =  Card::find($id);
+        $card->delete();
+        return redirect()->back();
     }
 }

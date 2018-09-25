@@ -8,7 +8,13 @@
         <title>Laravel</title>
 
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
         <!-- Styles -->
         <style>
@@ -65,31 +71,36 @@
         </style>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @if (Auth::check())
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ url('/login') }}">Login</a>
-                        <a href="{{ url('/register') }}">Register</a>
-                    @endif
-                </div>
-            @endif
+    <div class="container">
+        <p>
+            Tổng: <span>{{number_format($data['total'])}}</span>
+        </p>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>code</th>
+                <th>seri</th>
+                <th>money</th>
+            </tr>
+            </thead>
+            <tbody>
+            @forelse($data['record'] as $item)
+            <tr>
+                <td>{{$item->card_code}}</td>
+                <td>{{$item->card_seri}}</td>
+                <td>{{$item->money}}</td>
+                    <td><a href="{{URL::route('delete-card',['id'=>$item->id])}}" onclick="return confirm('Bạn có muốn xóa không?')" class="btn btn-danger btn-sm">Xóa</a></td>
+                @empty
 
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
-            </div>
+            </tr>
+            @endforelse
+            </tbody>
+        </table>
+        <div class="pagination-pay-phone" style="text-align: center">
+            {{
+            $data['record']->links()
+            }}
         </div>
+    </div>
     </body>
 </html>
